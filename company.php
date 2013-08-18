@@ -72,7 +72,7 @@ Para nadie es un secreto nuestro éxito en estos  9 años: Personas y talentos c
                     	<input id="" type="text" value="" name="" class="textbx_1">
                     </div>
                     <div class="form_element">
-                    	<div class="form_text">Departamento / Ciudad: </div>
+                    	<div class="form_text">Departamento <br />/ Ciudad: </div>
                     	<input id="" type="text" value="" name="" class="textbx_1">
                     </div>
                     <div class="form_element">
@@ -90,7 +90,7 @@ Para nadie es un secreto nuestro éxito en estos  9 años: Personas y talentos c
                     <div class="form_element">
                     	<div class="form_text">Cual es el resultado? </div><br/>
                         <div class="captcha_img"></div><br/>
-                    	<input id="" type="text" value="" name="" class="textbx_1">
+                    	<input id="" type="text" value="" name="" style="float:right;">
                     </div>
                     <input type="submit" value="Enviar" class="btn_1"/>
                 </form>

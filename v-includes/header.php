@@ -69,5 +69,20 @@ $("#foo2").carouFredSel({
                     <option value="santafe">Santafé de Bogotá</option>
                 </select>
             </div>
+            <div class="social_icon_container">
+                  	<div class="follow_us">Follow us:</div>
+                    <!--Facebook Icon-->
+                    <div class="social_icon">
+                    	<a href="#"><img src="images/facebook.png" alt="facebook" style="width:100%;height:100%;"/></a>
+                    </div>
+                    <!--Twitter Icon-->
+                    <div class="social_icon">
+                    	<a href="#"><img src="images/twitter.png" alt="twitter" style="width:100%;height:100%;"/></a>
+                    </div>
+                    <!--Linkdin Icon-->
+                    <div class="social_icon">
+                    	<a href="#"><img src="images/linkedin.png" alt="linkedin" style="width:100%;height:100%;"/></a>
+                    </div>
+                  </div>
         </div><!--#header_main ends-->
     </div><!--#header_container ends-->

@@ -40,6 +40,28 @@ h1,h2,h3,h4{
     margin-right: 35px;
     margin-top: 45px;
 }
+.social_icon_container{
+    float: right;
+    height: 25px;
+    left: 281px;
+    position: relative;
+    top: 75px;
+    width: 193px;
+}
+.follow_us{
+	color: #666666;
+    float: left;
+    font-size: 16px;
+    margin: 2px 13px 0 0;
+    width: 80px;
+	font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+.social_icon{
+    float: left;
+    height: 25px;
+    margin-right: 5px;
+    width: 28px;
+}
 /*-----------------------------------------Nav bar CSS-------STARTS-----------------------------------------*/
 #nav_bar_container{
 	background-image:url(../images/nav_bg.jpg);
@@ -267,7 +289,6 @@ h1,h2,h3,h4{
 .left_container{
 	width:310px;
 	float:left;
-	border-right:1px solid;
 	margin: 10px 0;
     padding: 0 15px 35px;
 }
@@ -276,6 +297,7 @@ h1,h2,h3,h4{
     margin: 10px 0;
     padding: 0 15px 30px;
     width: 313px;
+	border-left:1px solid;
 }
 .company_img{
 	background-color: #666666;
@@ -321,21 +343,33 @@ h1,h2,h3,h4{
 	float: left;
     font-family: verdana;
     font-size: 12px;
+    max-width: 155px;
 }
 .textbx_1{
 	float:right;
-	width:145px;
+	width:166px;
 }
 .textarea_1{
 	width:98%;
 	height:100px;
 	float:left;
 }
+.chkbox_1{
+	float:right;
+	width:175px;
+	font-size:10px;
+	font-family:Verdana, Geneva, sans-serif;
+}
 .captcha_img{
 	background-color: #000066;
     float: left;
     height: 54px;
     width: 135px;
+}
+.form_element_1{
+	float: right;
+    margin-right: 4px;
+    width: 100%;
 }
 .btn_1{
 	float: right;
@@ -346,6 +380,7 @@ h1,h2,h3,h4{
 
 .contact_form{
 	float: right;
+    margin-bottom: 40px;
     margin-right: 200px;
     margin-top: 60px;
     width: 400px;
@@ -445,4 +480,24 @@ h1,h2,h3,h4{
     padding-left: 8px;
     width: 522px;
 	margin-top: 10px;
+}
+.policy_container_1{
+	float: left;
+    height: 240px;
+    width: 300px;
+	margin-top: 25px;
+}
+.policy_container_1 ul li{
+	margin-top:56px;
+	font-size: 14px;
+}
+.policy_container_2{
+	float: left;
+	font-size:12px;
+	margin-top: 25px;
+}
+.content_form{
+	float: left;
+    font-size: 12px;
+    margin-top: 11px;
 }
