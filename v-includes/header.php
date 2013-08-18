@@ -6,9 +6,12 @@
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <!-- Attach slider CSS -->
 <link rel="stylesheet" href="css/orbit-1.2.3.css">
+<link rel="stylesheet" href="css/carousel.css">
 
+<!-- js added for company.php -->
+<script type="text/javascript" language="javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
 <!-- Attach slider JS -->
-<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.orbit-1.2.3.min.js"></script>
 
 <!--[if IE]>
@@ -23,6 +26,25 @@
     $(window).load(function() {
         $('#featured').orbit();
     });
+	
+$(document).ready(function() {
+
+$("#foo2").carouFredSel({
+	circular: false,
+	infinite: false,
+	auto 	: false,
+	prev	: {	
+		button	: "#foo2_prev",
+		key		: "left"
+	},
+	next	: { 
+		button	: "#foo2_next",
+		key		: "right"
+	},
+	pagination	: "#foo2_pag"
+});
+});
+	
 </script>
 </head>
 
