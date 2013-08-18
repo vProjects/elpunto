@@ -28,7 +28,30 @@
             	<div class="left_container">
                 	<h2>Company Name</h2>
                     <div class="company_img"></div>
-                    <div class="company_img_scroller"></div>
+                    <div class="company_img_scroller">
+
+                            <div class="image_carousel">
+                                <div id="foo2">
+                                    <img src="images/small/basketball.jpg" alt="basketball" width="70" height="70" />
+                                    <img src="images/small/beachtree.jpg" alt="beachtree" width="70" height="70" />
+                                    <img src="images/small/cupcackes.jpg" alt="cupcackes" width="70" height="70" />
+                                    <img src="images/small/hangmat.jpg" alt="hangmat" width="70" height="70" />
+                                    <img src="images/small/new_york.jpg" alt="new york" width="70" height="70" />
+                                    <img src="images/small/laundry.jpg" alt="laundry" width="70" height="70" />
+                                    <img src="images/small/mom_son.jpg" alt="mom son" width="70" height="70" />
+                                    <img src="images/small/picknick.jpg" alt="picknick" width="70" height="70" />
+                                    <img src="images/small/shoes.jpg" alt="shoes" width="70" height="70" />
+                                    <img src="images/small/paris.jpg" alt="paris" width="70" height="70" />
+                                    <img src="images/small/sunbading.jpg" alt="sunbading" width="70" height="70" />
+                                    <img src="images/small/yellow_couple.jpg" alt="yellow couple" width="70" height="70" />
+                                </div>
+                                <div class="clearfix"></div>
+                                <a class="prev" id="foo2_prev" href="#"><span>prev</span></a>
+                                <a class="next" id="foo2_next" href="#"><span>next</span></a>
+                                <div class="pagination" id="foo2_pag"></div>
+                            </div>
+                    
+                     </div>
                     <div class="company_logo"></div>
                     <div class="company_info">(1234) 1234 258</div>
                     <div class="company_info">Lorem IPSUM</div>
