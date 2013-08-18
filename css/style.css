@@ -10,7 +10,7 @@ body{
 img{
 	border:none;
 }
-h2,h3,h4{
+h1,h2,h3,h4{
 	margin:10px 0;
 	font-family: 'Microsoft Sans Serif';
 }
@@ -439,4 +439,10 @@ h2,h3,h4{
 .article_more a{
 	text-decoration:none;
 	color:#616161;
+}
+.article_full{
+	float: left;
+    padding-left: 8px;
+    width: 522px;
+	margin-top: 10px;
 }

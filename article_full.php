@@ -23,7 +23,7 @@
             </div>
             
             <!--page index-->
-            <div class="page_index">Inicio » Articles of interest</div>
+            <div class="page_index">Inicio » Article of interest » Article Name</div>
             
             <!--page_content for text of every page-->
             <div class="page_content">
@@ -35,31 +35,15 @@
                         <li><a href="#">Author of article 1</a></li>
                     </ul>
                 </div>
-                
+                <h1>Article Name</h1>
                 <!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">Article 3</div>
-                    <div class="article_auth">Por: another author</div>
-                    <div class="article_brief">brief resume article 3... Newest article appears first, </div>
-                    <div class="article_more"><a href="article_full.php">Leer mas »</a></div>
-                </div><!--#article container ends here-->
-                
-                <!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">Article 2</div>
-                    <div class="article_auth">Por: another author</div>
-                    <div class="article_brief">brief resume article 2... Newest article appears first, </div>
-                    <div class="article_more"><a href="article_full.php">Leer mas »</a></div>
-                </div><!--#article container ends here-->
-                
-                <!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">Article 1</div>
-                    <div class="article_auth">Por: Author of article 1</div>
-                    <div class="article_brief">brief resume article 1... Newest article appears first, </div>
-                    <div class="article_more"><a href="article_full.php">Leer mas »</a></div>
+                <div class="article_full">
+                	<div class="article_header">Complete Article</div><br/><br/><br/>
+                    <div class="article_auth">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                    </div>
                 </div><!--#article container ends here-->
             </div><!--#page_content ends here-->
+            
            
             <!--horizontal menu starts here-->
             <div id="hori_nav_container">
