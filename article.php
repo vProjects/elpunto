@@ -27,6 +27,38 @@
             
             <!--page_content for text of every page-->
             <div class="page_content">
+            	<!--right author nav-->
+            	<div class="auth_info">
+                	<h4>TODO</h4>
+                	<ul>
+                    	<li><a href="#">Another author</a></li>
+                        <li><a href="#">Author of article 1</a></li>
+                    </ul>
+                </div>
+                
+                <!--article_container starts here-->
+            	<div class="article_container">
+                	<div class="article_header">Article 3</div>
+                    <div class="article_auth">Por: another author</div>
+                    <div class="article_brief">brief resume article 3... Newest article appears first, </div>
+                    <div class="article_more"><a href="#">Leer mas »</a></div>
+                </div><!--#article container ends here-->
+                
+                <!--article_container starts here-->
+            	<div class="article_container">
+                	<div class="article_header">Article 2</div>
+                    <div class="article_auth">Por: another author</div>
+                    <div class="article_brief">brief resume article 2... Newest article appears first, </div>
+                    <div class="article_more"><a href="#">Leer mas »</a></div>
+                </div><!--#article container ends here-->
+                
+                <!--article_container starts here-->
+            	<div class="article_container">
+                	<div class="article_header">Article 1</div>
+                    <div class="article_auth">Por: Author of article 1</div>
+                    <div class="article_brief">brief resume article 1... Newest article appears first, </div>
+                    <div class="article_more"><a href="#">Leer mas »</a></div>
+                </div><!--#article container ends here-->
             </div><!--#page_content ends here-->
            
             <!--horizontal menu starts here-->
