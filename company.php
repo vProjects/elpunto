@@ -48,7 +48,6 @@
                                 <div class="clearfix"></div>
                                 <a class="prev" id="foo2_prev" href="#"><span>prev</span></a>
                                 <a class="next" id="foo2_next" href="#"><span>next</span></a>
-                                <div class="pagination" id="foo2_pag"></div>
                             </div>
                     
                      </div>
