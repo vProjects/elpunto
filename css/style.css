@@ -1,0 +1,376 @@
+@charset "utf-8";
+/* 
+Codes by VYRAZU_LABS_
+Author Anand K. Singh
+*/
+body{
+	padding:0;
+	margin:0;
+}
+img{
+	border:none;
+}
+h2,h3{
+	margin:10px 0;
+	font-family: 'Microsoft Sans Serif';
+}
+#header_container{
+	background-image: url("../images/header_bg.jpg");
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 980px;
+    padding-top: 18px;
+}
+#header_main{
+    background-size: 100% 100%;
+    height: 123px;
+    margin: 0 auto;
+	width: 979px;
+	background-image:url(../images/header_bg_white.png);
+}
+#logo_container{
+	float: left;
+    margin: 46px 0 0 26px;
+}
+#seacrch_box{
+    color: #767676;
+    float: right;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    margin-right: 35px;
+    margin-top: 45px;
+}
+/*-----------------------------------------Nav bar CSS-------STARTS-----------------------------------------*/
+#nav_bar_container{
+	background-image:url(../images/nav_bg.jpg);
+    height: 45px;
+    margin: 0 auto;
+    width: 954px;
+	border-right:1px solid #dbdbdb;
+	border-left:1px solid #dbdbdb;
+}
+#nav_bar{
+    float: right;
+    height: 45px;
+    width: 650px;
+}
+.navbar_horizontal{
+	width:100%;
+}
+.navbar_horizontal ul{
+	margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 100;
+	border-left:1px solid #dbdbdb;
+}
+.navbar_horizontal ul li{
+	list-style-type:none;
+	float:left;
+}
+.navbar_horizontal ul li a{
+	border-right: 1px solid #DBDBDB;
+    color: #9C9C9E;
+    display: block;
+    font-family: Trebuchet MS;
+    height: 31px;
+    padding: 13px 11px 0;
+    text-decoration: none;
+	font-size: 14px;
+}
+.navbar_horizontal ul li a:hover{
+	color:#666;
+}
+.navbar_horizontal ul ul {
+	display:none;
+	margin-top: -126px;
+}
+.navbar_horizontal ul li:hover > ul {
+	display: block;
+	z-index:-1000;
+}
+.navbar_horizontal ul li:hover > ul li{
+	float:none;
+	background-color:#FFF;
+	border:1px solid #CACACA;
+}
+.navbar_horizontal ul li:hover > ul li a{
+	display: block;
+	padding: 9px 12px;
+	height: 12px;
+}
+.navbar_horizontal ul li:hover > ul li:hover{
+	background-color:#E3E3E3;
+	color:#000;
+}
+#login{
+	float: right;
+}
+#login a{
+    color: #9C9C9E;
+    display: block;
+    height: 27px;
+    padding-top: 14px;
+    text-decoration: none;
+    width: 100px;
+	font-family: Trebuchet MS;
+}
+#login a:hover{
+	color:#009;
+}
+/*---------------------------------------body_container css starts here-----------------------*/
+#body_main_div{
+    margin: 0 auto;
+    width: 982px;
+	clear:both;
+	background-image:url(../images/sompra_cont.jpg);
+	background-repeat:no-repeat;
+}
+#body_container{
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    padding-top: 10px;
+    width: 955px;
+}
+#slider_container{
+    float: right;
+    height: 210px;
+    width: 750px;
+}
+.valla_img{
+	float: left;
+    left: 10px;
+    position: relative;
+    right: 0;
+    top: -47px;
+    width: 180px;
+}
+#hori_nav_container{
+	background-image: url("../images/hori_bg.png");
+    background-repeat: no-repeat;
+    height: 600px;
+    left: 13px;
+    position: relative;
+    width: 180px;
+	right: 0;
+    top: 70px;	
+}
+#hori_nav{
+	border-bottom: 1px solid #DBDBDB;
+    border-left: 1px solid #DBDBDB;
+    border-right: 1px solid #DBDBDB;
+    float: left;
+    margin-left: 6px;
+    position: relative;
+    width: 164px;
+}
+#hori_nav ul{
+	float:left;
+	margin:0;
+	padding:0;
+}
+#hori_nav ul li{
+	list-style-type:none;
+}
+#hori_nav ul li a{
+	border-top: 1px dotted;
+    color: grey;
+    display: block;
+    font-size: 13px;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+#hori_nav ul li a:hover{
+	color:#000;
+	background-color:#E4E4E4;
+}
+.hori_search_container{
+	float: left;
+    height: 45px;
+    margin-top: 6px;
+    width: 100%;
+}
+.search_button{
+	background-image:url(../images/btn_buscar.jpg);
+    border: medium none;
+    height: 21px;
+    width: 30px;
+	cursor:pointer;
+}
+.search_txtbx{
+	margin: 12px 0px 12px 12px;
+    width: 100px;
+}
+#a_container{
+    float: right;
+    margin: 25px;
+    width: 708px;
+}
+.a_content{
+    float: left;
+    height: 134px;
+    margin: 8px 2px;
+    width: 170px;
+	background-image:url(../images/a_bg.png);
+}
+.a_image{
+    float: left;
+    height: 54px;
+    margin: 18px 29px;
+    width: 113px;
+}
+.a_image img{
+	width:100%;
+	height:100%;
+}
+.a_company_name{
+	float: left;
+    font-family: arial;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+}
+/*-------------------------------------------------footer css-----------------starts-------------------------*/
+#footer_container{
+    height: 110px;
+    max-width: 100%;
+    min-width: 980px;
+	margin:0 auto;
+	clear:both;
+	background-image:url(../images/footer_bg_1.jpg);
+}
+#footer{
+	background-image: url("../images/footer_bg.png");
+    background-size: 100% 100%;
+    height: 75px;
+    margin: 0 auto;
+    width: 967px;
+}
+#footer_text{
+	float: left;
+    font-family: Verdana;
+    font-size: 9px;
+    margin: 15px 0 0 124px;
+    text-align: center;
+    width: 676px;
+}
+/*-------------------------------------------------company page-----------------starts-------------------------*/
+.company_content_holder{
+	border: 1px solid #666;
+    border-radius: 15px 15px 15px 15px ;
+    box-shadow: 0 6px 1px 0 #666;
+    float: right;
+    margin: 29px 39px 29px 18px;
+    width: 690px;
+}
+.left_container{
+	width:310px;
+	float:left;
+	border-right:1px solid;
+	margin: 10px 0;
+    padding: 0 15px 35px;
+}
+.right_container{
+    float: right;
+    margin: 10px 0;
+    padding: 0 15px 30px;
+    width: 313px;
+}
+.company_img{
+	background-color: #666666;
+    float: left;
+    height: 250px;
+    margin: 30px 30px 13px;
+    width: 250px;
+}
+.company_img_scroller{
+	background-color: #666666;
+    float: left;
+    height: 95px;
+    width: 100%;
+}
+.company_logo{
+	background-color: #666666;
+    float: left;
+    height: 30px;
+    margin: 12px 0;
+    width: 50px;
+}
+.company_info{
+    float: left;
+    font-family: Verdana;
+    margin-top: 2px;
+    width: 100%;
+}
+.company_description{
+    float: left;
+    font-family: 'Microsoft Sans Serif';
+    font-size: 12px;
+    margin: 10px 0 30px;
+    text-align: justify;
+    width: 100%;
+}
+.form_element{
+	float: left;
+    margin-left: 4px;
+    margin-top: 12px;
+    width: 98%;
+}
+.form_text{
+	float: left;
+    font-family: verdana;
+    font-size: 12px;
+}
+.textbx_1{
+	float:right;
+	width:145px;
+}
+.textarea_1{
+	width:98%;
+	height:100px;
+	float:left;
+}
+.captcha_img{
+	background-color: #000066;
+    float: left;
+    height: 54px;
+    width: 135px;
+}
+.btn_1{
+	float: right;
+    height: 30px;
+    margin-top: 10px;
+    width: 100px;
+}
+
+.contact_form{
+	float: right;
+    margin-right: 200px;
+    margin-top: 60px;
+    width: 400px;
+}
+.page_index{
+	float: left;
+    font-family: verdana;
+    font-size: 14px;
+    margin-left: 30px;
+    margin-top: 7px;
+}
+.page_content{
+	float: right;
+    font-family: verdana;
+    font-size: 11px;
+    margin-right: 42px;
+    margin-top: 20px;
+    text-align: justify;
+    width: 706px;
+}
+.page_content_14{
+	float: right;
+    font-family: verdana;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: justify;
+    width: 706px;
+}
