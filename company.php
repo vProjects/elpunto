@@ -8,7 +8,6 @@
 	$company_name = $_GET['comp_name'];
 	$ad_details = $getAd_details->getAd_details($company_name);
 ?>
-    
     <!--body main div-->
     <div id="body_main_div">
     	<!--nav_bar_container starts here-->

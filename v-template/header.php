@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title><?php echo $page_title;?></title>
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <!-- Attach slider CSS -->
@@ -64,9 +64,9 @@ $("#foo2").carouFredSel({
                     <option value="boavita">Boavita</option>
                     <option value="cali">Cali</option>
                     <option value="envigado">Envigado</option>
-                    <option value="medellín">Medellín</option>Nocaima
+                    <option value="medell�n">Medell&iacute;n</option>Nocaima
                     <option value="nocaima">Nocaima</option>
-                    <option value="santafe">Santafé de Bogotá</option>
+                    <option value="santafe">Santaf&eacute; de Bogot&aacute;</option>
                 </select>
             </div>
             <div class="social_icon_container">
