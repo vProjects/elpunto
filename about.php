@@ -1,6 +1,6 @@
 <?php
 	$page_title = "ABOUT";
-	include 'v-includes/header.php';
+	include 'v-template/header.php';
 ?>
     
     <!--body main div-->
@@ -12,7 +12,7 @@
             </div>
         	<?php
 			//include nav bar
-			include 'v-includes/sidebar.php';
+			include 'v-template/sidebar.php';
 			?>
         </div><!--#nav_bar_container ends here-->
         
@@ -71,5 +71,5 @@ Gloria Arango</a> con 20 años de experiencia en adecuación de puntos de venta,
     
 <?php
 //include nav bar
-include 'v-includes/footer.php';
+include 'v-template/footer.php';
 ?>

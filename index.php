@@ -1,6 +1,13 @@
 <?php
 	$page_title = "HOME";
-	include 'v-includes/header.php';
+	//include class of BLL for data fetching
+	include 'v-includes/BLL.getAds.php';
+	$getAds = new BLL_searchResult;
+	//keyword for the adds
+	$search_keyword = 'home';
+	
+	//include header file
+	include 'v-template/header.php';
 ?>
     
     <!--body main div-->
@@ -12,7 +19,7 @@
             </div>
         	<?php
 			//include nav bar
-			include 'v-includes/sidebar.php';
+			include 'v-template/sidebar.php';
 			?>
         </div><!--#nav_bar_container ends here-->
         
@@ -32,33 +39,11 @@
             </div><!--slider container ends here-->
             
             <!--Add_container-->
-            <div id="a_container">
-            	<!--container for adds to be repeated-->
-                <a href="company.php">
-                    <div class="a_content">
-                        <div class="a_image">
-                            <img src="images/company_logo/grafticartt.jpg" alt="grafti cartt" />    
-                        </div>
-                        <div class="a_company_name">Grafti Cartt</div>
-                    </div>
-                </a>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
-                <div class="a_content"></div>
+            <div id="a_container">                
+                <?php 
+					//get adds according to the keywords
+					$getAds->getSearch($search_keyword); 
+				?>   
             </div><!--#add_container ends here-->
             
             <!--horizontal menu starts here-->
@@ -98,5 +83,5 @@
     
 <?php
 //include nav bar
-include 'v-includes/footer.php';
+include 'v-template/footer.php';
 ?>

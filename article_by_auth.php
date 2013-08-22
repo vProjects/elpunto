@@ -1,6 +1,6 @@
 <?php
 	$page_title = "ARTICLE OF INTEREST";
-	include 'v-includes/header.php';
+	include 'v-template/header.php';
 ?>
     
     <!--body main div-->
@@ -12,7 +12,7 @@
             </div>
         	<?php
 			//include nav bar
-			include 'v-includes/sidebar.php';
+			include 'v-template/sidebar.php';
 			?>
         </div><!--#nav_bar_container ends here-->
         
@@ -90,5 +90,5 @@
     
 <?php
 //include nav bar
-include 'v-includes/footer.php';
+include 'v-template/footer.php';
 ?>

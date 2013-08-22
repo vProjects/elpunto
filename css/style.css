@@ -239,7 +239,7 @@ h1,h2,h3,h4{
 .a_image{
     float: left;
     height: 54px;
-    margin: 18px 29px;
+    margin: 15px 29px;
     width: 113px;
 }
 .a_image img{
@@ -484,7 +484,7 @@ h1,h2,h3,h4{
 .policy_container_1{
 	float: left;
     height: 240px;
-    width: 300px;
+    width: 265px;
 	margin-top: 25px;
 }
 .policy_container_1 ul li{
