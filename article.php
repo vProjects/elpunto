@@ -1,6 +1,9 @@
 <?php
 	$page_title = "ARTICLE OF INTEREST";
+	include 'v-includes/BLL.Article.php';
+	$article = new BLL_Article();
 	include 'v-template/header.php';
+	
 ?>
     
     <!--body main div-->
@@ -28,37 +31,10 @@
             <!--page_content for text of every page-->
             <div class="page_content">
             	<!--right author nav-->
-            	<div class="auth_info">
-                	<h4>TODO</h4>
-                	<ul>
-                    	<li><a href="article_by_auth.php">Another author</a></li>
-                        <li><a href="#">Author of article 1</a></li>
-                    </ul>
-                </div>
+            	<?php $article->getAuthor_sidebar(); ?>
                 
-                <!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">Article 3</div>
-                    <div class="article_auth">Por: another author</div>
-                    <div class="article_brief">brief resume article 3... Newest article appears first, </div>
-                    <div class="article_more"><a href="article_full.php">Leer mas »</a></div>
-                </div><!--#article container ends here-->
+                <?php $article->getArticles(); ?>
                 
-                <!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">Article 2</div>
-                    <div class="article_auth">Por: another author</div>
-                    <div class="article_brief">brief resume article 2... Newest article appears first, </div>
-                    <div class="article_more"><a href="article_full.php">Leer mas »</a></div>
-                </div><!--#article container ends here-->
-                
-                <!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">Article 1</div>
-                    <div class="article_auth">Por: Author of article 1</div>
-                    <div class="article_brief">brief resume article 1... Newest article appears first, </div>
-                    <div class="article_more"><a href="article_full.php">Leer mas »</a></div>
-                </div><!--#article container ends here-->
             </div><!--#page_content ends here-->
            
             <!--horizontal menu starts here-->

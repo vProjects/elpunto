@@ -46,7 +46,6 @@ $("#foo2").carouFredSel({
 });
 
 function changeImage(value){
-	alert(value);
 	document.getElementById('change_image').src = value ;
 }
 	
