@@ -44,6 +44,11 @@ $("#foo2").carouFredSel({
 	pagination	: "#foo2_pag"
 });
 });
+
+function changeImage(value){
+	alert(value);
+	document.getElementById('change_image').src = value ;
+}
 	
 </script>
 </head>

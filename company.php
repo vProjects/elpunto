@@ -32,12 +32,12 @@
             	<!--left_container starts here-->
             	<div class="left_container">
                 	<h2><?php echo $ad_details[0]['company_name']; ?></h2>
-                    <div class="company_img"><img src="<?php echo $ad_details[0]['company_logo']; ?>" style="width:100%;height:100%;" /></div>
+                    <div class="company_img"><img id="change_image" src="<?php echo $ad_details[0]['company_logo']; ?>" style="width:100%;height:100%;" /></div>
                     <div class="company_img_scroller">
 
                             <div class="image_carousel">
                                 <div id="foo2">
-                                    <img src="images/small/basketball.jpg" alt="basketball" width="70" height="70" />
+                                    <img src="images/small/basketball.jpg" alt="basketball" width="70" height="70" onclick="changeImage(this.src)" />
                                     <img src="images/small/beachtree.jpg" alt="beachtree" width="70" height="70" />
                                     <img src="images/small/cupcackes.jpg" alt="cupcackes" width="70" height="70" />
                                     <img src="images/small/hangmat.jpg" alt="hangmat" width="70" height="70" />
