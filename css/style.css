@@ -300,11 +300,7 @@ h1,h2,h3,h4{
 	border-left:1px solid;
 }
 .company_img{
-	background-color: #666666;
-    float: left;
-    height: 250px;
-    margin: 30px 30px 13px;
-    width: 250px;
+    margin: 25px auto 30px;
 }
 .company_img_scroller{
 	background-color: #666666;
@@ -313,11 +309,10 @@ h1,h2,h3,h4{
     width: 100%;
 }
 .company_logo{
-	background-color: #666666;
-    float: left;
-    height: 30px;
+	float: left;
+    height: 40px;
     margin: 12px 0;
-    width: 50px;
+    width: 95px;
 }
 .company_info{
     float: left;

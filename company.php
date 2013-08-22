@@ -1,6 +1,12 @@
 <?php
-	$page_title = "HOME";
+	$page_title = "El Punto de Venta";
+	//include class of BLL for data fetching
+	include 'v-includes/BLL.getAds.php';
+	$getAd_details = new BLL_manageData();
 	include 'v-template/header.php';
+	
+	$company_name = $_GET['comp_name'];
+	$ad_details = $getAd_details->getAd_details($company_name);
 ?>
     
     <!--body main div-->
@@ -11,8 +17,8 @@
                 <a href="#"><img src="images/icon_login.png" alt="login" />&nbsp;&nbsp;LOGIN</a>
             </div>
         	<?php
-			//include nav bar
-			include 'v-template/sidebar.php';
+				//include nav bar
+				include 'v-template/sidebar.php';
 			?>
         </div><!--#nav_bar_container ends here-->
         
@@ -26,8 +32,8 @@
             <div class="company_content_holder">
             	<!--left_container starts here-->
             	<div class="left_container">
-                	<h2>Company Name</h2>
-                    <div class="company_img"></div>
+                	<h2><?php echo $ad_details[0]['company_name']; ?></h2>
+                    <div class="company_img"><img src="<?php echo $ad_details[0]['company_logo']; ?>" style="width:100%;height:100%;" /></div>
                     <div class="company_img_scroller">
 
                             <div class="image_carousel">
@@ -51,16 +57,14 @@
                             </div>
                     
                      </div>
-                    <div class="company_logo"></div>
-                    <div class="company_info">(1234) 1234 258</div>
-                    <div class="company_info">Lorem IPSUM</div>
-                    <div class="company_info">Lorem IPSUM</div>
+                    <div class="company_logo"><img src="<?php echo $ad_details[0]['company_logo']; ?>" style="width:100%;height:100%;" /></div>
+                    <div class="company_info"><?php echo $ad_details[0]['company_address']; ?></div>
+                    <div class="company_info"><?php echo $ad_details[0]['company_city']; ?></div>
+                    <div class="company_info"><?php echo $ad_details[0]['company_website']; ?></div>
                 </div><!--#left_container ends here-->
                 <!--right_container starts here-->
             	<div class="right_container">
-                	<div class="company_description">
-Para nadie es un secreto nuestro éxito en estos  9 años: Personas y talentos comprometidos en crear una de las mejores empresas de Colombia en un mediano plazo.<br/><br/>Desde nuestra fundación en el 2003, TRENDIX ha tenido un crecimiento constante gracias también a nuestros clientes, proveedores y amigos quienes han confiado en nuestra empresa.<br/><br/>Hoy en día hemos consolidado el mercado nacional y también hemos expandido nuestro mercado a los hermanos paises de Venezuela, Ecuador, Perú y Chile.
-				</div>
+                	<div class="company_description"><?php echo $ad_details[0]['company_description']; ?></div>
 				<h3>Contacte al proveedor</h3>
                 <form class="company_contact_form">
                 	<div class="form_element">

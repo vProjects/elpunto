@@ -2,7 +2,7 @@
 	$page_title = "HOME";
 	//include class of BLL for data fetching
 	include 'v-includes/BLL.getAds.php';
-	$getAds = new BLL_searchResult;
+	$getAds = new BLL_manageData();
 	//keyword for the adds
 	$search_keyword = 'home';
 	
