@@ -65,7 +65,7 @@
             	<div class="right_container">
                 	<div class="company_description"><?php echo $ad_details[0]['company_description']; ?></div>
 				<h3>Contacte al proveedor</h3>
-                <form class="company_contact_form">
+                <form class="company_contact_form" method="post">
                 	<div class="form_element">
                     	<div class="form_text">Nombre / Apellido:</div>
                     	<input id="" type="text" value="" name="" class="textbx_1">
@@ -92,10 +92,11 @@
                     </div>
                     <div class="form_element">
                     	<div class="form_text">Cual es el resultado? </div><br/>
-                        <div class="captcha_img"></div><br/>
+                        <div class="captcha_img">
+                        </div><br/>
                     	<input id="" type="text" value="" name="" style="float:right;">
                     </div>
-                    <input type="submit" value="Enviar" class="btn_1"/>
+                    <input type="submit" value="Enviar" name="Enviar" class="btn_1"/>
                 </form>
                 </div><!--#right_container ends here-->
             </div><!--#company content holder-->
