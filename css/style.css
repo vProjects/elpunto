@@ -1,0 +1,497 @@
+@charset "utf-8";
+/* 
+Codes by VYRAZU_LABS_
+Author Anand K. Singh
+*/
+body{
+	padding:0;
+	margin:0;
+}
+img{
+	border:none;
+}
+h1,h2,h3,h4{
+	margin:10px 0;
+	font-family: 'Microsoft Sans Serif';
+}
+#header_container{
+	background-image: url("../images/header_bg.jpg");
+    margin: 0 auto;
+    max-width: 100%;
+    min-width: 980px;
+    padding-top: 18px;
+}
+#header_main{
+    background-size: 100% 100%;
+    height: 123px;
+    margin: 0 auto;
+	width: 979px;
+	background-image:url(../images/header_bg_white.png);
+}
+#logo_container{
+	float: left;
+    margin: 46px 0 0 26px;
+}
+#seacrch_box{
+    color: #767676;
+    float: right;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    margin-right: 35px;
+    margin-top: 45px;
+}
+.social_icon_container{
+    float: right;
+    height: 25px;
+    left: 281px;
+    position: relative;
+    top: 75px;
+    width: 193px;
+}
+.follow_us{
+	color: #666666;
+    float: left;
+    font-size: 16px;
+    margin: 2px 13px 0 0;
+    width: 80px;
+	font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+.social_icon{
+    float: left;
+    height: 25px;
+    margin-right: 5px;
+    width: 28px;
+}
+/*-----------------------------------------Nav bar CSS-------STARTS-----------------------------------------*/
+#nav_bar_container{
+	background-image:url(../images/nav_bg.jpg);
+    height: 45px;
+    margin: 0 auto;
+    width: 954px;
+	border-right:1px solid #dbdbdb;
+	border-left:1px solid #dbdbdb;
+}
+#nav_bar{
+    float: right;
+    height: 45px;
+    width: 650px;
+}
+.navbar_horizontal{
+	width:100%;
+}
+.navbar_horizontal ul{
+	margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 100;
+	border-left:1px solid #dbdbdb;
+}
+.navbar_horizontal ul li{
+	list-style-type:none;
+	float:left;
+}
+.navbar_horizontal ul li a{
+	border-right: 1px solid #DBDBDB;
+    color: #9C9C9E;
+    display: block;
+    font-family: Trebuchet MS;
+    height: 31px;
+    padding: 13px 11px 0;
+    text-decoration: none;
+	font-size: 14px;
+}
+.navbar_horizontal ul li a:hover{
+	color:#666;
+}
+.navbar_horizontal ul ul {
+	display:none;;
+}
+.navbar_horizontal ul li:hover > ul {
+	display: block;
+	z-index:-1000;
+}
+.navbar_horizontal ul li:hover > ul li{
+	float:none;
+	background-color:#FFF;
+	border:1px solid #CACACA;
+}
+.navbar_horizontal ul li:hover > ul li a{
+	display: block;
+	padding: 9px 12px;
+	height: 12px;
+}
+.navbar_horizontal ul li:hover > ul li:hover{
+	background-color:#E3E3E3;
+	color:#000;
+}
+#login{
+	float: right;
+}
+#login a{
+    color: #9C9C9E;
+    display: block;
+    height: 27px;
+    padding-top: 14px;
+    text-decoration: none;
+    width: 100px;
+	font-family: Trebuchet MS;
+}
+#login a:hover{
+	color:#009;
+}
+/*---------------------------------------body_container css starts here-----------------------*/
+#body_main_div{
+    margin: 0 auto;
+    width: 982px;
+	clear:both;
+	background-image:url(../images/sompra_cont.jpg);
+	background-repeat:no-repeat;
+}
+#body_container{
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    padding-top: 10px;
+    width: 955px;
+}
+#slider_container{
+    float: right;
+    height: 210px;
+    width: 750px;
+}
+.valla_img{
+	float: left;
+    left: 10px;
+    position: relative;
+    right: 0;
+    top: -47px;
+    width: 180px;
+}
+#hori_nav_container{
+	background-image: url("../images/hori_bg.png");
+    background-repeat: no-repeat;
+    height: 600px;
+    left: 13px;
+    position: relative;
+    width: 180px;
+	right: 0;
+    top: 70px;	
+}
+#hori_nav{
+	border-bottom: 1px solid #DBDBDB;
+    border-left: 1px solid #DBDBDB;
+    border-right: 1px solid #DBDBDB;
+    float: left;
+    margin-left: 6px;
+    position: relative;
+    width: 164px;
+}
+#hori_nav ul{
+	float:left;
+	margin:0;
+	padding:0;
+}
+#hori_nav ul li{
+	list-style-type:none;
+}
+#hori_nav ul li a{
+	border-top: 1px dotted;
+    color: grey;
+    display: block;
+    font-size: 13px;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+#hori_nav ul li a:hover{
+	color:#000;
+	background-color:#E4E4E4;
+}
+.hori_search_container{
+	float: left;
+    height: 45px;
+    margin-top: 6px;
+    width: 100%;
+}
+.search_button{
+	background-image:url(../images/btn_buscar.jpg);
+    border: medium none;
+    height: 21px;
+    width: 30px;
+	cursor:pointer;
+}
+.search_txtbx{
+	margin: 12px 0px 12px 12px;
+    width: 100px;
+}
+#a_container{
+    float: right;
+    margin: 25px;
+    width: 708px;
+}
+.a_content{
+    float: left;
+    height: 134px;
+    margin: 8px 2px;
+    width: 170px;
+	background-image:url(../images/a_bg.png);
+}
+.a_image{
+    float: left;
+    height: 54px;
+    margin: 15px 29px;
+    width: 113px;
+}
+.a_image img{
+	width:100%;
+	height:100%;
+}
+.a_company_name{
+	float: left;
+    font-family: arial;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+}
+/*-------------------------------------------------footer css-----------------starts-------------------------*/
+#footer_container{
+    height: 110px;
+    max-width: 100%;
+    min-width: 980px;
+	margin:0 auto;
+	clear:both;
+	background-image:url(../images/footer_bg_1.jpg);
+}
+#footer{
+	background-image: url("../images/footer_bg.png");
+    background-size: 100% 100%;
+    height: 75px;
+    margin: 0 auto;
+    width: 967px;
+}
+#footer_text{
+	float: left;
+    font-family: Verdana;
+    font-size: 9px;
+    margin: 15px 0 0 124px;
+    text-align: center;
+    width: 676px;
+}
+/*-------------------------------------------------company page-----------------starts-------------------------*/
+.company_content_holder{
+	border: 1px solid #666;
+    border-radius: 15px 15px 15px 15px ;
+    box-shadow: 0 6px 1px 0 #666;
+    float: right;
+    margin: 29px 39px 29px 18px;
+    width: 690px;
+}
+.left_container{
+	width:310px;
+	float:left;
+	margin: 10px 0;
+    padding: 0 15px 35px;
+}
+.right_container{
+    float: right;
+    margin: 10px 0;
+    padding: 0 15px 30px;
+    width: 313px;
+	border-left:1px solid;
+}
+.company_img{
+    margin: 25px auto 30px;
+}
+.company_img_scroller{
+	background-color: #666666;
+    float: left;
+    height: 95px;
+    width: 100%;
+}
+.company_logo{
+	float: left;
+    height: 40px;
+    margin: 12px 0;
+    width: 95px;
+}
+.company_info{
+    float: left;
+    font-family: Verdana;
+    margin-top: 2px;
+    width: 100%;
+}
+.company_description{
+    float: left;
+    font-family: 'Microsoft Sans Serif';
+    font-size: 12px;
+    margin: 10px 0 30px;
+    text-align: justify;
+    width: 100%;
+}
+.form_element{
+	float: left;
+    margin-left: 4px;
+    margin-top: 12px;
+    width: 98%;
+}
+.form_text{
+	float: left;
+    font-family: verdana;
+    font-size: 12px;
+    max-width: 155px;
+}
+.textbx_1{
+	float:right;
+	width:166px;
+}
+.textarea_1{
+	width:98%;
+	height:100px;
+	float:left;
+}
+.chkbox_1{
+	float:right;
+	width:175px;
+	font-size:10px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+.captcha_img{
+	background-color: #000066;
+    float: left;
+    height: 54px;
+    width: 135px;
+}
+.form_element_1{
+	float: right;
+    margin-right: 4px;
+    width: 100%;
+}
+.btn_1{
+	float: right;
+    height: 30px;
+    margin-top: 10px;
+    width: 100px;
+}
+
+.contact_form{
+	float: right;
+    margin-bottom: 40px;
+    margin-right: 200px;
+    margin-top: 60px;
+    width: 400px;
+}
+.page_index{
+	float: left;
+    font-family: verdana;
+    font-size: 14px;
+    margin-left: 30px;
+    margin-top: 7px;
+}
+.page_content{
+	float: right;
+    font-family: verdana;
+    font-size: 11px;
+    margin-right: 42px;
+    margin-top: 20px;
+    text-align: justify;
+    width: 706px;
+}
+.page_content_14{
+	float: right;
+    font-family: verdana;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: justify;
+    width: 706px;
+}
+.auth_info{
+	border: 1px solid #666666;
+    border-radius: 13px 13px 13px 13px;
+    box-shadow: 0 10px 2px -1px #616161;
+    float: right;
+    margin:0;
+    min-height: 160px;
+    padding: 8px;
+    width: 132px;
+}
+.auth_info ul{
+	margin-left: 2px;
+    padding: 0;
+}
+.auth_info ul li{
+	list-style-type:none;
+}
+.auth_info ul li a{
+	color: #616161;
+    display: block;
+    margin-top: 2px;
+    text-decoration: none;
+}
+.auth_info ul a:hover{
+	color:#00F;
+}
+.article_container{
+	border-bottom: 1px solid;
+    float: left;
+    padding-left: 8px;
+    width: 522px;
+	margin-top: 10px;
+}
+.article_header{
+	font-size: 15px;
+	float:left;
+	width:100%;
+}
+.article_auth{
+	font-size: 10px;
+	float:left;
+	width:100%;
+}
+.article_brief{
+	font-size: 12px;
+	float:left;
+	width:100%;
+	margin-top:8px;
+}
+.article_more{
+	font-size: 12px;
+	float:left;
+	width:100%;
+	margin-top:8px;
+}
+.article_more{
+	font-size: 12px;
+	float:left;
+	width:100%;
+	margin-top:8px;
+	margin-bottom:7px;
+}
+.article_more a{
+	text-decoration:none;
+	color:#616161;
+}
+.article_full{
+	float: left;
+    padding-left: 8px;
+    width: 522px;
+	margin-top: 10px;
+}
+.policy_container_1{
+	float: left;
+    height: 240px;
+    width: 265px;
+	margin-top: 25px;
+}
+.policy_container_1 ul li{
+	margin-top:56px;
+	font-size: 14px;
+}
+.policy_container_2{
+	float: left;
+	font-size:12px;
+	margin-top: 25px;
+}
+.content_form{
+	float: left;
+    font-size: 12px;
+    margin-top: 11px;
+}
