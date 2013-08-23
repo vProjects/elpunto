@@ -104,8 +104,7 @@ h1,h2,h3,h4{
 	color:#666;
 }
 .navbar_horizontal ul ul {
-	display:none;
-	margin-top: -126px;
+	display:none;;
 }
 .navbar_horizontal ul li:hover > ul {
 	display: block;

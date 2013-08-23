@@ -1,16 +1,8 @@
 <?php
-	include 'class.DAL.php';
+	include 'BLL.getAds.php';
 	
-	class BLL_Article
+	class BLL_Article extends BLL_manageData
 	{
-		private $manage_content;
-		
-		function __construct()
-		{
-			$this->manage_content = new ManageContent_DAL;
-			return $this->manage_content;
-		}
-		
 		function getAuthor_sidebar()
 		{
 			$authors = $this->manage_content->getValue_distinct('article_info','article_author');

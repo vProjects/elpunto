@@ -55,7 +55,7 @@
 				return $rowcount;
 			}
 		}
-		
+		//get all the latest aricles 
 		function getValue_latest($table_name,$value)
 		{
 			$query = $this->link->query("SELECT $value from $table_name pet ORDER BY `article_date` DESC");
@@ -69,7 +69,7 @@
 				return $rowcount;
 			}
 		}
-		
+		//get latest article according to the author
 		function getValue_latest_where($table_name,$value,$row_value,$value_entered)
 		{
 			$query = $this->link->query("SELECT $value from $table_name where $row_value='$value_entered' ORDER BY `article_date` DESC");
@@ -88,6 +88,20 @@
 		function getvalue_search($table_name,$value,$row_value,$value_entered)
 		{
 			$query = $this->link->query("SELECT $value from $table_name WHERE ( $row_value LIKE '%home%') AND `status` = '1'");
+			$query->execute();
+			$rowcount = $query->rowCount();
+			if($rowcount > 0){
+				$result = $query->fetchAll(PDO::FETCH_ASSOC);
+				return $result;
+			}
+			else{
+				return $rowcount;
+			}
+		}
+		//get submenus according to the position
+		function getSubmenu_ordered($table_name,$value,$order)
+		{
+			$query = $this->link->query("SELECT $value from $table_name HAVING $order > 0  ORDER BY $order ASC");
 			$query->execute();
 			$rowcount = $query->rowCount();
 			if($rowcount > 0){
