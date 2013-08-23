@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+.radio_section{	
+	height:25px;
+	width:350px;
+	padding:5px 2px;
+}
+.contact-us .radio{
+	width: 20px;
+	height: 25px;
+	float: left;
+	margin-top: 0px;		
+}
+.contact-us .mynamelabel  {
+	margin-top: 5px;
+	font-size: 12px;
+	width: 65px;
+	height: 25px;
+	float: left;
+	margin-top: 2px;		
+}
+.radio_section_occupation{
+	height:100px;
+	width:350px;
+	padding:5px 2px;
+}
+.contact-us h4{
+	padding-left:0px;
+
+}
