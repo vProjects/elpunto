@@ -70,6 +70,20 @@
 			}
 		}
 		
+		function getValue_latest_where($table_name,$value,$row_value,$value_entered)
+		{
+			$query = $this->link->query("SELECT $value from $table_name where $row_value='$value_entered' ORDER BY `article_date` DESC");
+			$query->execute();
+			$rowcount = $query->rowCount();
+			if($rowcount > 0){
+				$result = $query->fetchAll(PDO::FETCH_ASSOC);
+				return $result;
+			}
+			else{
+				return $rowcount;
+			}
+		}
+		
 		//function for search functionality
 		function getvalue_search($table_name,$value,$row_value,$value_entered)
 		{

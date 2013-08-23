@@ -33,12 +33,9 @@
             	<!--right author nav-->
             	<?php $article->getAuthor_sidebar(); ?>
                 
-                <h1>Article Name</h1>
-                <!--article_container starts here-->
-                <div class="article_full">
-                <!--get article flong description-->
+                
                 <?php $article->getFullArticle($article_no); ?>
-                </div><!--#article container ends here-->
+                
             </div><!--#page_content ends here-->
             
            

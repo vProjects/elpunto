@@ -3,6 +3,8 @@
 	include 'v-includes/BLL.Article.php';
 	$article = new BLL_Article();
 	include 'v-template/header.php';
+	
+	$author = $_GET['author'];
 ?>
     
     <!--body main div-->
@@ -32,21 +34,8 @@
             	<!--right author nav-->
             	<?php $article->getAuthor_sidebar(); ?>
                 
-                <!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">Article 2</div>
-                    <div class="article_auth">Por: another author</div>
-                    <div class="article_brief">brief resume article 2... Newest article appears first, </div>
-                    <div class="article_more"><a href="article_full.php">Leer mas »</a></div>
-                </div><!--#article container ends here-->
-                
-                <!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">Article 1</div>
-                    <div class="article_auth">Por: Author of article 1</div>
-                    <div class="article_brief">brief resume article 1... Newest article appears first, </div>
-                    <div class="article_more"><a href="article_full.php">Leer mas »</a></div>
-                </div><!--#article container ends here-->
+                <!-- get article according to the author sorted by latest date-->
+                <?php $article->getArticles_byAuthor($author); ?>
             </div><!--#page_content ends here-->
            
             <!--horizontal menu starts here-->
