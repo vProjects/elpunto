@@ -1,7 +1,5 @@
 <?php
 	$page_title = "ARTICLE OF INTEREST";
-	include 'v-includes/BLL.Article.php';
-	$article = new BLL_Article();
 	include 'v-template/header.php';
 	
 	$author = $_GET['author'];
@@ -32,10 +30,10 @@
             <!--page_content for text of every page-->
             <div class="page_content">
             	<!--right author nav-->
-            	<?php $article->getAuthor_sidebar(); ?>
+            	<?php $getData_UI->getAuthor_sidebar(); ?>
                 
                 <!-- get article according to the author sorted by latest date-->
-                <?php $article->getArticles_byAuthor($author); ?>
+                <?php $getData_UI->getArticles_byAuthor($author); ?>
             </div><!--#page_content ends here-->
            
             <!--horizontal menu starts here-->

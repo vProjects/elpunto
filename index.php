@@ -1,8 +1,6 @@
 <?php
 	$page_title = "HOME";
-	//include class of BLL for data fetching
-	include 'v-includes/BLL.getAds.php';
-	$getAds = new BLL_manageData();
+	
 	//keyword for the adds
 	$search_keyword = 'home';
 	
@@ -42,7 +40,7 @@
             <div id="a_container">                
                 <?php 
 					//get adds according to the keywords
-					$getAds->getSearch($search_keyword); 
+					$getData_UI->getSearch($search_keyword); 
 				?>   
             </div><!--#add_container ends here-->
             

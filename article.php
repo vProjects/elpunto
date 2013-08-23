@@ -1,7 +1,5 @@
 <?php
 	$page_title = "ARTICLE OF INTEREST";
-	include 'v-includes/BLL.Article.php';
-	$article = new BLL_Article();
 	include 'v-template/header.php';
 	
 ?>
@@ -31,9 +29,9 @@
             <!--page_content for text of every page-->
             <div class="page_content">
             	<!--right author nav-->
-            	<?php $article->getAuthor_sidebar(); ?>
+            	<?php $getData_UI->getAuthor_sidebar(); ?>
                 
-                <?php $article->getArticles(); ?>
+                <?php $getData_UI->getArticles(); ?>
                 
             </div><!--#page_content ends here-->
            

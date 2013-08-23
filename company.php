@@ -1,12 +1,9 @@
 <?php
 	$page_title = "El Punto de Venta";
-	//include class of BLL for data fetching
-	include 'v-includes/BLL.getAds.php';
-	$getAd_details = new BLL_manageData();
 	include 'v-template/header.php';
 	
 	$company_name = $_GET['comp_name'];
-	$ad_details = $getAd_details->getAd_details($company_name);
+	$ad_details = $getData_UI->getAd_details($company_name);
 ?>
     <!--body main div-->
     <div id="body_main_div">
