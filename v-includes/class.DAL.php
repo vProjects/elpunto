@@ -112,5 +112,19 @@
 				return $rowcount;
 			}
 		}
+		//get vertical nav sorted by parent_id and position
+		function getMenu_sorted($table_name,$value,$order,$value_parent)
+		{
+			$query = $this->link->query("SELECT $value from $table_name HAVING $order = $value_parent ORDER BY $order,'position','parent_id' ASC");
+			$query->execute();
+			$rowcount = $query->rowCount();
+			if($rowcount > 0){
+				$result = $query->fetchAll(PDO::FETCH_ASSOC);
+				return $result;
+			}
+			else{
+				return $rowcount;
+			}
+		}
 	}
 ?>

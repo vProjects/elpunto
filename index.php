@@ -6,6 +6,8 @@
 	
 	//include header file
 	include 'v-template/header.php';
+	
+    $getData_UI->get_navbar_vertical();
 ?>
     
     <!--body main div-->
@@ -56,6 +58,7 @@
                     </div>
                     <!--nav_elements-->
                     <ul>
+                    	<?php $getData_UI->get_navbar_vertical(); ?>
                     	<li><a href="#">Adecuación Punto de Venta</a></li>
                         <li><a href="#">Avisos y Señalización</a></li>
                         <li><a href="#">Banco de imágenes</a></li>

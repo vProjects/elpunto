@@ -206,6 +206,27 @@ h1,h2,h3,h4{
 	color:#000;
 	background-color:#E4E4E4;
 }
+#hori_nav ul ul {
+	display:none;;
+}
+#hori_nav ul li:hover > ul {
+	display: block;
+	z-index:-1000;
+}
+#hori_nav ul li:hover > ul li{
+	float:none;
+	background-color:#FFF;
+	border:1px solid #CACACA;
+}
+#hori_nav ul li:hover > ul li a{
+	display: block;
+	padding: 9px 12px;
+	height: 12px;
+}
+#hori_nav ul li:hover > ul li:hover{
+	background-color:#E3E3E3;
+	color:#000;
+}
 .hori_search_container{
 	float: left;
     height: 45px;

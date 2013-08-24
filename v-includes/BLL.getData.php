@@ -131,6 +131,29 @@
                     <div class="article_auth">'.$article[0]['article_description'].'</div>';
 			echo '</div><!--#article container ends here-->' ;
 		}
+		
+		function get_navbar_vertical()
+		{
+			$horizontalMenus = $this->manage_content->getMenu_sorted('horizontal_navbar','*','level',"0");
+			foreach($horizontalMenus as $horizontalMenu)
+			{
+				echo '<li><a href="'.$horizontalMenu['menu_link'].'">'.$horizontalMenu['menu_name'].'</a>';
+				$horizontal_subMenus = $this->manage_content->getMenu_sorted('horizontal_navbar','*','level',"1");
+				if(isset($horizontal_subMenus) && $horizontal_subMenus != "")
+				{
+					echo '<ul>';
+					foreach($horizontal_subMenus as $horizontal_subMenu)
+					{
+						if($horizontalMenu['id'] == $horizontal_subMenu['parent_id'])
+						{
+							echo '<li><a href="'.$horizontal_subMenu['menu_link'].'">'.$horizontal_subMenu['menu_name'].'</a></li>';
+						}
+					}
+					echo '</ul>';
+				}
+				echo '</li>';
+			}
+		}
 	}
 
 ?>
