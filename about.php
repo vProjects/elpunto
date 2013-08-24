@@ -37,14 +37,10 @@ Gloria Arango</a> con 20 años de experiencia en adecuación de puntos de venta,
             <!--horizontal menu starts here-->
             <div id="hori_nav_container">
             	<div id="hori_nav" style="top:-90px;">
-                	<!--horiz search container-->
-                    <div class="hori_search_container">
-                    	<form action="#" method="get">
-                        	<input type="text" class="search_txtbx" placeholder="Search..."/>
-                            <input type="submit" class="search_button" value=""/>
-                        </form>
-                    </div>
-                    <!--nav_elements-->
+                	<?php
+						//get the vertical search from the template folder 
+						include 'v-template/vertical_search.php' 
+					?>
                     <?php
                         //get the vertical navbar 
                         $getData_UI->get_navbar_vertical(); 
