@@ -49,9 +49,9 @@
             	<div id="hori_nav" style="top:-200px;">
                 	<!--horiz search container-->
                     <div class="hori_search_container">
-                    	<form action="#" method="get">
-                        	<input type="text" class="search_txtbx" placeholder="Search..."/>
-                            <input type="submit" class="search_button" value=""/>
+                    	<form action="#" method="get" name="serach_ads" id="serach_ads">
+                        	<input type="text" class="search_txtbx" placeholder="Search..." name="search_value"/>
+                            <input type="button" class="search_button" onclick="serach_ads_f()"/>
                         </form>
                     </div>
 					<?php

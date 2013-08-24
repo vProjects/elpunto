@@ -56,6 +56,8 @@ function changeImage(value){
 }
 	
 </script>
+<!--JS code for search of ads-->
+<script src="js/search_function.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -68,8 +70,9 @@ function changeImage(value){
             </div>
             <!--search box-->
             <div id="seacrch_box">Seleccione su ciudad
-            	<select>
-                	<option value="">Todas</option>
+            	<select onchange="search_ads_city(this.value)">
+                	<option value="">Select One</option>
+                	<option value="default">Todas</option>
                     <option value="Bello">Bello</option>
                     <option value="boavita">Boavita</option>
                     <option value="cali">Cali</option>
