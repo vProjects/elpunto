@@ -1,3 +1,8 @@
+<?php
+print_r($GLOBALS);
+
+?>
+
 <?php 
 	include('../class/class.manageusers.php');
 	$manageUsers = new manageusers();

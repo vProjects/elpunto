@@ -58,6 +58,7 @@
    
 
 	 function loadFile(variable){
+		 
 		 var xmlhttp;
 			if (window.XMLHttpRequest)
 			  {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -114,4 +115,4 @@
 
 <body>
 
-<div class="container">
+<div class="container" id="wrap">

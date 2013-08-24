@@ -4,7 +4,7 @@
 	
 	//checks whether user is logged in or not
 	if(isset($_SESSION['code'])){
-		if($_SESSION['code'] == 'JW3QM4Pq990lHYH115It9kIczy2IWzy9'){
+		if($_SESSION['code'] == session_id()){
 			header('Location: admin.php');
 		}
 	}

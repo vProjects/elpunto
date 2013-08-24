@@ -15,12 +15,12 @@
 	*/
 	if(count($GLOBALS['_GET'])>=1){
 		$value = $GLOBALS['_GET']['value'];
-		echo $value;
+		
 	
 		switch($value){
 			
 			case 'seo':{
-				echo "<script> loadFile('view.seo.php') </script>";
+				echo "<script> loadFile('view.seo.php?abc=naman') </script>";
 				break;
 			}
 			case 'admin':{
@@ -32,7 +32,7 @@
 				break;
 			}
 			case 'services':{
-				echo "<script> loadFile('view.services.php') </script>";
+				echo "<script> loadFile('view.services.php?abc=anand') </script>";
 				break;
 			}
 			case 'password':{
@@ -47,7 +47,7 @@
 
 	include('v-includes/nav.php');
 ?>
-	<div class="container bodycontainer">
+	<div class="container bodycontainer" id="main">
 <?php
 	include('v-includes/accordion.php');
 ?>

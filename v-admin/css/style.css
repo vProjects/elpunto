@@ -5,6 +5,17 @@ body{
 	background-repeat:repeat;
 
 }
+/* sticky footer implementation */
+html, body {height: 100%;}
+#wrap{ min-height:100%}
+#main {overflow:auto;
+	padding-bottom: 30px;}  /* must be same height as the footer */
+#footer {position: relative;
+	margin-top: -30px; /* negative value of footer height */
+	height: 30px;
+	clear:both;} 
+
+/* sticky footer implementation ends here */
 .navbar-inverse .navbar-inner {
 	color: #ffffff;
 	text-decoration: none;
@@ -33,7 +44,7 @@ body{
 }
 .form_signin{
 	padding: 19px 29px 29px;
-	background-color: brown;
+	background-color: #FFF;
 	width: 360px;
 	margin: 0 auto;
 }
@@ -47,7 +58,7 @@ body{
 	margin-left: 113px;
 }
 .login_form{
-	color:white;
+	color:#000;
 }
 .login_form ul{
 	display:block;
@@ -136,7 +147,7 @@ a .accordion-inner{
 	cursor:pointer;
 	color:#000;
 	float:left;
-	padding: 7px 0px 7px;
+	padding: 0px 0px 0px;
 	-webkit-border-radius: 0 0 0px 0px;
      -moz-border-radius: 0 0 0px 0px;
           border-radius: 0 0 0px 0px;

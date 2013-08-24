@@ -14,7 +14,7 @@
 
 	if($rowcount==1){
 		session_start();
-		$_SESSION['code'] = 'JW3QM4Pq990lHYH115It9kIczy2IWzy9';
+		$_SESSION['code'] = session_id();
 		$_SESSION['adminemail'] = $email;
 		header('Location: ../../admin.php');
 		
