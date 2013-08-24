@@ -381,10 +381,7 @@ h1,h2,h3,h4{
 	font-family:Verdana, Geneva, sans-serif;
 }
 .captcha_img{
-	background-color: #000066;
     float: left;
-    height: 54px;
-    width: 135px;
 }
 .form_element_1{
 	float: right;
