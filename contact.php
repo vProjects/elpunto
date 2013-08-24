@@ -1,4 +1,5 @@
 <?php
+	include('v-includes/captcha/captchaVerify.php');
 	$page_title = "CONTACT US";
 	include 'v-template/header.php';
 ?>
@@ -31,7 +32,7 @@
             </div><!--#page_content ends here-->
             
             <!--contact form starts here-->
-            <form class="contact_form">
+            <form class="contact_form" action="v-includes/captcha/captchaVerify.php" method="post">
                 <div class="form_element">
                     <div class="form_text">Nombre / Apellido:</div>
                     <input id="" type="text" value="" name="" class="textbx_1">
@@ -58,8 +59,10 @@
                 </div>
                 <div class="form_element">
                     <div class="form_text">Cual es el resultado? </div><br/>
-                    <div class="captcha_img"></div><br/>
-                    <input id="" type="text" value="" name="" class="textbx_1">
+                    <div class="captcha_img">
+        <img src="v-includes/captcha/image.php" alt="Click to reload image" title="Click to reload image" id="captcha" onclick="javascript:reloadCaptcha()" />
+                    </div><br/>
+                    <input id="" type="text"  name="secure" value="what's the result?" onclick="this.value=''" class="textbx_1">
                 </div>
                 <input type="submit" value="Enviar" class="btn_1"/>
             </form><!--contact form ends here-->

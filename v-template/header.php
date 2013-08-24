@@ -54,6 +54,11 @@ $("#foo2").carouFredSel({
 function changeImage(value){
 	document.getElementById('change_image').src = value ;
 }
+function reloadCaptcha()
+{
+	document.getElementById('captcha').src = document.getElementById('captcha').src+ '?' +new Date();
+}
+
 	
 </script>
 <!--JS code for search of ads-->
