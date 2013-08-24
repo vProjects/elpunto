@@ -47,13 +47,10 @@
             <!--horizontal menu starts here-->
             <div id="hori_nav_container">
             	<div id="hori_nav" style="top:-200px;">
-                	<!--horiz search container-->
-                    <div class="hori_search_container">
-                    	<form action="#" method="get" name="serach_ads" id="serach_ads">
-                        	<input type="text" class="search_txtbx" placeholder="Search..." name="search_value"/>
-                            <input type="button" class="search_button" onclick="serach_ads_f()"/>
-                        </form>
-                    </div>
+                	<?php
+						//get the vertical search from the template folder 
+						include 'v-template/vertical_search.php' 
+					?>
 					<?php
                         //get the vertical navbar 
                         $getData_UI->get_navbar_vertical(); 
