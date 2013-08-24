@@ -48,24 +48,10 @@
                         </form>
                     </div>
                     <!--nav_elements-->
-                    <ul>
-                    	<li><a href="#">Adecuación Punto de Venta</a></li>
-                        <li><a href="#">Avisos y Señalización</a></li>
-                        <li><a href="#">Banco de imágenes</a></li>
-                        <li><a href="#">Branding</a></li>
-                        <li><a href="#">Decoración Espacios</a></li>
-                        <li><a href="#">E-marketing</a></li>
-                        <li><a href="#">Estanterías y Góndolas</a></li>
-                        <li><a href="#">Exhibición Portátil</a></li>
-                        <li><a href="#">Impresión Gran Formato</a></li>
-                        <li><a href="#">Logística de Eventos</a></li>
-                        <li><a href="#">Merchandising - POP</a></li>
-                        <li><a href="#">Muebles y Panelería</a></li>
-                        <li><a href="#">Otros servicios</a></li>
-                        <li><a href="#">Software / hardware</a></li>
-                        <li><a href="#">Vitrinas Interactivas</a></li>
-                        <li><a href="#">new section</a></li>
-                    </ul>
+                    <?php
+                        //get the vertical navbar 
+                        $getData_UI->get_navbar_vertical(); 
+                    ?> 
                 </div>
             </div><!--hori meu ends here-->
             

@@ -135,6 +135,8 @@
 		function get_navbar_vertical()
 		{
 			$horizontalMenus = $this->manage_content->getMenu_sorted('horizontal_navbar','*','level',"0");
+			echo '<!--nav_elements-->
+                    <ul>';
 			foreach($horizontalMenus as $horizontalMenu)
 			{
 				echo '<li><a href="'.$horizontalMenu['menu_link'].'">'.$horizontalMenu['menu_name'].'</a>';
@@ -153,6 +155,7 @@
 				}
 				echo '</li>';
 			}
+			echo '</ul>';
 		}
 	}
 
