@@ -1,4 +1,5 @@
 <?php
+	$metaName = 'terms';
 	$page_title = "TERMS OF USE";
 	include 'v-template/header.php';
 ?>

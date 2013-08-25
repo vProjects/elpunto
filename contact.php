@@ -1,5 +1,6 @@
 <?php
 	include('v-includes/captcha/captchaVerify.php');
+	$metaName = 'contact';
 	$page_title = "CONTACT US";
 	include 'v-template/header.php';
 ?>

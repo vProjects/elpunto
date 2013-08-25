@@ -1,5 +1,6 @@
 <?php
 	$page_title = "ARTICLE OF INTEREST";
+	$metaName = 'articlelist';
 	include 'v-template/header.php';
 	
 ?>

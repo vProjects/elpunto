@@ -1,5 +1,6 @@
 <?php
 	$page_title = "ARTICLE OF INTEREST";
+	$metaName = 'articlebyauth';
 	include 'v-template/header.php';
 	
 	$author = $_GET['author'];

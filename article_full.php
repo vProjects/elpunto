@@ -1,5 +1,6 @@
 <?php
 	$page_title = "ARTICLE OF INTEREST";
+	$metaName = 'fullarticle';
 	$article_no = $_GET['article_no'];
 	include 'v-template/header.php';
 ?>

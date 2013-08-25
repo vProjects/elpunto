@@ -1,6 +1,6 @@
 <?php
+	$metaName = 'inicio';
 	$page_title = "HOME";
-	
 	//keyword for the adds
 	$search_keyword = 'home';
 	

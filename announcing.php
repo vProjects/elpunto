@@ -1,6 +1,7 @@
 <?php
 	include('v-includes/captcha/captchaVerify.php');
 	$page_title = "ARTICLE OF INTEREST";
+	$metaName = 'announce';
 	include 'v-template/header.php';
 ?>
     

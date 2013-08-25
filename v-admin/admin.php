@@ -57,9 +57,9 @@
 	   		echo '';
 		else
    echo '<div id="introduction">
-   		<h1> Welcome to WC Group </h1>
+   		<h1> Welcome to Elpunto Da Venta </h1>
         <h2> A site developed by vyrazu labs</h2>
-        <button type="button" class="btn btn-primary intro_button" onClick="loadFile(\'view/view.dashboard.php\')">Enter to edit your site</button> 
+        <button type="button" class="btn btn-primary intro_button" onClick="loadFile(\'view.dashboard.php\')">Enter to edit your site</button> 
     </div> '; ?>
     
    </div>

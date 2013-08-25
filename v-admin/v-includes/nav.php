@@ -2,10 +2,10 @@
 ?>
 <div class="navbar navbar-inverse">
       <div class="navbar-inner">
-        <a class="brand" href="#">WC Group</a>
+        <a class="brand" href="#">Elpunto Da Venta</a>
         <ul class="nav">
           <li class="active"><a href="#">Home</a></li>
-          <li><a href="../">Go to Site</a></li>
+          <li><a href="../" target="_blank" >Go to Site</a></li>
           <li><a href="#">Terms</a></li>
           <?php if(isset($_SESSION['code'])){ ?>
 

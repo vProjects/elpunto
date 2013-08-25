@@ -157,6 +157,18 @@
 			}
 			echo '</ul>';
 		}
+		
+		
+		/**
+		* function used to return the meta tags for every reqested page. argument provided is the page name
+		* @returns the meta tags (keyword and description)
+		*/
+		function getMetaTags($pageName){
+			$metaTags = $this->manage_content->getValue_where('meta_tags','*','page',$pageName);
+			echo '<meta name="description" content="'.$metaTags[0]['keyword'].'" />
+<meta name="description" content="'.$metaTags[0]['description'].'" />';
+		}
+		
 	}
 
 ?>

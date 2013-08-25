@@ -8,6 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<?php $getData_UI->getMetaTags($metaName); // this code fetches the meta tags for every page?>   
 <title><?php echo $page_title;?></title>
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <!-- Attach slider CSS -->

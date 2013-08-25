@@ -1,5 +1,6 @@
 <?php
 	$page_title = "ABOUT";
+	$metaName = 'about';
 	include 'v-template/header.php';
 ?>
     

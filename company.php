@@ -1,5 +1,6 @@
 <?php
 	include('v-includes/captcha/captchaVerify.php');
+	$metaName = 'company';
 	$page_title = "El Punto de Venta";
 	include 'v-template/header.php';
 	
