@@ -36,6 +36,12 @@
                     <div class="accordion-inner" onclick="loadFile('view.fileuploader.php')">
                       File Uploader
                     </div> 
+                    <div class="accordion-inner" onclick="loadFile('view.changeMenu_vertical.php')">
+                      Manage Horizontal Menu
+                    </div> 
+                    <div class="accordion-inner" onclick="loadFile('view.changeMenu_vertical.php')">
+                      Manage Vertical Menu
+                    </div>
                   </div>
                 </div>
                 <div class="accordion-group">

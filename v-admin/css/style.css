@@ -239,6 +239,10 @@ blockquote {
 	margin: 35px 20px;
 	height: 400px;
 }
+.container_navbar_manage{
+	margin: 35px 20px;
+	height: 80px;
+}
 .label1{
 	height: 30px;
 	width: 130px;
