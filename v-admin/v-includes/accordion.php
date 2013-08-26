@@ -11,8 +11,8 @@
                     <div class="accordion-inner" onClick="loadFile('view.seo.php?abc=vasu')">SEO Management</div>
                      <div class="accordion-inner" onClick="loadFile('view.analytics.php')">
                       Analytics
-                    </div> <div class="accordion-inner" onclick="loadFile('view.client_edit_form.php')">
-                      Edit Form
+                    </div> <div class="accordion-inner" onclick="loadFile('view.postArticle.php')">
+                      Post An Article
                     </div> <div class="accordion-inner" onClick="loadFile('view.changepassword.php')">
                       Change Your Password
                     </div> <div class="accordion-inner" onclick="loadFile('view.client_form.php')" >

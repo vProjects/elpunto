@@ -235,6 +235,13 @@ blockquote {
 	height:500px;
 	margin-bottom:25px;
 }
+#post_article{
+	background-color:#FFF;
+	max-width:800px;
+	width:100%;
+	height:600px;
+	margin-bottom:25px;
+}
 .element1{
 	margin: 35px 20px;
 	height: 400px;
