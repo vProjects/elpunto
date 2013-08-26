@@ -134,21 +134,21 @@
 		
 		function get_navbar_vertical()
 		{
-			$horizontalMenus = $this->manage_content->getMenu_sorted('horizontal_navbar','*','level',"0");
+			$verticalMenus = $this->manage_content->getMenu_sorted('vertical_navbar','*','level',"0");
 			echo '<!--nav_elements-->
                     <ul>';
-			foreach($horizontalMenus as $horizontalMenu)
+			foreach($verticalMenus as $verticalMenu)
 			{
-				echo '<li><a href="'.$horizontalMenu['menu_link'].'">'.$horizontalMenu['menu_name'].'</a>';
-				$horizontal_subMenus = $this->manage_content->getMenu_sorted('horizontal_navbar','*','level',"1");
-				if(isset($horizontal_subMenus) && $horizontal_subMenus != "")
+				echo '<li><a href="'.$verticalMenu['menu_link'].'">'.$verticalMenu['menu_name'].'</a>';
+				$vertical_subMenus = $this->manage_content->getMenu_sorted('vertical_navbar','*','level',"1");
+				if(isset($vertical_subMenus) && $vertical_subMenus != "")
 				{
 					echo '<ul>';
-					foreach($horizontal_subMenus as $horizontal_subMenu)
+					foreach($vertical_subMenus as $vertical_subMenu)
 					{
-						if($horizontalMenu['id'] == $horizontal_subMenu['parent_id'])
+						if($verticalMenu['id'] == $vertical_subMenu['parent_id'])
 						{
-							echo '<li><a href="'.$horizontal_subMenu['menu_link'].'">'.$horizontal_subMenu['menu_name'].'</a></li>';
+							echo '<li><a href="'.$vertical_subMenu['menu_link'].'">'.$vertical_subMenu['menu_name'].'</a></li>';
 						}
 					}
 					echo '</ul>';

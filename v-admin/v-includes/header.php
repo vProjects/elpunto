@@ -107,11 +107,34 @@
 //		}
 //		
 //		myFunction(1, 2, "three",4,"five");
-
-	 
 	 
 </script>
 
+<script type="text/javascript">
+<!-- this function works with ajax call -->
+function get_result(result_select_id,select_id){
+	//alert(menu);
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	  {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  xmlhttp=new XMLHttpRequest();
+	  }
+	else
+	  {// code for IE6, IE5
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  }
+	xmlhttp.onreadystatechange=function()
+	  {
+	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+		document.getElementById(result_select_id).innerHTML=xmlhttp.responseText;
+		}
+	  }
+	var submenu = document.getElementById(select_id).value;
+	xmlhttp.open("GET","../v-includes/function.showsubmenu.php?submenu="+submenu,true);
+	xmlhttp.send(null);
+}
+</script>
 
 </head>
 

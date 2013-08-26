@@ -131,5 +131,42 @@ class manageusers{
 			return $searchResult = $query->fetchALL(PDO::FETCH_ASSOC);
 	}	
 /* ------------------------------------ CODES ADDED BY VASU NAMAN ENDS HERE---------------------------------------------------------- */		
+/*-----Author Anand-----*/
+	function insertValue_menu($table_name,$menu_name,$menu_link,$parent_id,$position,$level)
+	{		
+		$query = $this->link->prepare("INSERT INTO `vertical_navbar`(`menu_name`, `menu_link`, `parent_id`, `position`, `level`) VALUES (?,?,?,?,?)");
+		$values = array($menu_name,$menu_link,$parent_id,$position,$level);
+		$query->execute($values);
+		$rowcount = $query->rowCount();
+		return $rowcount;
+	}
+	//get vertical nav sorted by parent_id and position order asc
+	function getMenu_sorted($table_name,$value,$order,$value_parent)
+	{
+		$query = $this->link->query("SELECT $value from $table_name HAVING $order = $value_parent ORDER BY $order,`parent_id`,`position` ASC");
+		$query->execute();
+		$rowcount = $query->rowCount();
+		if($rowcount > 0){
+			$result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $result;
+		}
+		else{
+			return $rowcount;
+		}
+	}
+	//get vertical nav sorted by parent_id and position order desc
+	function getMenu_sorted_DESC($table_name,$value,$order,$value_parent)
+	{
+		$query = $this->link->query("SELECT $value from $table_name HAVING $order = $value_parent ORDER BY $order,`parent_id`,`position` DESC");
+		$query->execute();
+		$rowcount = $query->rowCount();
+		if($rowcount > 0){
+			$result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $result;
+		}
+		else{
+			return $rowcount;
+		}
+	}
 }
 ?>
