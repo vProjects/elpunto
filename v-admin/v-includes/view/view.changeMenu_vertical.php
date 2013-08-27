@@ -106,14 +106,16 @@
             <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Update</button> 
         </form>
 		</div> 
+        
+        <!--delete vertical menu form-->
         <blockquote>
       		<p>Delete Vertical Menu of your site</p>
           	<small>It will help <cite title="Source Title">you category changes</cite></small>
         </blockquote>
         <div class="container_navbar_manage">
-        <form class="meta_tag" action="v-includes/functions/function.changepassword.php" method="post">
+        <form class="meta_tag" action="v-includes/functions/function.delete_verticalmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
-            <select class="input1" name="page" style="width:587px;">
+            <select class="input1" name="menu_id" style="width:587px;">
             <?php
 				//get the select element value of menu dynamically
 				foreach($menus as $menu)
@@ -123,9 +125,10 @@
 			?>
             </select>
             <?php if(isset($result)) echo $result ?>
-            <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Update</button> 
+            <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Delete</button> 
         </form>
-        </div>
+        </div><!--delete vertical menu form ends here-->
+        
         <blockquote>
       		<p>Delete Vertical Sub Menu of your site</p>
           	<small>It will help <cite title="Source Title">you category changes</cite></small>

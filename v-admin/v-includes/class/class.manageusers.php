@@ -199,5 +199,13 @@ class manageusers{
 			return $rowcount;
 		}
 	}
+	function deleteValue($table_name,$column_name,$column_value)
+	{
+		$queryString = "DELETE FROM $table_name WHERE $column_name =$column_value";
+		$query = $this->link->prepare($queryString);
+		$query->execute();
+		$count = $query->rowCount();
+		return $count;
+	}
 }
 ?>
