@@ -23,15 +23,15 @@
         </form>
 		</div><!--form for inserting menu ends here-->
         
-        
+        <!--update menu details start here-->
         <blockquote>
           <p>Update Vertical Menu of your site</p>
           <small>It will help <cite title="Source Title">you category changes</cite></small>
         </blockquote>
         <div class="container_navbar_manage" style="height: 130px;">
-        <form class="meta_tag" action="v-includes/functions/function.changepassword.php" method="post">
+        <form class="meta_tag" action="v-includes/functions/function.upadate_menu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
-            <select class="input1" name="page" style="width:587px;">
+            <select class="input1" name="menu_id" style="width:587px;">
              	<?php
 					//get the select element value of menu dynamically
 					foreach($menus as $menu)
@@ -40,9 +40,9 @@
 					}
 				?>
             </select>
-        	<label class="label1" style="margin-right:0px;">Menu Name:</label><input type="text" class="input1" name="oldPassword" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;">
-            <label class="label1" style="margin-right:0px;">Menu Link:</label><input type="text" class="input1" name="oldPassword1" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;">
-            <label class="label1" style="margin-right:0px;">Menu Position:</label><input type="text" class="input1" name="oldPassword1" placeholder="Enter Menu Position" style="width: 200px; margin-right:30px;">
+        	<label class="label1" style="margin-right:0px;">Menu Name:</label><input type="text" class="input1" name="menu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;">
+            <label class="label1" style="margin-right:0px;">Menu Link:</label><input type="text" class="input1" name="menu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;">
+            <label class="label1" style="margin-right:0px;">Menu Position:</label><input type="text" class="input1" name="menu_position" placeholder="Enter Menu Position" style="width: 200px; margin-right:30px;">
             
             <?php if(isset($result)) echo $result ?>
             <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Update</button> 
