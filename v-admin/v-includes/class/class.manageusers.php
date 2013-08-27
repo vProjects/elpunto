@@ -114,6 +114,18 @@ class manageusers{
 			$query = $this->link->prepare("update `otherpage` SET `content` = '$content' where id = 4");
 		$query->execute();
 	}
+	
+	/*
+	* Function use to update the content of different pages
+	* @returns whether updated or not
+	*/
+	function insertArticle($aHeading, $aAuthor, $aBrief, $aDesc){
+		$query = $this->link->prepare("INSERT INTO `article_info`(`article_title`, `article_author`, `article_brief`, `article_description`) VALUES (?,?,?,?)");
+		$values = array($aHeading,$aAuthor,$aBrief,$aDesc);
+		
+		$query->execute($values);
+	}
+	
 
 	/*
 	* Function use to search the users
@@ -124,7 +136,8 @@ class manageusers{
 			$query = $this->link->prepare("select * from $tableName where $searchElement LIKE '%$searchValue%'");
 			$query->execute();
 			return $searchResult = $query->fetchALL(PDO::FETCH_ASSOC);
-	}	
+	}
+		
 /* ------------------------------------ CODES ADDED BY VASU NAMAN ENDS HERE---------------------------------------------------------- */		
 /*-----Author Anand-----*/
 	function insertValue_menu($table_name,$menu_name,$menu_link,$parent_id,$position,$level)

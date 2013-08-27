@@ -94,7 +94,7 @@
 						CKEDITOR.replace( 'editor4' );   // this is used to load cke-edtior on any page
 						CKEDITOR.replace( 'editor5' );   // this is used to load cke-edtior on any page
 					}
-					if(variable == 'view.postArticle.php')
+					if(variable == 'view.postArticle.php' || variable == 'view.postArticle.php?status=fail' || variable == 'view.postArticle.php?status=pass' )
 						CKEDITOR.replace( 'editor2' );   // this is used to load cke-edtior on any page
 				}
 			  }

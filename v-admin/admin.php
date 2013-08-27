@@ -43,6 +43,14 @@
 				echo "<script> loadFile('view.otherpages.php') </script>";
 				break;
 			}
+			case 'afail':{
+				echo "<script> loadFile('view.postArticle.php?status=fail') </script>";
+				break;
+			}
+			case 'apass':{
+				echo "<script> loadFile('view.postArticle.php?status=pass') </script>";
+				break;
+			}
 
 		}
 	}
