@@ -71,7 +71,6 @@ class manageusers{
 
 	function manageHomePageContent($value,$firstValue,$secondValue,$thirdValue,$fourthValue){
 		if($value == 'believe'){
-			echo 'I am inside believe';
 			$query = $this->link->prepare("UPDATE `homepage` SET `firstvalue`='$firstValue',`secondvalue`='$secondValue',`thirdvalue`='$thirdValue',`fourthvalue`='$fourthValue' WHERE id=1");
 		}
 		
@@ -92,10 +91,8 @@ class manageusers{
 	* @returns home page content
 	*/
 		function pageContent($page){
-			if($page == 'index')
-				$query = $this->link->prepare("select * from homepage");
-			else if($page == 'services')
-				$query = $this->link->prepare("select * from services");
+			if($page == 'otherpage')
+				$query = $this->link->prepare("select * from otherpage");
 				
 			$query->execute();
 			$pageContent = $query->fetchALL(PDO::FETCH_ASSOC);
@@ -103,20 +100,18 @@ class manageusers{
 		}
 
 	/*
-	* Function use to update the content of the services pages
+	* Function use to update the content of different pages
 	* @returns whether updated or not
 	*/
-	function addServices($value,$content){
-		if($value=='topcontent')
-			$query = $this->link->prepare("update `services` SET `content` = '$content' where id = 1");
-		else if($value == 'leftcontent')
-			$query = $this->link->prepare("update `services` SET `content` = '$content' where id = 2");
-		else if($value == 'rightcontent')
-			$query = $this->link->prepare("update `services` SET `content` = '$content' where id = 3");
-		else if($value == 'login')
-			$query = $this->link->prepare("update `services` SET `content` = '$content' where id = 4");
-		else if($value == 'about')
-			$query = $this->link->prepare("update `services` SET `content` = '$content' where id = 5");
+	function updateOtherPage($page,$content){
+		if($page=='aboutus')
+			$query = $this->link->prepare("update `otherpage` SET `content` = '$content' where id = 1");
+		else if($page == 'announcing')
+			$query = $this->link->prepare("update `otherpage` SET `content` = '$content' where id = 2");
+		else if($page == 'terms')
+			$query = $this->link->prepare("update `otherpage` SET `content` = '$content' where id = 3");
+		else if($page == 'contact')
+			$query = $this->link->prepare("update `otherpage` SET `content` = '$content' where id = 4");
 		$query->execute();
 	}
 

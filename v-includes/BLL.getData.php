@@ -169,6 +169,15 @@
 <meta name="description" content="'.$metaTags[0]['description'].'" />';
 		}
 		
+		/**
+		* function used to return the page content
+		* @returns the contents of any page (text appears on the page)
+		*/
+		
+		function getPageContent($pageName){
+			$pageContent = $this->manage_content->getValue_where('otherpage','*','page',$pageName);
+			echo $pageContent[0]['content'];
+		}
 	}
 
 ?>

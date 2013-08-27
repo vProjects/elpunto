@@ -87,7 +87,7 @@
 					if(variable == 'view.homepage.php'){
 						CKEDITOR.replace( 'editor1' );   // this is used to load cke-edtior on any page
 					}
-					if(variable == 'view.services.php'){
+					if(variable == 'view.otherpages.php'){
 						CKEDITOR.replace( 'editor1' );   // this is used to load cke-edtior on any page
 						CKEDITOR.replace( 'editor2' );   // this is used to load cke-edtior on any page
 						CKEDITOR.replace( 'editor3' );   // this is used to load cke-edtior on any page

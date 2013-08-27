@@ -39,7 +39,10 @@
 				echo "<script> loadFile('view.changepassword.php') </script>";
 				break;
 			}
-
+			case 'otherpage':{
+				echo "<script> loadFile('view.otherpages.php') </script>";
+				break;
+			}
 
 		}
 	}

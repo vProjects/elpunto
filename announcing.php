@@ -29,7 +29,8 @@
             
            <!--page_content for text of every page-->
             <div class="page_content">
-            	 Es muy sencillo.<br/><br/><br/>Diligencie el siguiente formulario y una vez su anuncio esté publicado le enviaremos la factura.<br/><br/><br/>Si despues de publicado el aviso cambia de opinión, no hay ningun problema, lo retiramos y usted no habra incurrido en ningún gasto ni habra adquirido ningún compromiso<br/><br/><br/>Es MUY económico.  Adquiéralo ahora  e incremente sus ventas !!<br/><br/>
+				<?php $getData_UI->getPageContent('announcing') ?>
+            	 <!--Es muy sencillo.<br/><br/><br/>Diligencie el siguiente formulario y una vez su anuncio esté publicado le enviaremos la factura.<br/><br/><br/>Si despues de publicado el aviso cambia de opinión, no hay ningun problema, lo retiramos y usted no habra incurrido en ningún gasto ni habra adquirido ningún compromiso<br/><br/><br/>Es MUY económico.  Adquiéralo ahora  e incremente sus ventas !!<br/><br/>
                  <div class="policy_container_1">
                      <ul>
                         <li>6 meses :$ 250.000 + IVA</li>
@@ -56,7 +57,7 @@
                     </ul>
             	</div>
                 
-                <div class="content_form">Como pagar?  Tambien Muy fácil: Con Tarjeta Crédito  / Débito / Consignación</div>
+                <div class="content_form">Como pagar?  Tambien Muy fácil: Con Tarjeta Crédito  / Débito / Consignación</div>-->
             
                 <!--contact form starts here-->
                 <form class="contact_form" action="v-includes/captcha/captchaVerify.php" method="post">

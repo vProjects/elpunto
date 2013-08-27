@@ -29,7 +29,7 @@
             
              <!--page_content for text of every page-->
             <div class="page_content">
-            	 En El Punto de Venta somos como usted:<strong>Cero tolerantes con el spam</strong>, por ello, nunca recibira un correo publicitario nuestro y no suministraremos sus datos a ninguna empresa 
+				<?php $getData_UI->getPageContent('contact') ?>
             </div><!--#page_content ends here-->
             
             <!--contact form starts here-->

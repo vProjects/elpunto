@@ -30,7 +30,7 @@
                     <div class="accordion-inner" onclick="loadFile('view.homepage.php')" >
                       Home Page
                     </div>
-                     <div class="accordion-inner" onclick="loadFile('view.services.php')" >
+                     <div class="accordion-inner" onclick="loadFile('view.otherpages.php')" >
                       Other Pages
                     </div> 
                     <div class="accordion-inner" onclick="loadFile('view.fileuploader.php')">
