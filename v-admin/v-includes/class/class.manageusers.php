@@ -163,5 +163,28 @@ class manageusers{
 			return $rowcount;
 		}
 	}
+	
+	//function for update of values
+	function updateValue($table_name,$column_name,$column_value,$id)
+	{
+		$query = $this->link->prepare("UPDATE `$table_name` SET `$column_name` = '$column_value' WHERE `id` = $id");
+		$query->execute();
+		$count = $query->rowCount();
+		return $count;
+	}
+	//function get value with where
+	function getValue_where($table_name,$value,$row_value,$value_entered)
+	{
+		$query = $this->link->query("SELECT $value from $table_name where $row_value='$value_entered'");
+		$query->execute();
+		$rowcount = $query->rowCount();
+		if($rowcount > 0){
+			$result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $result;
+		}
+		else{
+			return $rowcount;
+		}
+	}
 }
 ?>
