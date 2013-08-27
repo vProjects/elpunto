@@ -23,26 +23,36 @@
 		$result = $manageData->updateValue($table_name,'menu_link',$menu_link,$menu_id);
 		echo $result.'menu link';
 	}
+	
 	//update menu position
 	if(isset($menu_position) && $menu_position != "" && isset($menu_id) && $menu_id != "")
 	{
+		//get id of the selected position
+		$id_selected_pos = $manageData->getValue_where($table_name,'id','position',$menu_position);
+		
 		//get current menu position
 		$menu_position_present = $manageData->getValue_where($table_name,'position','id',$menu_id);
 		//current menu position =  $menu_position_present[0]['position']
+		//id of selected position = $id_selected_pos[0]['id'];
+		
+		//get all the navbar table elements
 		$navbar_menus = $manageData->getMenu_sorted($table_name,'*','level',0);
 		
 		//when entered position is less than current position
 		if($menu_position_present[0]['position'] > $menu_position)
-		{	
-			echo 'less';
+		{
 			foreach($navbar_menus as $navbar_menu)
 			{
-				//get the position is less than or equal to current position and greater than postion entered
-				if($navbar_menu['position'] <= $menu_position_present[0]['position'] && $navbar_menu['position'] > $menu_position)
+				//get the position is less than current position and greater than or equal to postion entered
+				if($navbar_menu['position'] < $menu_position_present[0]['position'] && $navbar_menu['position'] >= $menu_position)
 				{
-					echo $navbar_menu['position'].'<br/>';
+					$update_pos_all = $manageData->updateValue($table_name,'position',($navbar_menu['position']+1),$navbar_menu['id']);
+					//echo $navbar_menu['position'].'<br/>';
 				}
 			}
+			//update the menu position of the selected menu to move the selected menu to desired place
+			$update_pos = $manageData->updateValue($table_name,'position',$menu_position,$menu_id);
+			echo $update_pos.'-->updated pos'.'<br />';
 		}
 		//when entered position is greater than current position
 		if($menu_position_present[0]['position'] < $menu_position)
@@ -50,16 +60,20 @@
 			echo 'greater';
 			foreach($navbar_menus as $navbar_menu)
 			{
-				//get the value greater than current position and less than or equal to postion entered
+				//get the position is less than current position and greater than or equal to postion entered
 				if($navbar_menu['position'] > $menu_position_present[0]['position'] && $navbar_menu['position'] <= $menu_position)
 				{
-					echo $navbar_menu['position'].'<br/>';
+					$update_pos_all = $manageData->updateValue($table_name,'position',($navbar_menu['position']-1),$navbar_menu['id']);
+					//echo $navbar_menu['position'].'<br/>';
 				}
 			}
+			//update the menu position of the selected menu to move the selected menu to desired place
+			$update_pos = $manageData->updateValue($table_name,'position',$menu_position,$menu_id);
+			echo $update_pos.'-->updated pos'.'<br />';
 		}
 		if($menu_position == $menu_position_present[0]['position'])
 		{
-			echo 'equal';
+			echo 'please enter a valid position';
 		}
 	}
 	
