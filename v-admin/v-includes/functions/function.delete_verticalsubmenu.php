@@ -15,3 +15,4 @@
 		$result = $manageData->deleteValue($table_name,'id',$submenu_id);
 		echo $result;
 	}
+?>
