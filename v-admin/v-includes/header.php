@@ -103,7 +103,7 @@
 
 	 }
 	 
-	 function showSubmenu(value){
+	 function showSubmenu(value,output_div){
 		 alert(value);
 		 var xmlhttp;
 			if (window.XMLHttpRequest)
@@ -118,10 +118,11 @@
 			  {
 			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 				{
-					document.getElementById("pqr").innerHTML=xmlhttp.responseText;
+					document.getElementById(output_div).innerHTML=xmlhttp.responseText;
+					
 				}
 			  }
-			xmlhttp.open("GET","v-includes/view/view.changeMenu_vertical.php?submenu="+value,true);
+			xmlhttp.open("GET","v-includes/functions/function.showsubmenu.php?submenu="+value,true);
 			xmlhttp.send();
 		 
 		 

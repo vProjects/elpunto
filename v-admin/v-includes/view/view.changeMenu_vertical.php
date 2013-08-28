@@ -5,14 +5,8 @@
 	$manage_UI = new manageusers();
 	
 	$menus = $manage_UI->getMenu_sorted('vertical_navbar','*','level',0);
-	if(count($GLOBALS['_GET'])!=0){
-		if(isset($_GET['submenu']) && $_GET['submenu'] != '')
-		{
-			$menu_id = $_GET['submenu'];
-		}
-		$submenus = $manage_UI->getMenu_sorted('vertical_navbar','*','parent_id',$menu_id);
-	}
 ?>
+             
 
 <div id="dashboard">
 	<div id="mailbox" style="height:1300px">
@@ -88,7 +82,7 @@
         <div class="container_navbar_manage" style="height:150px;">
         <form class="meta_tag" action="v-includes/functions/function.upadate_submenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
-            <select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value)">
+            <select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenu')">
             <?php
 				//get the select element value of menu dynamically
 				foreach($menus as $menu)
@@ -98,7 +92,7 @@
 			?>
             </select>
            	<label class="label1" style="margin-right:0px;">Select Sub Menu</label>
-             <div id="pqr"></div>
+            <div id="showsubmenu">
             	<select class="input1" name="submenu_id" style="width:587px;">
                   <option value="index">Select One</option>
                   <?php
@@ -109,7 +103,7 @@
 					}
 				  ?>
                 </select>
-              
+            </div>  
        	  <label class="label1" style="margin-right:0px;">Sub Menu Name:</label><input type="text" class="input1" name="submenu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;">
             <label class="label1" style="margin-right:0px;">Sub Menu Link:</label><input type="text" class="input1" name="submenu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;">
             <label class="label1" style="margin-right:0px;">Sub Menu Position:</label><input type="text" class="input1" name="submenu_position" placeholder="Enter Menu Position" style="width: 200px; margin-right:30px;">
@@ -148,7 +142,7 @@
         <div class="container_navbar_manage" >
         <form class="meta_tag" action="v-includes/functions/function.delete_verticalsubmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
-            	<select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value)">
+            	<select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenudown')">
                 	<option value="#">Select One</option>
                   <?php
 						//get the select element value of menu dynamically
@@ -159,6 +153,7 @@
 					?>
                 </select>
            	<label class="label1" style="margin-right:0px;">Select Sub Menu</label>
+            <div id="showsubmenudown">
             	<select class="input1" name="submenu_id" style="width:587px;">
                   <option value="#">Select One</option>
                   <?php
@@ -169,6 +164,7 @@
 					}
 				  ?>
                 </select>
+                </div>
             <?php if(isset($result)) echo $result ?>
             <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Update</button> 
         </form>
