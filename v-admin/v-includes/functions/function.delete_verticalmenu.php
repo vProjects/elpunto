@@ -11,12 +11,13 @@
 	
 	if(isset($menu_id) && $menu_id != "")
 	{
-		//get the value of ub menu with parent id = menu id
+		//get the value of sub menu with parent id = menu id
 		$submenus_parentid = $manageData->getMenu_sorted($table_name,'*','parent_id',$menu_id);
 		print_r($submenus_parentid);
 		//delete menu where id = menu_id
 		$delete_status = $manageData->deleteValue($table_name,'id',$menu_id);
 		//echo $delete_status.'menu<br />';
+		//codes for deletion the sub menus of the menu
 		if(isset($submenus_parentid) && $submenus_parentid != "")
 		{
 			foreach($submenus_parentid as $submenu_parentid)
