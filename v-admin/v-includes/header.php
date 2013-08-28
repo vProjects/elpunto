@@ -121,7 +121,7 @@
 					document.getElementById("pqr").innerHTML=xmlhttp.responseText;
 				}
 			  }
-			xmlhttp.open("GET","v-includes/view/view.showsubmenu.php?submenu="+value,true);
+			xmlhttp.open("GET","v-includes/view/view.changeMenu_vertical.php?submenu="+value,true);
 			xmlhttp.send();
 		 
 		 

@@ -199,6 +199,19 @@ class manageusers{
 			return $rowcount;
 		}
 	}
+	function getValue_where_menu($table_name,$value,$row_value,$value_entered,$parent_id)
+	{
+		$query = $this->link->query("SELECT $value from $table_name where $row_value='$value_entered' AND `parent_id` = '$parent_id'");
+		$query->execute();
+		$rowcount = $query->rowCount();
+		if($rowcount > 0){
+			$result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $result;
+		}
+		else{
+			return $rowcount;
+		}
+	}
 	function deleteValue($table_name,$column_name,$column_value)
 	{
 		$queryString = "DELETE FROM $table_name WHERE $column_name =$column_value";

@@ -28,7 +28,7 @@
 	if(isset($menu_position) && $menu_position != "" && isset($menu_id) && $menu_id != "")
 	{
 		//get id of the selected position
-		$id_selected_pos = $manageData->getValue_where($table_name,'id','position',$menu_position);
+		$id_selected_pos = $manageData->getValue_where_menu($table_name,'id','position',$menu_position,0);
 		
 		//get current menu position
 		$menu_position_present = $manageData->getValue_where($table_name,'position','id',$menu_id);
