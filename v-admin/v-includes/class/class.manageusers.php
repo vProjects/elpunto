@@ -177,6 +177,7 @@ class manageusers{
 		}
 	}
 	
+	
 	//function for update of values
 	function updateValue($table_name,$column_name,$column_value,$id)
 	{

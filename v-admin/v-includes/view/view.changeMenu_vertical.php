@@ -16,7 +16,7 @@
           <small>It will help <cite title="Source Title">you category changes</cite></small>
         </blockquote>
 		<div class="container_navbar_manage">
-        <form class="meta_tag" action="v-includes/functions/function.insert_verticalmenu.php" method="get">
+        <form class="meta_tag" action="v-includes/functions/function_verticalMenu/function.insert_verticalmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Menu Name:</label><input type="text" class="input1" name="menu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;">
             <label class="label1" style="margin-right:0px;">Menu Link:</label><input type="text" class="input1" name="menu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;">
             <?php if(isset($result)) echo $result ?>
@@ -30,7 +30,7 @@
           <small>It will help <cite title="Source Title">you category changes</cite></small>
         </blockquote>
         <div class="container_navbar_manage" style="height: 130px;">
-        <form class="meta_tag" action="v-includes/functions/function.upadate_menu.php" method="get">
+        <form class="meta_tag" action="v-includes/functions/function_verticalMenu/function.upadate_menu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             <select class="input1" name="menu_id" style="width:587px;">
              	<?php
@@ -56,7 +56,7 @@
           <small>It will help <cite title="Source Title">you category changes</cite></small>
         </blockquote>
 		<div class="container_navbar_manage">
-        <form class="meta_tag" action="v-includes/functions/function.insert_verticalsubmenu.php" method="get">
+        <form class="meta_tag" action="v-includes/functions/function_verticalMenu/function.insert_verticalsubmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             <select class="input1" name="menu_id" style="width:587px;">
                 <?php
@@ -80,7 +80,7 @@
           <small>It will help <cite title="Source Title">you category changes</cite></small>
         </blockquote>
         <div class="container_navbar_manage" style="height:150px;">
-        <form class="meta_tag" action="v-includes/functions/function.upadate_submenu.php" method="get">
+        <form class="meta_tag" action="v-includes/functions/function_verticalMenu/function.upadate_submenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             <select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenu')">
             <?php
@@ -119,7 +119,7 @@
           	<small>It will help <cite title="Source Title">you category changes</cite></small>
         </blockquote>
         <div class="container_navbar_manage">
-        <form class="meta_tag" action="v-includes/functions/function.delete_verticalmenu.php" method="get">
+        <form class="meta_tag" action="v-includes/functions/function_verticalMenu/function.delete_verticalmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             <select class="input1" name="menu_id" style="width:587px;">
             <?php
@@ -140,7 +140,7 @@
           	<small>It will help <cite title="Source Title">you category changes</cite></small>
         </blockquote>
         <div class="container_navbar_manage" >
-        <form class="meta_tag" action="v-includes/functions/function.delete_verticalsubmenu.php" method="get">
+        <form class="meta_tag" action="v-includes/functions/function_verticalMenu/function.delete_verticalsubmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             	<select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenudown')">
                 	<option value="#">Select One</option>
