@@ -6,6 +6,8 @@
 	
 	$company_name = $_GET['comp_name'];
 	$ad_details = $getData_UI->getAd_details($company_name);
+	
+	
 ?>
     <!--body main div-->
     <div id="body_main_div">
