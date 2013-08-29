@@ -103,8 +103,7 @@
 
 	 }
 	 
-	 function showSubmenu(value,output_div){
-		 alert(value);
+	 function showSubmenu(value,output_div,navbar){
 		 var xmlhttp;
 			if (window.XMLHttpRequest)
 			  {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -122,7 +121,7 @@
 					
 				}
 			  }
-			xmlhttp.open("GET","v-includes/functions/function.showsubmenu.php?submenu="+value,true);
+			xmlhttp.open("GET","v-includes/functions/function.showsubmenu.php?submenu="+value+"&type="+navbar,true);
 			xmlhttp.send();
 		 
 		 

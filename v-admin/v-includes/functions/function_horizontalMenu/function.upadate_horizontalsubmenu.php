@@ -2,8 +2,8 @@
 	include '../../class/class.manageusers.php';
 	//create an object manageUsers class
 	$manageData = new manageusers();
-	//table name for update is vertical navbar
-	$table_name = 'vertical_navbar';
+	//table name for update is horizontal navbar
+	$table_name = 'horizontal_navbar';
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
 		$menu_id = $_GET['menu_id'];

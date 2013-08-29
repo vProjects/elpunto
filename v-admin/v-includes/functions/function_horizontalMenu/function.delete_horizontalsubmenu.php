@@ -1,7 +1,7 @@
 <?php
 	include '../../class/class.manageusers.php';
 	$manageData = new manageusers();
-	$table_name = 'vertical_navbar';
+	$table_name = 'horizontal_navbar';
 	
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{

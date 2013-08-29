@@ -3,7 +3,7 @@
 	//create an object manageUsers class
 	$manageData = new manageusers();
 	//teble name for update is vertical navbar
-	$table_name = 'vertical_navbar';
+	$table_name = 'horizontal_navbar';
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
 		$menu_name = $_GET['menu_name'];

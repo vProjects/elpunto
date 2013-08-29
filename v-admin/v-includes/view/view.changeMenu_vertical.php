@@ -82,7 +82,7 @@
         <div class="container_navbar_manage" style="height:150px;">
         <form class="meta_tag" action="v-includes/functions/function_verticalMenu/function.upadate_submenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
-            <select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenu')">
+            <select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenu','vertical')">
             <?php
 				//get the select element value of menu dynamically
 				foreach($menus as $menu)
@@ -142,7 +142,7 @@
         <div class="container_navbar_manage" >
         <form class="meta_tag" action="v-includes/functions/function_verticalMenu/function.delete_verticalsubmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
-            	<select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenudown')">
+            	<select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenudown','vertical')">
                 	<option value="#">Select One</option>
                   <?php
 						//get the select element value of menu dynamically
@@ -166,7 +166,7 @@
                 </select>
                 </div>
             <?php if(isset($result)) echo $result ?>
-            <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Update</button> 
+            <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Delete</button> 
         </form>
         </div>
         

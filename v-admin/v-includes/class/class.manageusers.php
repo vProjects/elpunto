@@ -142,7 +142,7 @@ class manageusers{
 /*-----Author Anand-----*/
 	function insertValue_menu($table_name,$menu_name,$menu_link,$parent_id,$position,$level)
 	{		
-		$query = $this->link->prepare("INSERT INTO `vertical_navbar`(`menu_name`, `menu_link`, `parent_id`, `position`, `level`) VALUES (?,?,?,?,?)");
+		$query = $this->link->prepare("INSERT INTO `$table_name`(`menu_name`, `menu_link`, `parent_id`, `position`, `level`) VALUES (?,?,?,?,?)");
 		$values = array($menu_name,$menu_link,$parent_id,$position,$level);
 		$query->execute($values);
 		$rowcount = $query->rowCount();
