@@ -201,7 +201,7 @@ h1,h2,h3,h4{
     color: grey;
     display: block;
     font-size: 13px;
-    padding: 8px 15px;
+    padding: 8px 18px;
     text-decoration: none;
 }
 #hori_nav ul li a:hover{
@@ -569,7 +569,7 @@ h1,h2,h3,h4{
     border: 3px solid #dbdbdb;
     height: auto;
     position: absolute;
-    right: 12%;
+    right: 194px;
     top: 186px;
     width: 350px;
     z-index: 1001;

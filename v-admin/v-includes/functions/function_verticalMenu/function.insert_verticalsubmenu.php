@@ -2,7 +2,7 @@
 	include '../../class/class.Manageusers.php';
 	$manageData = new manageusers();
 	//table name for vertical sub menu
-	$table_name = 'vertical_nabvar';
+	$table_name = 'vertical_navbar';
 	
 	if($_SERVER["REQUEST_METHOD"] == "GET")
 	{
@@ -12,7 +12,7 @@
 	}
 	if(isset($submenu_name) && isset($submenu_link) && $submenu_name != "" && $submenu_link != "")
 	{
-		$position = $manageData->getMenu_sorted_DESC('vertical_navbar','*','parent_id',$menu_id);
+		$position = $manageData->getMenu_sorted_DESC($table_name,'*','parent_id',$menu_id);
 		print_r($position[0]['position']+1);
 		if($position != 0 || $position != "")
 		{
