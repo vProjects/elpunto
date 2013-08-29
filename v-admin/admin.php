@@ -51,6 +51,14 @@
 				echo "<script> loadFile('view.postArticle.php?status=pass') </script>";
 				break;
 			}
+			case 'horizontal_menu':{
+				echo "<script> loadFile('view.changeMenu_horizontal.php') </script>";
+				break;
+			}
+			case 'vertical_menu':{
+				echo "<script> loadFile('view.changeMenu_vertical.php') </script>";
+				break;
+			}
 
 		}
 	}

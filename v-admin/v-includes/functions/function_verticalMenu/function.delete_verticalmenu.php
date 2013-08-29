@@ -7,7 +7,6 @@
 	{
 		$menu_id = $_GET['menu_id'];
 	}
-	echo $menu_id;
 	
 	if(isset($menu_id) && $menu_id != "")
 	{
@@ -24,8 +23,8 @@
 			{
 				$delete_status = $manageData->deleteValue($table_name,'id',$submenu_parentid['id']);
 			}
-		}
-		
-		
+		}	
 	}
+	
+	header("Location:../../../admin.php?value=vertical_menu");
 ?>

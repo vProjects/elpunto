@@ -7,13 +7,11 @@
 	{
 		$menu_id = $_GET['menu_id'];
 	}
-	echo $menu_id;
 	
 	if(isset($menu_id) && $menu_id != "")
 	{
 		//get the value of sub menu with parent id = menu id
 		$submenus_parentid = $manageData->getMenu_sorted($table_name,'*','parent_id',$menu_id);
-		print_r($submenus_parentid);
 		//delete menu where id = menu_id
 		$delete_status = $manageData->deleteValue($table_name,'id',$menu_id);
 		//echo $delete_status.'menu<br />';
@@ -24,8 +22,8 @@
 			{
 				$delete_status = $manageData->deleteValue($table_name,'id',$submenu_parentid['id']);
 			}
-		}
-		
-		
+		}	
 	}
+	
+	header("Location:../../../admin.php?value=horizontal_menu");
 ?>

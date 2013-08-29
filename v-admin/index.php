@@ -1,5 +1,5 @@
 <?php 
-	$pageTitle = 'WC admin';
+	$pageTitle = 'Elpunto Devanta admin';
 	session_start();  //starts the session for this page
 	
 	//checks whether user is logged in or not

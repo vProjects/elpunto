@@ -14,7 +14,8 @@
 	{
 		$position = $manageData->getMenu_sorted_DESC('horizontal_navbar','*','level',"0");
 		$result = $manageData->insertValue_menu('horizontal_navbar',$menu_name,$menu_link,'0',$position[0]['position']+1,'0');
-		echo $result.'horizontal_navbar';
+		
 	}
+	header("Location:../../../admin.php?value=horizontal_menu");
 
 ?>

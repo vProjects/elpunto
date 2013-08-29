@@ -33,6 +33,7 @@
         <form class="meta_tag" action="v-includes/functions/function_horizontalMenu/function.upadate_horizontalmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             <select class="input1" name="menu_id" style="width:587px;">
+            	<option value="">Select One</option>
              	<?php
 					//get the select element value of menu dynamically
 					foreach($menus as $menu)
@@ -59,6 +60,7 @@
         <form class="meta_tag" action="v-includes/functions/function_horizontalMenu/function.insert_horizontalsubmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             <select class="input1" name="menu_id" style="width:587px;">
+            	<option value="">Select One</option>
                 <?php
 					//get the select element value of menu dynamically
 					foreach($menus as $menu)
@@ -83,7 +85,8 @@
         <form class="meta_tag" action="v-includes/functions/function_horizontalMenu/function.upadate_horizontalsubmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             <select class="input1" name="menu_id" style="width:587px;" onchange="showSubmenu(this.value,'showsubmenu','horizontal')">
-            <?php
+            	<option value="">Select One</option>
+			<?php
 				//get the select element value of menu dynamically
 				foreach($menus as $menu)
 				{
@@ -94,7 +97,7 @@
            	<label class="label1" style="margin-right:0px;">Select Sub Menu</label>
             <div id="showsubmenu">
             	<select class="input1" name="submenu_id" style="width:587px;">
-                  <option value="index">Select One</option>
+                  <option value="">Select One</option>
                   <?php
 				  	//codes for generating submenu dynamically
 					foreach($submenus as $submenu)
@@ -122,6 +125,7 @@
         <form class="meta_tag" action="v-includes/functions/function_horizontalMenu/function.delete_horizontalmenu.php" method="get">
         	<label class="label1" style="margin-right:0px;">Select Menu</label>
             <select class="input1" name="menu_id" style="width:587px;">
+            	<option value="">Select One</option>
             <?php
 				//get the select element value of menu dynamically
 				foreach($menus as $menu)

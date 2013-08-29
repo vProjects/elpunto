@@ -15,13 +15,11 @@
 	if(isset($menu_name) && $menu_name != "" && isset($menu_id) && $menu_id != "")
 	{
 		$result = $manageData->updateValue($table_name,'menu_name',$menu_name,$menu_id);
-		echo $result.'menu name';
 	}
 	//update only menu link
 	if(isset($menu_link) && $menu_link != "" && isset($menu_id) && $menu_id != "")
 	{
 		$result = $manageData->updateValue($table_name,'menu_link',$menu_link,$menu_id);
-		echo $result.'menu link';
 	}
 	
 	//update menu position
@@ -52,12 +50,10 @@
 			}
 			//update the menu position of the selected menu to move the selected menu to desired place
 			$update_pos = $manageData->updateValue($table_name,'position',$menu_position,$menu_id);
-			echo $update_pos.'-->updated pos'.'<br />';
 		}
 		//when entered position is greater than current position
 		if($menu_position_present[0]['position'] < $menu_position)
 		{
-			echo 'greater';
 			foreach($navbar_menus as $navbar_menu)
 			{
 				//get the position is less than current position and greater than or equal to postion entered
@@ -69,12 +65,13 @@
 			}
 			//update the menu position of the selected menu to move the selected menu to desired place
 			$update_pos = $manageData->updateValue($table_name,'position',$menu_position,$menu_id);
-			echo $update_pos.'-->updated pos'.'<br />';
 		}
 		if($menu_position == $menu_position_present[0]['position'])
 		{
 			echo 'please enter a valid position';
 		}
 	}
+	
+	header("Location:../../../admin.php?value=vertical_menu");
 	
 ?>
