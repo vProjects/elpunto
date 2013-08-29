@@ -5,6 +5,5 @@
         <img src="images/d&d.png" alt="VYRAZU LABS" style="float:right;margin-right:15px;" />
     </div>
 </div><!--#footer_container ends here-->
-    
 </body>
 </html>

@@ -59,7 +59,20 @@ function reloadCaptcha()
 {
 	document.getElementById('captcha').src = document.getElementById('captcha').src+ '?' +new Date();
 }
+/*function showmenubox(){
+	document.getElementById('login_box').style.display = 'block';
+	return false;
+}*/
+function hidemenu(){
+	document.getElementById('login_box').style.display = 'none';
+}
 
+
+$(document).ready(function(){
+  $("#login").click(function(){
+    $("#login_box").slideToggle("slow");
+  });
+});
 	
 </script>
 <!--JS code for search of ads-->
@@ -68,7 +81,7 @@ function reloadCaptcha()
 
 <body>
 	<!--#header_container starts here-->
-	<div id="header_container">
+	<div id="header_container" onclick="hidemenu()">
     	<!--header main container-->
     	<div id="header_main">
         	<div id="logo_container">
