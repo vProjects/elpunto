@@ -14,6 +14,7 @@
 	{
 		$position = $manageData->getMenu_sorted_DESC($table_name,'*','level',"0");
 		$result = $manageData->insertValue_menu($table_name,$menu_name,$menu_link,'0',$position[0]['position']+1,'0');
+		
 	}
 	
 	header("Location:../../../admin.php?value=vertical_menu");
