@@ -51,7 +51,7 @@
                     </a>
                   </div>
                   <div id="collapseThree" class="accordion-body collapse">
-                    <div class="accordion-inner" onclick="loadFile('view.tracker.php')">
+                    <div class="accordion-inner" onclick="loadFile('view.tracker.php?id=1')">
                       Tracker
                     </div>
                      <div class="accordion-inner" onclick="loadFile('view.insertAds.php')">

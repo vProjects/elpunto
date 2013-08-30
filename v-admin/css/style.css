@@ -462,7 +462,12 @@ blockquote {
 
 #tracker{
     background-color: #FFFFFF;
-    height: 500px;
+    height: auto;
     max-width: 865px;
 }
-
+.tracker{
+	width:630px;
+}
+.excel{
+	width:200px;
+}

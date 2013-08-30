@@ -126,5 +126,13 @@
 				return $rowcount;
 			}
 		}
+		
+		// function to store user tracking results
+		function insertTrackingValues($browserName,$ip,$category,$date){
+			$query = $this->link->prepare("INSERT INTO `tracking`(`browsername`, `ip`, `category`, `date`) VALUES (?,?,?,?)");
+			$values = array($browserName,$ip,$category,$date);
+			
+			$query->execute($values);
+		}
 	}
 ?>

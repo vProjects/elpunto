@@ -213,6 +213,7 @@ class manageusers{
 			return $rowcount;
 		}
 	}
+	
 	function deleteValue($table_name,$column_name,$column_value)
 	{
 		$queryString = "DELETE FROM $table_name WHERE $column_name =$column_value";
@@ -221,5 +222,36 @@ class manageusers{
 		$count = $query->rowCount();
 		return $count;
 	}
+	
+	
+	//function to get 10 consecutive values for tracking from the end
+	/* get values id and total no of tables in table name returns last 10 rows in the consecutive orders
+	*/
+	function getTrackingResult($id,$totalRows,$tableName){
+		
+		if($id == 1){
+			$from = $totalRows - 10;
+			$to = $totalRows;
+
+		}else{
+			$from = $totalRows - $id*10;
+			$to = $totalRows - ($id - 1)*10;
+
+		}
+		$query = $this->link->prepare("SELECT * FROM $tableName WHERE id BETWEEN '$from' AND $to");
+		$query->execute();
+		return $query->fetchALL(PDO::FETCH_ASSOC);
+		
+	}
+	
+	//function to return total no of row
+	function allRow($tableName){
+		$query = $this->link->prepare("SELECT count(*) FROM $tableName");
+		$query->execute();
+		$noOfRows = $query->fetchALL(PDO::FETCH_ASSOC);
+		return $noOfRows[0]['count(*)'];
+	}
+	
+	
 }
 ?>

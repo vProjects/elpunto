@@ -6,9 +6,11 @@
 	
 	$company_name = $_GET['comp_name'];
 	$ad_details = $getData_UI->getAd_details($company_name);
+	$getData_UI->trackViewers();
 	
 	
 ?>
+
     <!--body main div-->
     <div id="body_main_div">
     	<!--nav_bar_container starts here-->
