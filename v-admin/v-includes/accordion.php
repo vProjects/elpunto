@@ -47,18 +47,18 @@
                 <div class="accordion-group">
                   <div class="accordion-heading">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                     Manage Data
+                     Manage Ads
                     </a>
                   </div>
                   <div id="collapseThree" class="accordion-body collapse">
                     <div class="accordion-inner" onclick="loadFile('view.tracker.php')">
                       Tracker
                     </div>
-                     <div class="accordion-inner" onclick="loadFile('view.advisor.php')">
-                      Advisiors
-                    </div> <div class="accordion-inner" onclick="loadFile('view.updatepassword.php')">
-                      change Users Password
-                    </div> <div class="accordion-inner" onclick="loadFile('view.addPolicy.php')">
+                     <div class="accordion-inner" onclick="loadFile('view.insertAds.php')">
+                      Insert Ads
+                    </div> <div class="accordion-inner" onclick="loadFile('view.updateAds.php')">
+                      Update Ads
+                    </div> <div class="accordion-inner" onclick="loadFile('view.updateAds.php')">
                       Add Policy of Client
                     </div>
                   </div>

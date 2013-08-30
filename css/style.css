@@ -34,18 +34,18 @@ h1,h2,h3,h4{
 }
 #seacrch_box{
     color: #767676;
-    float: right;
-    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-    font-size: 14px;
-    margin-right: 35px;
-    margin-top: 45px;
+	float: right;
+	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	margin-right: 35px;
+	margin-top: 45px;
+	margin-left: 200px;
 }
 .social_icon_container{
     float: right;
     height: 25px;
-    left: 281px;
-    position: relative;
-    top: 75px;
+    margin-right: 32px;
+	margin-top: 10px;
     width: 193px;
 }
 .follow_us{

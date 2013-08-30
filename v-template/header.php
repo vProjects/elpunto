@@ -84,9 +84,7 @@ $(document).ready(function(){
 	<div id="header_container" onclick="hidemenu()">
     	<!--header main container-->
     	<div id="header_main">
-        	<div id="logo_container">
-            	<a href="index.php"><img src="images/logo_elpunto.png" alt="elpunto logo" /></a>
-            </div>
+        	
             <!--search box-->
             <div id="seacrch_box">Seleccione su ciudad
             	<select onchange="search_ads_city(this.value)">
@@ -100,6 +98,9 @@ $(document).ready(function(){
                     <option value="nocaima">Nocaima</option>
                     <option value="santafe">Santaf&eacute; de Bogot&aacute;</option>
                 </select>
+            </div>
+            <div id="logo_container">
+            	<a href="index.php"><img src="images/logo_elpunto.png" alt="elpunto logo" /></a>
             </div>
             <div class="social_icon_container">
                   	<div class="follow_us">Follow us:</div>

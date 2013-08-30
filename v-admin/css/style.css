@@ -297,12 +297,14 @@ blockquote {
 }
 .polls{
 	padding-top: 20px;
-	padding-left: 80px;	
+	padding-left: 80px;
+	padding-bottom:30px;
 }
 .polllabel{
 	float:left; !important
 	display: block;
 	width: 100px;
+	margin-right: 15px;
 }
 .polltable{
 	margin-left: 80px;

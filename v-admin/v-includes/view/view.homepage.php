@@ -1,8 +1,3 @@
-
-
-
-
-
 <div id="dashboard">
 	<div id="homepage">
     	<blockquote>
