@@ -252,6 +252,22 @@ class manageusers{
 		return $noOfRows[0]['count(*)'];
 	}
 	
+	function getCategroy(){
+		$query = $this->link->prepare("SELECT menu_name FROM vertical_navbar");
+		$query->execute();
+		return $categories = $query->fetchALL(PDO::FETCH_ASSOC);
+
+	}
+	
+	
+	function getTrackingByTime($tableName,$today,$timeDifference,$category){
+		$query = $this->link->prepare("SELECT * FROM $tableName 
+										WHERE date BETWEEN '$today' AND '$timeDifference'
+										AND category = '$category'");
+		$query->execute();
+		return $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+	
 	
 }
 ?>

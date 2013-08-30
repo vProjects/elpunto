@@ -1,10 +1,12 @@
 <?php
+	header('Content-Type: text/html; charset=iso-8859-1');
 	include('../class/class.manageusers.php');
 	$manageUsers = new manageusers();
 	$id = $_GET['id'];
 	$loopIterator = $id;  // this will help to iterate the loop and show the active tab
 	$totalRow = $manageUsers->allRow('tracking');    // this returns the total no of row in a table
 	$trackingResults = $manageUsers->getTrackingResult($_GET['id'],$totalRow,'tracking'); // this returns 10 ros form last with some logic..
+	$categories = $manageUsers->getCategroy();
 ?>
 <div id="dashboard">
 	<div id="tracker">
@@ -13,35 +15,25 @@
           <small>It will help <cite title="Source Title">you to check the traffic for every </cite></small>
         </blockquote>
 		<div class="element1" style="height:auto">
-        <form class="meta_tag tracker" action="v-includes/functions/" method="post">
-            <label class="label1">Select the Page</label>
-            	<select class="input1" name="page">
-                  <option value="index">Home Page</option>
-                  <option value="portfolio">Portfolio</option>
-                  <option value="login">Login</option>
-                  <option value="services">Services</option>
-                  <option value="about">About</option>
-                  <option value="contact">Contact</option>
+        <form class="meta_tag tracker" action="v-includes/functions/function.downloadexcel.php" method="post">
+            <label class="label1">Select the Category</label>
+            	<select class="input1" name="category">
+                  <option value="Portapendones">Portapendones</option>
+                  <option value="Grafti Cartt">Grafti Cartt</option>
+                  <option value="Asesores en Internet S.A.S.">Asesores en Internet S.A.S.</option>
+                <?php foreach($categories as $category){ ?>
+                  <option value="<?php echo $category['menu_name'] ?>"><?php echo $category['menu_name'] ?></option>
+                <?php } ?>
                 </select>
-            <label class="label1">Select the Page</label>
-            	<select class="input1" name="page">
-                  <option value="index">Home Page</option>
-                  <option value="portfolio">Portfolio</option>
-                  <option value="login">Login</option>
-                  <option value="services">Services</option>
-                  <option value="about">About</option>
-                  <option value="contact">Contact</option>
+            <label class="label1">Download data</label>
+            	<select class="input1" name="duration">
+                  <option value="7">For 1 week</option>
+                  <option value="30">For 1 month</option>
+                  <option value="60">For 2 month</option>
+                  <option value="90">For 3 month</option>
+                  <option value="180">For 6 month</option>
+                  <option value="365">For 1 year</option>
                 </select>
-            <label class="label1">Select the Page</label>
-            	<select class="input1" name="page">
-                  <option value="index">Home Page</option>
-                  <option value="portfolio">Portfolio</option>
-                  <option value="login">Login</option>
-                  <option value="services">Services</option>
-                  <option value="about">About</option>
-                  <option value="contact">Contact</option>
-                </select>
-
             <button type="submit" class="btn btn-primary excel" onClick="">Download As Excel</button> 
         
         </form>

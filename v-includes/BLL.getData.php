@@ -172,7 +172,7 @@
 		* function used to collect tracking data for users
 		*/
 		function trackViewers(){
-			$date = date('m/d/Y', $_SERVER['REQUEST_TIME']);  // getting the date when a user visits this page
+			$date = date('Y-m-d H:i:s');  // getting the date when a user visits this page
 			$category = $_GET['comp_name'];						// category requested
 			$_SERVER['REMOTE_ADDR'];				   // getting the IP address of the remote user
  			$browser = get_browser(null, true);		// geting full browser info
