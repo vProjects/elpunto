@@ -162,6 +162,7 @@ class manageusers{
 			return $rowcount;
 		}
 	}
+	
 	//get vertical nav sorted by parent_id and position order desc
 	function getMenu_sorted_DESC($table_name,$value,$order,$value_parent)
 	{
@@ -275,5 +276,19 @@ class manageusers{
 		$query->execute($values);
 	}
 	
+	//get value according to the search result and search in the 'owner_name' and 'company_name'
+	function getvalue_search($table_name,$value,$row_value,$value_entered)
+	{
+		$query = $this->link->query("SELECT $value from $table_name WHERE ( $row_value LIKE '%".$value_entered."%') OR (`owner_name` LIKE '%".$value_entered."%') AND `status` = '1'");
+		$query->execute();
+		$rowcount = $query->rowCount();
+		if($rowcount > 0){
+			$result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $result;
+		}
+		else{
+			return $rowcount;
+		}
+	}
 }
 ?>

@@ -15,6 +15,7 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/v_functions.js"></script>
 <title><?php echo $pageTitle ?></title>
 <script>
 

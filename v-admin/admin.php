@@ -63,6 +63,10 @@
 				echo "<script> loadFile('view.insertAds.php') </script>";
 				break;
 			}
+			case 'updateAds':{
+				echo "<script> loadFile('view.updateAds.php') </script>";
+				break;
+			}
 
 		}
 	}
