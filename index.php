@@ -2,7 +2,7 @@
 	$metaName = 'inicio';
 	$page_title = "HOME";
 	//keyword for the adds
-	$search_keyword = 'home';
+	$search_keyword = $_GET['keyword'];
 	
 	//include header file
 	include 'v-template/header.php';

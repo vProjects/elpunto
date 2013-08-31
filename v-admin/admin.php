@@ -59,6 +59,10 @@
 				echo "<script> loadFile('view.changeMenu_vertical.php') </script>";
 				break;
 			}
+			case 'insertAds':{
+				echo "<script> loadFile('view.insertAds.php') </script>";
+				break;
+			}
 
 		}
 	}

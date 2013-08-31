@@ -58,8 +58,8 @@
                       Insert Ads
                     </div> <div class="accordion-inner" onclick="loadFile('view.updateAds.php')">
                       Update Ads
-                    </div> <div class="accordion-inner" onclick="loadFile('view.updateAds.php')">
-                      Add Policy of Client
+                    </div> <div class="accordion-inner" onclick="loadFile('view.allads.php')">
+                      View All Ads
                     </div>
                   </div>
                 </div>
