@@ -1,11 +1,10 @@
 <?php
-	header('Content-Type: text/html; charset=iso-8859-1');
+	header('Content-Type: text/html; charset=utf-8');
 	session_start();
 	include '../class/class.manageusers.php';
 	$manage_UI = new manageusers();
 	
-	$menus = $manage_UI->getMenu_sorted('vertical_navbar','*','level',0);
-	$submenus = $manage_UI->getMenu_sorted('vertical_navbar','*','level',1);
+	$company_infos = $manage_UI->getValue('company_info');
 ?>
 
 <div id="dashboard">
@@ -34,41 +33,26 @@
                         </tr>
                     </thead>
                         <tbody>
-                            <tr>
-                                <td>Grafti Caart</td>
-                                <td>1 Year</td>
-                                <td>20-06-2013</td>
-                                <td>20-06-2014</td>
-                                <td>ACTIVE</td>
-                            </tr>
-                            <tr>
-                                <td>Grafti Caart</td>
-                                <td>1 Year</td>
-                                <td>20-06-2013</td>
-                                <td>20-06-2014</td>
-                                <td>ACTIVE</td>
-                            </tr>
-                            <tr>
-                                <td>Grafti Caart</td>
-                                <td>1 Year</td>
-                                <td>20-06-2013</td>
-                                <td>20-06-2014</td>
-                                <td>ACTIVE</td>
-                            </tr>
-                            <tr>
-                                <td>Grafti Caart</td>
-                                <td>1 Year</td>
-                                <td>20-06-2013</td>
-                                <td>20-06-2014</td>
-                                <td>ACTIVE</td>
-                            </tr>
-                            <tr>
-                                <td>Grafti Caart</td>
-                                <td>1 Year</td>
-                                <td>20-06-2013</td>
-                                <td>20-06-2014</td>
-                                <td>ACTIVE</td>
-                            </tr>
+                        	<?php 
+								foreach($company_infos as $company_info)
+								{
+									echo '<tr>
+											<td>'.$company_info['company_name'].'</td>
+											<td>'.$company_info['ad_duration'].'</td>
+											<td>'.$company_info['start_date'].'</td>
+											<td>'.$company_info['end_date'].'</td>
+											<td>';
+									if($company_info['status'] == 1)
+									{
+										echo 'Active';
+									}
+									else
+									{
+										echo 'In-active';
+									}
+									echo '</td></tr>';
+								}
+							?>
                         </tbody>
                     </table> 		
 		</div>

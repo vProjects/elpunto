@@ -1,5 +1,5 @@
 <?php
-	header('Content-Type: text/html; charset=iso-8859-1');
+	header('Content-Type: text/html; charset=utf-8');
 	session_start();
 	include '../class/class.manageusers.php';
 	$manage_UI = new manageusers();
@@ -78,14 +78,14 @@
 								//get the select element value of menu dynamically
 								foreach($menus as $menu)
 								{
-									echo '<option value="'.$menu['menu_name'].'">'.$menu['menu_name'].'</option>';
+									echo '<option value="'.html_entity_decode($menu['menu_name'],ENT_QUOTES, "utf-8").'">'.html_entity_decode($menu['menu_name'],ENT_QUOTES, "utf-8").'</option>';
 								}
 							?>
                             <?php
 								//get the select element value of menu dynamically
 								foreach($submenus as $submenu)
 								{
-									echo '<option value="'.$submenu['menu_name'].'">'.$submenu['menu_name'].'</option>';
+									echo '<option value="'.html_entity_decode($submenu['menu_name'],ENT_QUOTES, "utf-8").'">'.html_entity_decode($submenu['menu_name'],ENT_QUOTES, "utf-8").'</option>';
 								}
 							?>
                         </select>

@@ -4,16 +4,16 @@
 		
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
-		$name = $_POST['name'];
-		$company_name = $_POST['company_name'];
-		$company_city = $_POST['company_city'];
-		$company_email = $_POST['company_email'];
-		$company_phone = $_POST['company_phone'];
-		$company_website = $_POST['company_website'];
-		$company_description = $_POST['company_description'];
-		$ad_duration = $_POST['ad_duration'];
-		$ad_status = $_POST['ad_status'];
-		$no_category = $_POST['no_category'];
+		$name = htmlentities($_POST['name'],ENT_QUOTES, "utf-8");
+		$company_name = htmlentities($_POST['company_name'],ENT_QUOTES, "utf-8");
+		$company_city = htmlentities($_POST['company_city'],ENT_QUOTES, "utf-8");
+		$company_email = htmlentities($_POST['company_email'],ENT_QUOTES, "utf-8");
+		$company_phone = htmlentities($_POST['company_phone'],ENT_QUOTES, "utf-8");
+		$company_website = htmlentities($_POST['company_website'],ENT_QUOTES, "utf-8");
+		$company_description = htmlentities($_POST['company_description'],ENT_QUOTES, "utf-8");
+		$ad_duration = htmlentities($_POST['ad_duration'],ENT_QUOTES, "utf-8");
+		$ad_status = htmlentities($_POST['ad_status'],ENT_QUOTES, "utf-8");
+		$no_category = htmlentities($_POST['no_category'],ENT_QUOTES, "utf-8");
 		$ad_categorys = $_POST['ad_category'];
 	}
 	
@@ -59,6 +59,9 @@
 					$i++;
 				}
 			}
+			$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "utf-8");
+			//$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "cp1252");
+			echo $ad_keyword;
 			$result = $manageData->insertAds_details($company_name,$company_phone,$company_city,$company_email,$company_website,$name,$company_description,$ad_keyword,$c_start_date,$c_end_date,$ad_status,$ad_duration);
 			echo $result;
 		}

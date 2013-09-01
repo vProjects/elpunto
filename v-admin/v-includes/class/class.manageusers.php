@@ -201,6 +201,20 @@ class manageusers{
 			return $rowcount;
 		}
 	}
+	//function get value 
+	function getValue($table_name)
+	{
+		$query = $this->link->query("SELECT * from $table_name");
+		$query->execute();
+		$rowcount = $query->rowCount();
+		if($rowcount > 0){
+			$result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $result;
+		}
+		else{
+			return $rowcount;
+		}
+	}
 	function getValue_where_menu($table_name,$value,$row_value,$value_entered,$parent_id)
 	{
 		$query = $this->link->query("SELECT $value from $table_name where $row_value='$value_entered' AND `parent_id` = '$parent_id'");

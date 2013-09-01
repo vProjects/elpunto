@@ -1,8 +1,7 @@
 <?php
 	$metaName = 'inicio';
 	$page_title = "HOME";
-	//keyword for the adds
-	$search_keyword = $_GET['keyword'];
+	$search_keyword = htmlentities($_GET['keyword'],ENT_QUOTES,"utf-8");
 	
 	//include header file
 	include 'v-template/header.php';

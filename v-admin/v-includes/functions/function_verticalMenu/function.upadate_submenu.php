@@ -7,8 +7,8 @@
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
 		$menu_id = $_GET['menu_id'];
-		$submenu_name = $_GET['submenu_name'];
-		$submenu_link = $_GET['submenu_link'];
+		$submenu_name = htmlentities($_GET['submenu_name'],ENT_QUOTES, "utf-8");
+		$submenu_link = htmlentities($_GET['submenu_link'],ENT_QUOTES, "utf-8");
 		$submenu_id = $_GET['submenu_id'];
 		$submenu_position = $_GET['submenu_position'];
 	}
