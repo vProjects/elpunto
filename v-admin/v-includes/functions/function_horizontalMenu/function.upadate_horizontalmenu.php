@@ -6,10 +6,10 @@
 	$table_name = 'horizontal_navbar';
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
-		$menu_name = $_GET['menu_name'];
-		$menu_link = $_GET['menu_link'];
+		$menu_name = htmlentities($_GET['menu_name'],ENT_QUOTES, "utf-8");
+		$menu_link = htmlentities($_GET['menu_link'],ENT_QUOTES, "utf-8");
 		$menu_id = $_GET['menu_id'];
-		$menu_position = $_GET['menu_position'];
+		$menu_position = htmlentities($_GET['menu_position'],ENT_QUOTES, "utf-8");
 	}
 	//update only menu name
 	if(isset($menu_name) && $menu_name != "" && isset($menu_id) && $menu_id != "")

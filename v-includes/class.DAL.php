@@ -87,6 +87,7 @@
 		//function for search functionality
 		function getvalue_search($table_name,$value,$row_value,$value_entered)
 		{
+			//$value_entered = htmlentities($value_entered);
 			$query = $this->link->query("SELECT $value from $table_name WHERE ( $row_value LIKE '%".$value_entered."%') OR (`company_city` LIKE '%".$value_entered."%') AND `status` = '1'");
 			$query->execute();
 			$rowcount = $query->rowCount();

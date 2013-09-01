@@ -6,8 +6,8 @@
 	
 	if($_SERVER["REQUEST_METHOD"] == "GET")
 	{
-		$menu_name = $_GET['menu_name'];
-		$menu_link = $_GET['menu_link'];
+		$menu_name = htmlentities($_GET['menu_name'],ENT_QUOTES, "utf-8");
+		$menu_link = htmlentities($_GET['menu_link'],ENT_QUOTES, "utf-8");
 	}
 	
 	if(isset($menu_link) && isset($menu_name) && $menu_link != "" && $menu_name != "")
