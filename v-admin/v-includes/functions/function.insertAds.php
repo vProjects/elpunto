@@ -1,4 +1,5 @@
 <?php
+	header('Content-Type: text/html; charset=utf-8');
 	include '../class/class.manageusers.php';
 	$manageData = new manageusers();
 		
@@ -24,11 +25,11 @@
 			//get expiration date
 			if($ad_duration == '6_months')
 			{
-				$c_end_date = date('Y-m-d',strtotime(date("Y-m-d", mktime()) . " + 182 day"));
+				$c_end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 182 day"));
 			}
 			elseif($ad_duration == '1_year')
 			{
-				$c_end_date = date('Y-m-d',strtotime(date("Y-m-d", mktime()) . " + 365 day"));
+				$c_end_date = date('Y-m-d',strtotime(date("Y-m-d", time()) . " + 365 day"));
 			}
 			//set the no. of category using $i
 			$i = 1;
