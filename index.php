@@ -32,8 +32,18 @@
                 </div>
             </div><!--slider container ends here-->
             
+            
+            
             <!--Add_container-->
-            <div id="a_container">                
+            <div id="a_container">  
+            	<div id="add_space">
+                	<div class="add_section"></div>
+                    <div class="add_section"></div>
+                    <div class="add_section"></div>
+                    <div class="add_section"></div>
+                    <div class="add_section"></div>
+                    <div class="add_section"></div>
+                </div>             
                 <?php
 					//get ads according to the keywords
 					$getData_UI->getSearch($search_keyword); 
@@ -42,7 +52,7 @@
             
             <!--horizontal menu starts here-->
             <div id="hori_nav_container">
-            	<div id="hori_nav" style="top:-200px;">
+            	<div id="hori_nav" style="position: absolute;top: 11px;">
                 	<?php
 						//get the vertical search from the template folder 
 						include 'v-template/vertical_search.php' 

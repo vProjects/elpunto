@@ -109,16 +109,18 @@ h1,h2,h3,h4{
 .navbar_horizontal ul li:hover > ul {
 	display: block;
 	z-index:-1000;
+	border:1px solid #CACACA;
 }
 .navbar_horizontal ul li:hover > ul li{
 	float:none;
 	background-color:#FFF;
-	border:1px solid #CACACA;
+	border-bottom:1px solid #CACACA;
+	width:200%;
 }
 .navbar_horizontal ul li:hover > ul li a{
 	display: block;
-	padding: 9px 12px;
-	height: 12px;
+	padding:4px 12px 0px;
+	text-align:center;
 }
 .navbar_horizontal ul li:hover > ul li:hover{
 	background-color:#E3E3E3;
@@ -152,7 +154,7 @@ h1,h2,h3,h4{
 #body_container{
     background-color: #FFFFFF;
     margin: 0 auto;
-    padding-bottom: 60px;
+    padding-bottom: 120px;
     padding-top: 10px;
     width: 955px;
 }
@@ -168,6 +170,17 @@ h1,h2,h3,h4{
     right: 0;
     top: -47px;
     width: 180px;
+}
+#add_space{ 
+	float:right;
+	background-color:#C69;
+}
+.add_section{
+	background-color: #006666;
+    float: left;
+    height: 70px;
+    margin: 3px 8px;
+    width: 220px;
 }
 #hori_nav_container{
 	background-image: url("../images/hori_bg.png");
@@ -214,24 +227,32 @@ h1,h2,h3,h4{
 #hori_nav ul li:hover > ul {
 	display: block;
 	z-index: 100;
+	min-height:100px;
 	position: absolute;
-	left: 165px;
+	left: 166px;
 	margin-top: -34px;
+	border:1px solid #E4E4E4;
+	border-radius:10px;
+	box-shadow:1px 2px 10px grey;
+	padding-bottom:25px;
+	background-color:#ffffff;
 }
 #hori_nav ul li:hover > ul li{
 	float:none;
 	background-color:#FFF;
+	border-bottom:1px solid #E4E4E4;
 }
 #hori_nav ul li:hover > ul li a{
 	display: block;
+	border-top:none;
+	margin-top:2px;
 	padding: 9px 9px;
-	height: 18px;
 	min-width: 116px;
-	text-align: center;
-	border:1px solid;
+	min-height:18px;
+	text-align:center;
 }
 #hori_nav ul li:hover > ul li:hover{
-	background-color:#E3E3E3;
+	background-color:#E4E4E4;
 	color:#000;
 }
 .hori_search_container{

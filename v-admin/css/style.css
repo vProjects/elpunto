@@ -471,3 +471,9 @@ blockquote {
 .excel{
 	width:200px;
 }
+.input_file{
+	background-color: inactiveborder;
+    border: 1px solid #C4C4C4;
+    float: left;
+    width: 559px;
+}
