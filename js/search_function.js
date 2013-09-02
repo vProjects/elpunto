@@ -6,7 +6,7 @@ function serach_ads_f()
 	var search_keyword=document.forms["serach_ads"]["search_value"].value;
 	if(search_keyword != '')
 	{
-		window.location = 'index.php?keyword='+search_keyword;
+		window.location = 'search-result.php?keyword='+search_keyword;
 	}
 	else
 	{
@@ -17,6 +17,6 @@ function search_ads_city(search_keyword)
 {
 	if(search_keyword != '')
 	{
-		window.location = 'index.php?keyword='+search_keyword;
+		window.location = 'search-result.php?keyword='+search_keyword;
 	}
 }

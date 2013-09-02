@@ -72,4 +72,4 @@
 		}
 ?>
 
-<a href="../../admin.php?value=insertAds">Redirect</a>
+<a href="../../admin.php?value=insertAds_img?company_name=<?php echo $company_name; ?>">Redirect</a>

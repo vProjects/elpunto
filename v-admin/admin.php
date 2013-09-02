@@ -73,6 +73,11 @@
 				echo "<script> loadFile('view.allads.php?keyword=$searchKeyword') </script>";
 				break;
 			}
+			case 'insertAds_img':{
+				$company_name = $_GET['company_name'];
+				echo "<script> loadFile('view.insertAds_img.php?company_name=$company_name') </script>";
+				break;
+			}
 
 		}
 	}
