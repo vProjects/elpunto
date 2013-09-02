@@ -1,9 +1,7 @@
 <?php
-	$metaName = 'inicio';
-	$page_title = "HOME";
-	$search_keyword = 'Home';
-	
-	//include header file
+	$metaName = 'fullarticle';
+	$page_title = "Ads | Elpunto de Venta";
+	$search_keyword = htmlentities($_GET['keyword'],ENT_QUOTES,"utf-8");
 	include 'v-template/header.php';
 ?>
     
@@ -22,15 +20,8 @@
         	<div class="valla_img">
                 <img src="images/btn_encuentre_valla.png" alt="de villa" />
             </div>
-            <!--slider container starts-->
-            <div id="slider_container">
-                <div id="featured"> 
-                    <img src="images/banner_1.jpg" />
-                    <img src="images/banner_2.jpg" />
-                    <img src="images/banner_1.jpg" />
-                    <img src="images/banner_2.jpg" />
-                </div>
-            </div><!--slider container ends here-->
+            
+            
             
             <!--Add_container-->
             <div id="a_container">                
@@ -40,14 +31,15 @@
 				?>   
             </div><!--#add_container ends here-->
             
+           
             <!--horizontal menu starts here-->
             <div id="hori_nav_container">
-            	<div id="hori_nav" style="top:-200px;">
+            	<div id="hori_nav" style="top:-90px;">
                 	<?php
 						//get the vertical search from the template folder 
 						include 'v-template/vertical_search.php' 
 					?>
-					<?php
+                    <?php
                         //get the vertical navbar 
                         $getData_UI->get_navbar_vertical(); 
                     ?> 

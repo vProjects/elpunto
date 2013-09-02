@@ -9,9 +9,6 @@
     <div id="body_main_div">
     	<!--nav_bar_container starts here-->
         <div id="nav_bar_container">
-        	<div id="login">
-                <a href="#"><img src="images/icon_login.png" alt="login" />&nbsp;&nbsp;LOGIN</a>
-            </div>
         	<?php
 			//include nav bar
 			include 'v-template/sidebar.php';

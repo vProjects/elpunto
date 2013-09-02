@@ -42,6 +42,9 @@
                     <div class="accordion-inner" onclick="loadFile('view.changeMenu_vertical.php')">
                       Manage Vertical Menu
                     </div>
+                    <div class="accordion-inner" onclick="loadFile('view.updateCategoryDescription.php')">
+                      Manage Category Description
+                    </div>
                   </div>
                 </div>
                 <div class="accordion-group">
