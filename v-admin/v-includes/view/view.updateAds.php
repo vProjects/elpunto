@@ -8,9 +8,9 @@
 	$submenus = $manage_UI->getMenu_sorted('vertical_navbar','*','level',1);
 	
 	//get value for fetching
-	//$search_value = $_GET['keyword'];
+	$search_value = htmlentities($_GET['keyword'],ENT_QUOTES,"utf-8");
 	//get value according to the search result
-	$company_details = $manage_UI->getvalue_search('company_info','*','company_name','Vyrazu');
+	$company_details = $manage_UI->getvalue_search('company_info','*','company_name',$search_value);
 ?>
 
 <div id="dashboard">
@@ -21,11 +21,9 @@
         </blockquote>
         <!--search box-->
         <div class="form-group" style="margin-top:20px;">
-        	<form name="search_ads_update">
               <label for="exampleInputEmail" class="polllabel" style="width:auto;margin-left:50px;">Search by Company or Owner name</label>
-              <input type="text" class="form-control" name="search_value" id="exampleInputEmail" placeholder="Enter Company Name or Owner Name" style="width:275px" value="<?php //echo $search_value; ?>">
-              <input type="button" class="btn btn-warning" value="search" style="margin-top:-11px;" onclick="serach_ads_f()"/>
-          	</form>
+              <input type="text" class="form-control" name="search_value" id="search_keyword" placeholder="Enter Company Name or Owner Name" style="width:275px" value="<?php echo $search_value; ?>">
+              <input type="button" class="btn btn-warning" value="search" style="margin-top:-11px;" onclick="serach_ads_f('search_keyword')"/>
         </div>
         
 		<div id="managePageContent">

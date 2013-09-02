@@ -1,14 +1,28 @@
 // JavaScript Document
 //Author Anand K. Singh
 //Copyright Vyrazu Labs
-function serach_ads_f()
+function serach_ads_f(search_id)
 {
 	alert('anand');
-	var search_keyword=document.forms["search_ads_update"]["search_value"].value;
+	var search_keyword=document.getElementById(search_id).value;
 	alert(search_keyword);
 	if(search_keyword != '')
 	{
 		window.location = 'admin.php?value=updateAds&keyword='+search_keyword;
+	}
+	else
+	{
+		alert('Please enter a value!');
+	}
+}
+function serach_ads_a(search_id)
+{
+	alert('anand');
+	var search_keyword=document.getElementById(search_id).value;
+	alert(search_keyword);
+	if(search_keyword != '')
+	{
+		window.location = 'admin.php?value=allads&keyword='+search_keyword;
 	}
 	else
 	{

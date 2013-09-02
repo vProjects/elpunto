@@ -68,6 +68,11 @@
 				echo "<script> loadFile('view.updateAds.php?keyword=$searchKeyword') </script>";
 				break;
 			}
+			case 'allads':{
+				$searchKeyword = $_GET['keyword'];
+				echo "<script> loadFile('view.allads.php?keyword=$searchKeyword') </script>";
+				break;
+			}
 
 		}
 	}

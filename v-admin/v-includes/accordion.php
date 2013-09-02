@@ -56,9 +56,9 @@
                     </div>
                      <div class="accordion-inner" onclick="loadFile('view.insertAds.php')">
                       Insert Ads
-                    </div> <div class="accordion-inner" onclick="loadFile('view.updateAds.php?value=default')">
+                    </div> <div class="accordion-inner" onclick="loadFile('view.updateAds.php?value=default&keyword=none')">
                       Update Ads
-                    </div> <div class="accordion-inner" onclick="loadFile('view.allads.php')">
+                    </div> <div class="accordion-inner" onclick="loadFile('view.allads.php?keyword=all')">
                       View All Ads
                     </div>
                   </div>
