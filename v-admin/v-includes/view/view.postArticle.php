@@ -42,7 +42,7 @@
                 <label class="label1">Author:</label>
                 	<input type="text" class="input1" name="aerticle_author" placeholder="Enter Article Author" style="width: 447px;">
                 <label class="label1">Brief:</label> 
-               		<textarea class="ckeditor" id="" name="brief" placeholder="type the brief here" style="width:447px" ></textarea>
+               		<textarea id="" name="brief" placeholder="type the brief here" style="width:447px" ></textarea>
                 	<textarea class="ckeditor" id="editor2" name="editor2" ></textarea>
                 <input type="submit" value="submit" name="submit" class="btn btn-success btn-large nbutton"/>
             </form>
