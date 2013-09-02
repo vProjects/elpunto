@@ -21,8 +21,13 @@
                 <img src="images/btn_encuentre_valla.png" alt="de villa" />
             </div>
             
-            
-            
+            <!--page_content for text of every page-->
+            <div class="page_content">
+                <?php
+					//get category details
+					$getData_UI->getCategory_details($search_keyword);					
+				?>
+            </div><!--#page_content ends here-->
             <!--Add_container-->
             <div id="a_container">                
                 <?php 
@@ -34,7 +39,7 @@
            
             <!--horizontal menu starts here-->
             <div id="hori_nav_container">
-            	<div id="hori_nav" style="top:-90px;">
+            	<div id="hori_nav" style="position: absolute;top: 15px;">
                 	<?php
 						//get the vertical search from the template folder 
 						include 'v-template/vertical_search.php' 

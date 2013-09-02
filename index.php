@@ -34,8 +34,8 @@
             
             <!--Add_container-->
             <div id="a_container">                
-                <?php 
-					//get adds according to the keywords
+                <?php
+					//get ads according to the keywords
 					$getData_UI->getSearch($search_keyword); 
 				?>   
             </div><!--#add_container ends here-->

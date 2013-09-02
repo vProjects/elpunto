@@ -611,3 +611,11 @@ h1,h2,h3,h4{
     width: 25px;
 	cursor:pointer;
 }
+.category_header{
+	font-family: arial;
+    font-size: 14px;
+}
+.category_description{
+	font-family: arial;
+    font-size: 12px;
+}

@@ -185,14 +185,18 @@
  			$browser = get_browser(null, true);		// geting full browser info
 			$browser['browser'];                      // getting the browser name
 			
-			$this->manage_content->insertTrackingValues($browser['browser'],$_SERVER['REMOTE_ADDR'],$category,$date);
-			
-			 
+			$this->manage_content->insertTrackingValues($browser['browser'],$_SERVER['REMOTE_ADDR'],$category,$date);	 
+		}
+		
+		//function for getting the category details
+		function getCategory_details($category_name)
+		{
+			$details = $this->manage_content->getValue_where('vertical_navbar','*','menu_name',$category_name);
+			echo '<div class="category_header">'.$details[0]['menu_name'].'</div>
+                <br /><br/>
+                <div class="category_description">'.$details[0]['description'].'</div>';
 		}
 		
 	}
-	
-	
-	
 
 ?>
