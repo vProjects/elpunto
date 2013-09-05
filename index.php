@@ -36,15 +36,12 @@
             
             <!--Add_container-->
             <div id="a_container">  
-            	<div id="add_space">
-                	<div class="add_section"></div>
-                    <div class="add_section"></div>
-                    <div class="add_section"></div>
-                    <div class="add_section"></div>
-                    <div class="add_section"></div>
-                    <div class="add_section"></div>
-                </div>             
-                <?php
+            	<?php
+					//get banner images
+					$getData_UI->getbanners();
+				?>
+            	<?php
+					
 					//get ads according to the keywords
 					$getData_UI->getSearch($search_keyword); 
 				?>   

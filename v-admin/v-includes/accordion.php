@@ -45,6 +45,9 @@
                     <div class="accordion-inner" onclick="loadFile('view.updateCategoryDescription.php')">
                       Manage Category Description
                     </div>
+                    <div class="accordion-inner" onclick="loadFile('view.manageBanners.php')">
+                      Manage Banners
+                    </div>
                   </div>
                 </div>
                 <div class="accordion-group">

@@ -196,6 +196,21 @@
                 <br /><br/>
                 <div class="category_description">'.$details[0]['description'].'</div>';
 		}
+		//function to get banners table banner_info
+		function getbanners()
+		{
+			$banners = $this->manage_content->getValue('banner_info','*');
+			echo '<div id="add_space">';
+			foreach($banners as $banner)
+			{
+				if($banner['banner_status'] == 1)
+				{
+					echo '<a href="'.$banner['banner_link'].'">';
+					echo '<div class="add_section"><img src="'.$banner['banner_image'].'" style="height:'.$banner['banner_height'].'px;width:'.$banner['banner_width'].'px;float:left;"/></div></a>';
+				}
+			}
+			echo '</div>';
+		}
 		
 	}
 

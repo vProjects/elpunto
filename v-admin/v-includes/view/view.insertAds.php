@@ -15,7 +15,7 @@
         	<small>It will help <cite title="Source Title">you to create ads for your site</cite></small>
         </blockquote>
 		<div id="managePageContent">
-        		<form class="polls" action="v-includes/functions/function.insertAds.php" method="post">
+        		<form class="polls" action="v-includes/functions/function.insertAds.php" method="post" enctype="multipart/form-data">
                   <fieldset>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Name</label>
@@ -74,6 +74,7 @@
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Category</label>
                       <select class="input1" name="ad_category[]" style="margin-right: 88px;width: 514px;height: 161px" multiple="multiple">
+                      		<option value="home">Home</option>
                             <?php
 								//get the select element value of menu dynamically
 								foreach($menus as $menu)
@@ -89,6 +90,35 @@
 								}
 							?>
                         </select>
+                    </div>
+                    <!--section for uploading images-->
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Comapny Logo:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="company_logo"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 1:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_1"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 2:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_2"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 3:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_3"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 4:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_4"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 5:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_5"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 6:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_6"/>
                     </div>
                     <button type="submit" class="btn btn-primary" style="margin-left:220px;">Submit</button>
                   </fieldset>

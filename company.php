@@ -37,18 +37,17 @@
 
                             <div class="image_carousel">
                                 <div id="foo2">
-                                    <img src="images/small/basketball.jpg" alt="basketball" width="70" height="70" onclick="changeImage(this.src)" />
-                                    <img src="images/small/beachtree.jpg" alt="beachtree" width="70" height="70" />
-                                    <img src="images/small/cupcackes.jpg" alt="cupcackes" width="70" height="70" />
-                                    <img src="images/small/hangmat.jpg" alt="hangmat" width="70" height="70" />
-                                    <img src="images/small/new_york.jpg" alt="new york" width="70" height="70" />
-                                    <img src="images/small/laundry.jpg" alt="laundry" width="70" height="70" />
-                                    <img src="images/small/mom_son.jpg" alt="mom son" width="70" height="70" />
-                                    <img src="images/small/picknick.jpg" alt="picknick" width="70" height="70" />
-                                    <img src="images/small/shoes.jpg" alt="shoes" width="70" height="70" />
-                                    <img src="images/small/paris.jpg" alt="paris" width="70" height="70" />
-                                    <img src="images/small/sunbading.jpg" alt="sunbading" width="70" height="70" />
-                                    <img src="images/small/yellow_couple.jpg" alt="yellow couple" width="70" height="70" />
+                                	<?php 
+										//codes for getting secondary images
+										for($i = 1 ; $i <=6 ;$i++)
+										{
+											$varriable_name = 'sec_image_'.$i;
+											if($ad_details[0][$varriable_name] != "")
+											{
+												echo '<img src="'.$ad_details[0][$varriable_name].'" alt="6" width="70" height="70" onclick="changeImage(this.src)" />';
+											}
+										}
+									?>
                                 </div>
                                 <div class="clearfix"></div>
                                 <a class="prev" id="foo2_prev" href="#"><span>prev</span></a>

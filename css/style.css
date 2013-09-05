@@ -173,14 +173,11 @@ h1,h2,h3,h4{
 }
 #add_space{ 
 	float:right;
-	background-color:#C69;
+	width:720px;
 }
 .add_section{
-	background-color: #006666;
     float: left;
-    height: 70px;
     margin: 3px 8px;
-    width: 220px;
 }
 #hori_nav_container{
 	background-image: url("../images/hori_bg.png");

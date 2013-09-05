@@ -27,7 +27,7 @@
         </div>
         
 		<div id="managePageContent">
-        		<form class="polls" action="v-includes/functions/function.updateAds.php" method="post">
+        		<form class="polls" action="v-includes/functions/function.updateAds.php" method="post" enctype="multipart/form-data">
                   <fieldset>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Name</label>
@@ -94,6 +94,7 @@
                       <label for="exampleInputEmail" class="polllabel" >Category</label>
                       <input type="text" class="form-control" id="exampleInputEmail" placeholder="Phone No." style="width:500px" value="<?php echo $company_details[0]['company_keywords']; ?>" readonly="readonly">
                       <select class="input1" name="ad_category[]" style="margin-left: 116px;width: 514px;height: 161px" multiple="multiple">
+                      		<option value="home">Home</option>
                             <?php
 								//get the select element value of menu dynamically
 								foreach($menus as $menu)
@@ -109,6 +110,35 @@
 								}
 							?>
                         </select>
+                    </div>
+                    <!--section for uploading images-->
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Comapny Logo:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="company_logo"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 1:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_1"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 2:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_2"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 3:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_3"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 4:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_4"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 5:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_5"/>
+                    </div>
+                    <div class="form_element_v">
+                        <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 6:</label>
+                        <input type="file" class="browse_style" style="width:477px;" name="sec_image_6"/>
                     </div>
                     <input type="hidden" value="<?php echo $company_details[0]['id']; ?>" name="id"/>
                     <button type="submit" class="btn btn-primary" style="margin-left:220px;">Update</button>

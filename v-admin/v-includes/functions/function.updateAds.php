@@ -2,6 +2,9 @@
 	include '../class/class.manageusers.php';
 	$manageData = new manageusers();
 	//table name for the company information
+	include '../class/class.upload_file.php';
+	//object or uploading image
+	$uploadImage = new FileUpload();
 	$table_name = 'company_info';
 		
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -18,6 +21,14 @@
 		$ad_status = htmlentities($_POST['ad_status'],ENT_QUOTES, "utf-8");
 		$no_category = htmlentities($_POST['no_category'],ENT_QUOTES, "utf-8");
 		$ad_categorys = $_POST['ad_category'];
+		//varriables for getting images
+		$company_logo = $_FILES['company_logo']['name'];
+		$sec_image_1 = $_FILES['sec_image_1']['name'];
+		$sec_image_2 = $_FILES['sec_image_2']['name'];
+		$sec_image_3 = $_FILES['sec_image_3']['name'];
+		$sec_image_4 = $_FILES['sec_image_4']['name'];
+		$sec_image_5 = $_FILES['sec_image_5']['name'];
+		$sec_image_6 = $_FILES['sec_image_6']['name'];
 	}
 	echo $id;
 	//update owner name
@@ -180,5 +191,71 @@
 		{
 			echo 'ad_categorys status failed<br/>';
 		}
+	
+	//image upload section
+	//check wheather image are uploaded or not if yes upload the file
+	if($company_logo == 1)
+	{
+		$filename = $company_name.'_logo';
+		$result = $uploadImage->upload_file($filename,'company_logo','../../../images/company_logo/');
+		$image_link = 'images/company_logo/'.$result;
+		
+		$result1 = $manageData->updateValue('company_info','company_logo',$image_link,$id);
+		echo $result1;
+	}
+	if($sec_image_1 == 1)
+	{
+		$filename = $company_name.'_sec_image_1';
+		$result = $uploadImage->upload_file($filename,'sec_image_1','../../../images/company_secondary_image/');
+		$image_link = 'images/company_secondary_image/'.$result;
+		
+		$result1 = $manageData->updateValue('company_info','sec_image_1',$image_link,$id);
+		echo $result1;
+	}
+	if($sec_image_2 == 1)
+	{
+		$filename = $company_name.'_sec_image_2';
+		$result = $uploadImage->upload_file($filename,'sec_image_2','../../../images/company_secondary_image/');
+		$image_link = 'images/company_secondary_image/'.$result;
+		
+		$result1 = $manageData->updateValue('company_info','sec_image_2',$image_link,$id);
+		echo $result1;
+	}
+	if($sec_image_3 == 1)
+	{
+		$filename = $company_name.'_sec_image_3';
+		$result = $uploadImage->upload_file($filename,'sec_image_3','../../../images/company_secondary_image/');
+		$image_link = 'images/company_secondary_image/'.$result;
+		
+		$result1 = $manageData->updateValue('company_info','sec_image_3',$image_link,$id);
+		echo $result1;
+	}
+	if($sec_image_4 == 1)
+	{
+		$filename = $company_name.'_sec_image_4';
+		$result = $uploadImage->upload_file($filename,'sec_image_4','../../../images/company_secondary_image/');
+		$image_link = 'images/company_secondary_image/'.$result;
+		
+		$result1 = $manageData->updateValue('company_info','sec_image_4',$image_link,$id);
+		echo $result1;
+	}
+	if($sec_image_5 == 1)
+	{
+		$filename = $company_name.'_sec_image_5';
+		$result = $uploadImage->upload_file($filename,'sec_image_5','../../../images/company_secondary_image/');
+		$image_link = 'images/company_secondary_image/'.$result;
+		
+		$result1 = $manageData->updateValue('company_info','sec_image_5',$image_link,$id);
+		echo $result1;
+	}
+	if($sec_image_6 == 1)
+	{
+		$filename = $company_name.'_sec_image_6';
+		$result = $uploadImage->upload_file($filename,'sec_image_6','../../../images/company_secondary_image/');
+		$image_link = 'images/company_secondary_image/'.$result;
+		
+		$result1 = $manageData->updateValue('company_info','sec_image_6',$image_link,$id);
+		echo $result1;
+	}
 	}
 ?>
