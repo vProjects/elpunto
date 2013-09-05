@@ -6,8 +6,14 @@
 	
 	$company_name = $_GET['comp_name'];
 	$ad_details = $getData_UI->getAd_details($company_name);
-	
-	$getData_UI->trackViewers();
+	//tracker elements 
+	$date = date('Y-m-d H:i:s');  // getting the date when a user visits this page
+	$category = $_GET['comp_name'];						// category requested
+	$ip = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+	$browser = get_browser(null, true);		// geting full browser info
+	$browser['browser'];                      // getting the browser name
+	//insert the values database
+	$getData_UI->trackViewers($date,$category,$ip,$browser['browser']);
 	
 	
 ?>
