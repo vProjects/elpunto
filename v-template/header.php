@@ -2,6 +2,7 @@
 	//include class of BLL for data fetching
 	include 'v-includes/BLL.getData.php';
 	$getData_UI = new BLL_manageData();
+	
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -89,7 +90,6 @@ $(document).ready(function(){
             <div id="seacrch_box">Seleccione su ciudad
             	<select onchange="search_ads_city(this.value)">
                 	<option value="">Select One</option>
-                	<option value="default">Todas</option>
                     <option value="Bello">Bello</option>
                     <option value="boavita">Boavita</option>
                     <option value="cali">Cali</option>
@@ -106,15 +106,15 @@ $(document).ready(function(){
                   	<div class="follow_us">Follow us:</div>
                     <!--Facebook Icon-->
                     <div class="social_icon">
-                    	<a href="#"><img src="images/facebook.png" alt="facebook" style="width:100%;height:100%;"/></a>
+                    	<a href="<?php $getData_UI->getSocial_links('facebook'); ?>"><img src="images/facebook.png" alt="facebook" style="width:100%;height:100%;"/></a>
                     </div>
                     <!--Twitter Icon-->
                     <div class="social_icon">
-                    	<a href="#"><img src="images/twitter.png" alt="twitter" style="width:100%;height:100%;"/></a>
+                    	<a href="<?php $getData_UI->getSocial_links('twitter'); ?>"><img src="images/twitter.png" alt="twitter" style="width:100%;height:100%;"/></a>
                     </div>
                     <!--Linkdin Icon-->
                     <div class="social_icon">
-                    	<a href="#"><img src="images/linkedin.png" alt="linkedin" style="width:100%;height:100%;"/></a>
+                    	<a href="<?php $getData_UI->getSocial_links('linkedin'); ?>"><img src="images/linkedin.png" alt="linkedin" style="width:100%;height:100%;"/></a>
                     </div>
                   </div>
         </div><!--#header_main ends-->

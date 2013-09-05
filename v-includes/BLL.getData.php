@@ -211,7 +211,14 @@
 			}
 			echo '</div>';
 		}
+		//get social links
+		function getSocial_links($social_name)
+		{
+			$social_links = $this->manage_content->getValue('social_links','*');
+			print_r($social_links[0][$social_name]);
+		}
 		
 	}
+	
 
 ?>
