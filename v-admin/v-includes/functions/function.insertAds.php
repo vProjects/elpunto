@@ -86,7 +86,7 @@
 	echo $get_id[0]['id'];	
 	//image upload section
 	//check wheather image are uploaded or not if yes upload the file
-	//if($company_logo == 1)
+	if($company_logo == 1)
 	{
 		$filename = $company_name.'_logo';
 		$result = $uploadImage->upload_file($filename,'company_logo','../../../images/company_logo/');
