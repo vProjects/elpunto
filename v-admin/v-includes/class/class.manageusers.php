@@ -250,7 +250,7 @@ class manageusers{
 			$from = $totalRows - $id*10;
 			$to = $totalRows - ($id - 1)*10;
 		}
-		$query = $this->link->prepare("SELECT * FROM $tableName WHERE id BETWEEN '$from' AND $to order by date and time desc");
+		$query = $this->link->prepare("SELECT * FROM $tableName WHERE id BETWEEN '$from' AND $to order by `date`,`time` DESC");
 		$query->execute();
 		return $query->fetchALL(PDO::FETCH_ASSOC);
 		
