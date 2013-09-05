@@ -33,6 +33,9 @@
                      <div class="accordion-inner" onclick="loadFile('view.otherpages.php')" >
                       Other Pages
                     </div> 
+                    <div class="accordion-inner" onclick="loadFile('view.updateSliderImage.php')">
+                     Update Slider Image
+                    </div>
                     <div class="accordion-inner" onclick="loadFile('view.fileuploader.php')">
                       File Uploader
                     </div> 
