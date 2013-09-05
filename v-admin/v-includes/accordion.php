@@ -48,6 +48,9 @@
                     <div class="accordion-inner" onclick="loadFile('view.manageBanners.php')">
                       Manage Banners
                     </div>
+                     <div class="accordion-inner" onclick="loadFile('view.updateSocialLink.php')">
+                     Update Social Link
+                    </div>
                   </div>
                 </div>
                 <div class="accordion-group">
