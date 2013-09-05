@@ -276,7 +276,7 @@ class manageusers{
 	
 	function getTrackingByTime($tableName,$today,$timeDifference,$category){
 		$query = $this->link->prepare("SELECT * FROM $tableName 
-										WHERE date BETWEEN '$today' AND '$timeDifference'
+										WHERE date BETWEEN '$timeDifference' AND '$today'
 										AND category = '$category'");
 		$query->execute();
 		return $query->fetchAll(PDO::FETCH_ASSOC);

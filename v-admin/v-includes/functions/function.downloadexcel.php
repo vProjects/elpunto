@@ -10,8 +10,9 @@
 	
 	
 	$duration = $_POST['duration'];
+	$duration = intval($duration);
 	$today = substr(date('Y-m-d H:i:s'),0,10);
-	$timeDifference = date('Y-m-d',strtotime(date("Y-m-d", mktime()) . " + $duration day"));
+	$timeDifference = date('Y-m-d',strtotime(date("Y-m-d", time()) . " - $duration day"));
 	$trackingInfo = $manageUsers->getTrackingByTime('tracking',$today,$timeDifference,$_POST['category']);
 	
 

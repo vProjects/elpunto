@@ -1,6 +1,6 @@
 	
     <div id="login">
-           <a onclick="showmenubox()" ><img src="images/icon_login.png" alt="login" />&nbsp;&nbsp;LOGIN</a>
+           <a><img src="images/icon_login.png" alt="login" />&nbsp;&nbsp;LOGIN</a>
      </div>
      <form id="login_box" style="display:none" action="#">
 		
