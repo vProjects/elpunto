@@ -250,7 +250,7 @@ class manageusers{
 			$from = $totalRows - $id*10;
 			$to = $totalRows - ($id - 1)*10;
 		}
-		$query = $this->link->prepare("SELECT * FROM $tableName WHERE id BETWEEN '$from' AND $to order by date and time desc");
+		$query = $this->link->prepare("SELECT * FROM $tableName WHERE id BETWEEN '$from' AND $to order by date,time desc");
 		$query->execute();
 		return $query->fetchALL(PDO::FETCH_ASSOC);
 		
@@ -275,7 +275,7 @@ class manageusers{
 	function getTrackingByTime($tableName,$today,$timeDifference,$category){
 		$query = $this->link->prepare("SELECT * FROM $tableName 
 										WHERE date BETWEEN '$timeDifference' AND '$today'
-										AND category = '$category' order by DESC");
+										AND category = '$category' order by date, time desc");
 		$query->execute();
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}

@@ -20,23 +20,27 @@
 
 
 ?>
-        <table class="table" style="background-color:red">  
+        <table class="table">  
         <thead>  
           <tr>  
-            <th>Browser</th>  
-            <th>Date Time</th>  
-            <th>IP</th>  
-            <th>Catagory</th>  
+            <th>BrowserVer</th>  
+            <th>OS</th>  
+            <th>BrowserName</th>  
+            <th>IP</th>
+            <th>Company Name</th> 
+            <th>Date and Time</th>  
           </tr>  
         </thead>  
         <tbody>
         <?php
-			foreach($trackingInfo as $trackedData){ ?> 
+			foreach($trackingInfo as $trackingResult){ ?> 
           <tr>  
-            <td><?php echo $trackedData['browsername'] ?></td>  
-            <td><?php echo $trackedData['date']; echo '->'; echo $trackedData['time']; ?></td>  
-            <td><?php echo $trackedData['ip']?></td>  
-            <td><?php echo $trackedData['category']?></td>  
+            <td><?php echo $trackingResult['browserversion'].$trackingResult['id']?></td>  
+            <td><?php echo $trackingResult['os']; ?></td>  
+            <td><?php echo $trackingResult['browsername']?></td>  
+            <td><?php echo $trackingResult['ip']?></td>  
+            <td><?php echo $trackingResult['category']?></td>  
+            <td><?php echo $trackingResult['date']; echo '->'; echo $trackingResult['time'];?></td>  
           </tr>  
         <?php } ?>
         </tbody>  

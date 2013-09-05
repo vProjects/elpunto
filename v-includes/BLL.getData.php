@@ -1,5 +1,6 @@
 <?php
 	include 'class.DAL.php';
+	include 'class.utility.php';
 	
 	class BLL_manageData
 	{
@@ -178,10 +179,29 @@
 		/**
 		* function used to collect tracking data for users
 		*/
-		function trackViewers($date,$category,$ip,$browser){
-			$time_of_click = date("H:i:s");
-			$this->manage_content->insertTrackingValues($browser,$ip,$category,$date,$time_of_click);	 
+		function getUserData($companyName){
+				$date = date('Y-m-d H:i:s');  // getting the date when a user visits this page
+				$ip = $_SERVER['REMOTE_ADDR'];
+				$time_of_click = date("H:i:s");
+				$utility = new utility();
+				$userData= $utility->getBrowser();
+				$userInfo = array(
+					"company_name"=> $companyName,
+					"browserName" => $userData['name'],
+					"OS" => $userData['platform'],
+					"broswerVersion" => $userData['version'],
+					"date" => $date,
+				);
+	
+			$this->manage_content->insertTrackingValues($userInfo['company_name'],$userInfo['browserName'],
+														$userInfo['OS'],$userInfo['broswerVersion'],$userInfo['date'],$ip,$time_of_click);	 
+				
+	
 		}
+	
+		
+		
+		
 		
 		//function for getting the category details
 		function getCategory_details($category_name)

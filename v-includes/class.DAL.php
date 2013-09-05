@@ -129,9 +129,12 @@
 		}
 		
 		// function to store user tracking results
-		function insertTrackingValues($browserName,$ip,$category,$date,$time_click){
-			$query = $this->link->prepare("INSERT INTO `tracking`(`browsername`, `ip`, `category`, `date`,`time`) VALUES (?,?,?,?,?)");
-			$values = array($browserName,$ip,$category,$date,$time_click);
+
+
+		function insertTrackingValues($companyName,$browserName,$OS,$browserVersion,$date,$ip,$time){
+			
+			$query = $this->link->prepare("INSERT INTO `tracking`(`browserversion`, `os`, `browsername`, `ip`, `category`, `date`, `time`) VALUES (?,?,?,?,?,?,?)");
+			$values = array($browserVersion,$OS,$browserName,$ip,$companyName,$date,$time);
 			
 			$query->execute($values);
 		}
