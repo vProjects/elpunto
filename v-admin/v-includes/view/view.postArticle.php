@@ -1,4 +1,6 @@
 <?php
+	include('../class/class.manageusers.php');
+	$manageUsers = new manageusers();
 	session_start();
 	$result = 3;  // default value to remove undefined variable error
 	if(isset($GLOBALS['_GET']['status'])){
@@ -8,8 +10,17 @@
 		else if($GLOBALS['_GET']['status'] == 'pass'){
 			$result = 1;
 		}
+		else if($GLOBALS['_GET']['status'] == 'adel'){
+			$result = 2;
+		}
 	
 			 
+	}
+	$articleList = $manageUsers->getValue('article_info');
+	
+	// this section impplements the functionality of deleting the articles
+	if(isset($GLOBALS['_POST']['submit'])){
+		echo $GLOBALS['_POST']['abc'];
 	}
 ?>
 
@@ -46,6 +57,42 @@
                 	<textarea class="ckeditor" id="editor2" name="editor2" ></textarea>
                 <input type="submit" value="submit" name="submit" class="btn btn-success btn-large nbutton"/>
             </form>
-        </div>   
+        <?php
+		if($result == 2)
+				echo '<div class="alert alert-success">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>OOPS!!!</strong> You have deleted an article. Dont worry write a new one..by using the form above :)
+				</div>';
+		?>
+		    
+              
+        <table class="table table-hover table-bordered newslettertable" >  
+        <caption><h4>Article</h4></caption>
+        <thead>
+        <tr><td><h4>Article Info</h4></td></tr>  
+          <tr>  
+            <th>Article Heading</th>  
+            <th>Author</th>  
+            <th>Brief</th>  
+            <th>Delete</th>  
+          </tr>  
+        </thead>  
+        <tbody>
+        <?php
+			foreach($articleList as $article ){ ?> 
+          <tr>  
+            <td><?php echo $article['article_title'] ?></td>  
+            <td><?php echo $article['article_author'] ?></td>  
+            <td><?php echo $article['article_brief'] ?></td>  
+            <td><form method="post" action="v-includes/functions/function.postarticle.php">
+            	<input type="hidden" name="id" value="<?php echo $article['id'] ?>" />
+            	<input type="submit" value="delete" name="delete" />
+                </form>
+            </td>  
+          </tr>  
+        <?php } ?>
+        </tbody>  
+      </table>  
+	</div>   
     </div>
 </div>    

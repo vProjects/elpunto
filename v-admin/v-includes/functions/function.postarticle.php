@@ -18,6 +18,9 @@
 			 header('Location: ../../admin.php?value=apass');
 		 }
 	}
-	
+	if($GLOBALS['_POST']['delete']){
+		$manageUsers->deleteValue('article_info','id',$GLOBALS['_POST']['id']);
+		header('Location: ../../admin.php?value=adel');
+		}
 
 ?>
