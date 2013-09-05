@@ -178,14 +178,9 @@
 		/**
 		* function used to collect tracking data for users
 		*/
-		function trackViewers(){
-			$date = date('Y-m-d H:i:s');  // getting the date when a user visits this page
-			$category = $_GET['comp_name'];						// category requested
-			$_SERVER['REMOTE_ADDR'];				   // getting the IP address of the remote user
- 			$browser = get_browser(null, true);		// geting full browser info
-			$browser['browser'];                      // getting the browser name
-			
-			$this->manage_content->insertTrackingValues($browser['browser'],$_SERVER['REMOTE_ADDR'],$category,$date);	 
+		function trackViewers($date,$category,$ip,$browser){
+			$time_of_click = date("H:i:s");
+			$this->manage_content->insertTrackingValues($browser,$ip,$category,$date,$time_of_click);	 
 		}
 		
 		//function for getting the category details
