@@ -3,20 +3,33 @@
 	session_start();
 	include '../class/class.manageusers.php';
 	$manage_UI = new manageusers();
-	
-	$menus = $manage_UI->getMenu_sorted('vertical_navbar','*','level',0);
-	$submenus = $manage_UI->getMenu_sorted('vertical_navbar','*','level',1);
+	//get the links of the banner image
+	$image_links = $manage_UI->getValue('banner_info');
 ?>
              
 
 <div id="dashboard">
-	<div id="mailbox" style="height:562px">
+	<div id="mailbox" style="height:661px">
 		<!--create new sub menu form--->
         <blockquote>
           <p>Update Category Description of your site</p>
           <small>It will help <cite title="Source Title">you in category changes</cite></small>
         </blockquote>
 		<div class="container_navbar_manage">
+        <div class="banner_image_container">
+        	<div class="banner_image">
+            	<img src="../<?php if($image_links[0]['banner_status'] == 1){echo $image_links[0]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            </div>
+            <div class="banner_image">
+            	<img src="../<?php if($image_links[1]['banner_status'] == 1){echo $image_links[1]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            </div>
+            <div class="banner_image">
+            	<img src="../<?php if($image_links[2]['banner_status'] == 1){echo $image_links[2]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            </div>
+            <div class="banner_image" style="border:none;">
+            	<img src="../<?php if($image_links[3]['banner_status'] == 1){echo $image_links[3]['banner_image']; }?>" alt="Disabled" style="height:100%;width:100%;"/>
+            </div>
+        </div>
         <form class="meta_tag" action="v-includes/functions/function.uploadBanner.php" method="post" enctype="multipart/form-data">
         	<div class="form_element_v">
             	<label class="label1" style="margin-right:0px;margin-top:5px;">Banner Image 1:</label>

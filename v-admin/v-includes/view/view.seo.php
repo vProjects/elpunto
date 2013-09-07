@@ -1,6 +1,6 @@
 <?php
-print_r($GLOBALS);
-
+	header('Content-Type: text/html; charset=iso-8859-1');
+	session_start();
 ?>
 
 <div id="dashboard">

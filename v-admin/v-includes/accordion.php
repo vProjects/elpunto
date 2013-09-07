@@ -15,8 +15,6 @@
                       Post An Article
                     </div> <div class="accordion-inner" onClick="loadFile('view.changepassword.php')">
                       Change Your Password
-                    </div> <div class="accordion-inner" onclick="loadFile('view.client_form.php')" >
-                      Add Client
                     </div>
                   </div>
                 </div>

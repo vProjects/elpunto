@@ -35,7 +35,7 @@
 				echo "<script> loadFile('view.services.php?abc=anand') </script>";
 				break;
 			}
-			case 'password':{
+			case 'changePassword':{
 				echo "<script> loadFile('view.changepassword.php') </script>";
 				break;
 			}
