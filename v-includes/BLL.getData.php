@@ -221,7 +221,7 @@
 				if($banner['banner_status'] == 1)
 				{
 					echo '<a href="'.$banner['banner_link'].'">';
-					echo '<div class="add_section"><img src="'.$banner['banner_image'].'" style="height:'.$banner['banner_height'].'px;width:'.$banner['banner_width'].'px;float:left;"/></div></a>';
+					echo '<div class="add_section"><img src="images/'.$banner['banner_image'].'" style="height:'.$banner['banner_height'].'px;width:'.$banner['banner_width'].'px;float:left;"/></div></a>';
 				}
 			}
 			echo '</div>';
@@ -231,6 +231,19 @@
 		{
 			$social_links = $this->manage_content->getValue('social_links','*');
 			print_r($social_links[0][$social_name]);
+		}
+		
+		//function for getting slider images
+		function getSlider_images()
+		{
+			$slider_images = $this->manage_content->getValue('slider_info','*');
+			foreach($slider_images as $slider_image)
+			{
+				if($slider_image['slider_status'] == 1)
+				{
+					echo '<a href="'.$slider_image["slider_link"].'"><img src="images/'.$slider_image["slider_image"].'" style="width:692px;height:210px;"/></a>';
+				}
+			}
 		}
 		
 	}

@@ -34,30 +34,34 @@
 		$banner_link_4 = $_POST['banner_link_4'];
 	}
 	//check wheather banner image are uploaded or not if yes upload the file
-	if($banner_image_1 == 1)
+	if(!empty($banner_image_1))
 	{
 		$filename = 'ban_1';
 		$result = $uploadImage->upload_file($filename,'banner_image_1','../../../images/');
-		echo $result;
+		$result1 = $manageData->updateValue('banner_info','banner_image',$result,1);
+		echo $result1;
 	}
-	if($banner_image_2 == 1)
+	if(!empty($banner_image_2))
 	{
 		$filename = 'ban_2';
 		$result = $uploadImage->upload_file($filename,'banner_image_2','../../../images/');
-		echo $result;
+		$result1 = $manageData->updateValue('banner_info','banner_image',$result,2);
+		echo $result1;
 	}
-	if($banner_image_3 == 1)
+	if(!empty($banner_image_3))
 	{
 		echo 'ban_3';
 		$filename = 'ban_3';
 		$result = $uploadImage->upload_file($filename,'banner_image_3','../../../images/');
-		echo $result;
+		$result1 = $manageData->updateValue('banner_info','banner_image',$result,3);
+		echo $result1;
 	}
-	if($banner_image_4 == 1)
+	if(!empty($banner_image_4))
 	{
 		$filename = 'ban_4';
 		$result = $uploadImage->upload_file($filename,'banner_image_4','../../../images/');
-		echo $result;
+		$result1 = $manageData->updateValue('banner_info','banner_image',$result,4);
+		echo $result1;
 	}
 	//update the height 
 	if(isset($banner_h_1) && $banner_h_1 != "")

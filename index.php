@@ -25,10 +25,9 @@
             <!--slider container starts-->
             <div id="slider_container">
                 <div id="featured"> 
-                    <img src="images/banner_1.jpg" />
-                    <img src="images/banner_2.jpg" />
-                    <img src="images/banner_1.jpg" />
-                    <img src="images/banner_2.jpg" />
+                	<?php
+						$getData_UI->getSlider_images();
+					?>
                 </div>
             </div><!--slider container ends here-->
             

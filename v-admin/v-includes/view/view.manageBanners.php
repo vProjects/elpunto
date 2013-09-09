@@ -18,16 +18,16 @@
 		<div class="container_navbar_manage">
         <div class="banner_image_container">
         	<div class="banner_image">
-            	<img src="../<?php if($image_links[0]['banner_status'] == 1){echo $image_links[0]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            	<img src="../images/<?php if($image_links[0]['banner_status'] == 1){echo $image_links[0]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
             </div>
             <div class="banner_image">
-            	<img src="../<?php if($image_links[1]['banner_status'] == 1){echo $image_links[1]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            	<img src="../images/<?php if($image_links[1]['banner_status'] == 1){echo $image_links[1]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
             </div>
             <div class="banner_image">
-            	<img src="../<?php if($image_links[2]['banner_status'] == 1){echo $image_links[2]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            	<img src="../images/<?php if($image_links[2]['banner_status'] == 1){echo $image_links[2]['banner_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
             </div>
             <div class="banner_image" style="border:none;">
-            	<img src="../<?php if($image_links[3]['banner_status'] == 1){echo $image_links[3]['banner_image']; }?>" alt="Disabled" style="height:100%;width:100%;"/>
+            	<img src="../images/<?php if($image_links[3]['banner_status'] == 1){echo $image_links[3]['banner_image']; }?>" alt="Disabled" style="height:100%;width:100%;"/>
             </div>
         </div>
         <form class="meta_tag" action="v-includes/functions/function.uploadBanner.php" method="post" enctype="multipart/form-data">
@@ -41,9 +41,8 @@
                 <input type="text" class="form-control textbx_css" name="banner_w_1">
                 <label class="label1" style="margin-right:0px;float:right;margin-top:5px;">Banner1 Width:</label>
                 <select class="input1" name="banner_status_1" style="float:right;width:126px;margin-right:15px;">
-                	<option value="">Select Status</option>
-                    <option value="1">Active</option>
-                    <option value="0">In-active</option>
+                    <option value="1" <?php if($image_links[0]['banner_status'] == '1'){echo 'selected="selected"';} ?>>Active</option>
+                    <option value="0" <?php if($image_links[0]['banner_status'] == '0'){echo 'selected="selected"';} ?>>In-active</option>
                 </select>
             </div>
             <div class="form_element_v">
@@ -60,9 +59,8 @@
                 <input type="text" class="form-control textbx_css" name="banner_w_2">
                 <label class="label1" style="margin-right:0px;float:right;margin-top:5px;">Banner2 Width:</label>
                 <select class="input1" name="banner_status_2" style="float:right;width:126px;margin-right:15px;">
-                    <option value="">Select Status</option>
-                    <option value="1">Active</option>
-                    <option value="0">In-active</option>
+                    <option value="1" <?php if($image_links[1]['banner_status'] == '1'){echo 'selected="selected"';} ?>>Active</option>
+                    <option value="0" <?php if($image_links[1]['banner_status'] == '0'){echo 'selected="selected"';} ?>>In-active</option>
                 </select>
             </div>
             <div class="form_element_v">
@@ -79,9 +77,8 @@
                 <input type="text" class="form-control textbx_css" name="banner_w_3">
                 <label class="label1" style="margin-right:0px;float:right;margin-top:5px;">Banner3 Width:</label>
                 <select class="input1" name="banner_status_3" style="float:right;width:126px;margin-right:15px;">
-                    <option value="">Select Status</option>
-                    <option value="1">Active</option>
-                    <option value="0">In-active</option>
+                    <option value="1" <?php if($image_links[2]['banner_status'] == '1'){echo 'selected="selected"';} ?>>Active</option>
+                    <option value="0" <?php if($image_links[2]['banner_status'] == '0'){echo 'selected="selected"';} ?>>In-active</option>
                 </select>
             </div>
             <div class="form_element_v">
@@ -98,9 +95,8 @@
                 <input type="text" class="form-control textbx_css" name="banner_w_4">
                 <label class="label1" style="margin-right:0px;float:right;margin-top:5px;">Banner4 Width:</label>
                 <select class="input1" name="banner_status_4" style="float:right;width:126px;margin-right:15px;">
-                    <option value="">Select Status</option>
-                    <option value="1">Active</option>
-                    <option value="0">In-active</option>
+                    <option value="1" <?php if($image_links[3]['banner_status'] == '1'){echo 'selected="selected"';} ?>>Active</option>
+                    <option value="0" <?php if($image_links[3]['banner_status'] == '0'){echo 'selected="selected"';} ?>>In-active</option>
                 </select>
             </div>
             <div class="form_element_v">
