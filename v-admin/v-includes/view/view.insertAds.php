@@ -65,13 +65,6 @@
                         </select>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail" class="polllabel" style="width:auto;">No.of Categories</label>
-                      <select class="input1" name="no_category" style="margin-right: 88px;width: 509px;;">
-                            <option value="3">3</option>
-                            <option value="6">6</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Category</label>
                       <select class="input1" name="ad_category[]" style="margin-right: 88px;width: 514px;height: 161px" multiple="multiple">
                       		<option value="home">Home</option>

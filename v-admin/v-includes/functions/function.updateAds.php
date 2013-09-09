@@ -19,7 +19,6 @@
 		$end_date = $_POST['end_date'];
 		$id = $_POST['id'];
 		$ad_status = htmlentities($_POST['ad_status'],ENT_QUOTES, "utf-8");
-		$no_category = htmlentities($_POST['no_category'],ENT_QUOTES, "utf-8");
 		$ad_categorys = $_POST['ad_category'];
 		//varriables for getting images
 		$company_logo = $_FILES['company_logo']['name'];
@@ -149,36 +148,23 @@
 		}
 	}
 	//update category which are used as keyword for searching
-	if(isset($ad_categorys) && $ad_categorys != "" && isset($no_category) && $no_category != "")
+	if(isset($ad_categorys) && $ad_categorys != "")
 	{
 		//set the no. of category using $i
 		$i = 1;
+		//total number of elements in the category array
+		$count_category = count($ad_categorys);
 		//define $ad_keyword as null
 		$ad_keyword = "";
-		//get category array and convert it into keyword string
-		if($no_category == 3)
+		
+		foreach($ad_categorys as $ad_category)
 		{
-			foreach($ad_categorys as $ad_category)
+			$ad_keyword =$ad_keyword.','.$ad_category;
+			if($i == $count_category)
 			{
-				$ad_keyword =$ad_keyword.','.$ad_category;
-				if($i == 3)
-				{
-					break;
-				}
-				$i++;
+				break;
 			}
-		}
-		elseif($no_category == 6)
-		{
-			foreach($ad_categorys as $ad_category)
-			{
-				$ad_keyword =$ad_keyword.','.$ad_category;
-				if($i == 6)
-				{
-					break;
-				}
-				$i++;
-			}
+			$i++;
 		}
 		//support for special characters
 		$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "utf-8");
@@ -194,7 +180,7 @@
 	
 	//image upload section
 	//check wheather image are uploaded or not if yes upload the file
-	if($company_logo == 1)
+	if(!empty($company_logo))
 	{
 		$filename = $company_name.'_logo';
 		$result = $uploadImage->upload_file($filename,'company_logo','../../../images/company_logo/');
@@ -203,7 +189,7 @@
 		$result1 = $manageData->updateValue('company_info','company_logo',$image_link,$id);
 		echo $result1;
 	}
-	if($sec_image_1 == 1)
+	if(!empty($sec_image_1))
 	{
 		$filename = $company_name.'_sec_image_1';
 		$result = $uploadImage->upload_file($filename,'sec_image_1','../../../images/company_secondary_image/');
@@ -212,7 +198,7 @@
 		$result1 = $manageData->updateValue('company_info','sec_image_1',$image_link,$id);
 		echo $result1;
 	}
-	if($sec_image_2 == 1)
+	if(!empty($sec_image_2))
 	{
 		$filename = $company_name.'_sec_image_2';
 		$result = $uploadImage->upload_file($filename,'sec_image_2','../../../images/company_secondary_image/');
@@ -221,7 +207,7 @@
 		$result1 = $manageData->updateValue('company_info','sec_image_2',$image_link,$id);
 		echo $result1;
 	}
-	if($sec_image_3 == 1)
+	if(!empty($sec_image_3))
 	{
 		$filename = $company_name.'_sec_image_3';
 		$result = $uploadImage->upload_file($filename,'sec_image_3','../../../images/company_secondary_image/');
@@ -230,7 +216,7 @@
 		$result1 = $manageData->updateValue('company_info','sec_image_3',$image_link,$id);
 		echo $result1;
 	}
-	if($sec_image_4 == 1)
+	if(!empty($sec_image_4))
 	{
 		$filename = $company_name.'_sec_image_4';
 		$result = $uploadImage->upload_file($filename,'sec_image_4','../../../images/company_secondary_image/');
@@ -239,7 +225,7 @@
 		$result1 = $manageData->updateValue('company_info','sec_image_4',$image_link,$id);
 		echo $result1;
 	}
-	if($sec_image_5 == 1)
+	if(!empty($sec_image_5))
 	{
 		$filename = $company_name.'_sec_image_5';
 		$result = $uploadImage->upload_file($filename,'sec_image_5','../../../images/company_secondary_image/');
@@ -248,7 +234,7 @@
 		$result1 = $manageData->updateValue('company_info','sec_image_5',$image_link,$id);
 		echo $result1;
 	}
-	if($sec_image_6 == 1)
+	if(!empty($sec_image_6))
 	{
 		$filename = $company_name.'_sec_image_6';
 		$result = $uploadImage->upload_file($filename,'sec_image_6','../../../images/company_secondary_image/');
