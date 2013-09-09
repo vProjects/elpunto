@@ -34,8 +34,8 @@
             </div><!--#page_content ends here-->
            
             <!--horizontal menu starts here-->
-            <div id="hori_nav_container">
-            	<div id="hori_nav" style="top:-90px;">
+            <div class="hori_nav_modification">
+            	<div id="hori_nav">
                 	<?php
 						//get the vertical search from the template folder 
 						include 'v-template/vertical_search.php' 
@@ -46,7 +46,7 @@
                     ?> 
                 </div>
             </div><!--hori meu ends here-->
-            
+            <div class="clear"></div>
         </div><!--body container ends here-->
     </div><!--body_main_div-->
     
