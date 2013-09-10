@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Email</label>
-                      <input type="text" class="form-control" name="company_email" id="exampleInputEmail" placeholder="Email" style="width:500px" value="<?php echo $company_details[0]['company_email']; ?>">
+                      <input type="text" class="form-control" name="company_email" id="exampleInputEmail" placeholder="Email" style="width:500px" value="<?php echo $company_details[0]['company_email']; ?>" readonly="readonly">
 
                     </div>
                     <div class="form-group">

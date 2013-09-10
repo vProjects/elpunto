@@ -15,6 +15,8 @@
                       Post An Article
                     </div> <div class="accordion-inner" onClick="loadFile('view.changepassword.php')">
                       Change Your Password
+                    </div><div class="accordion-inner" onClick="loadFile('view.create_AdOwner.php')">
+                      Create Ad Owner
                     </div>
                   </div>
                 </div>
@@ -25,9 +27,6 @@
                     </a>
                   </div>
                   <div id="collapseTwo" class="accordion-body collapse" style="height: 0px;">
-                    <div class="accordion-inner" onclick="loadFile('view.homepage.php')" >
-                      Home Page
-                    </div>
                      <div class="accordion-inner" onclick="loadFile('view.otherpages.php')" >
                       Other Pages
                     </div> 

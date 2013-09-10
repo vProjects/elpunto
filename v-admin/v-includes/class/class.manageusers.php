@@ -177,6 +177,20 @@ class manageusers{
 		}
 	}
 	
+	//get email sorted according to alphabetical orders
+	function getValue_sorted($table_name,$value,$order_by)
+	{
+		$query = $this->link->query("SELECT $value from $table_name ORDER BY $order_by ASC");
+		$query->execute();
+		$rowcount = $query->rowCount();
+		if($rowcount > 0){
+			$result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $result;
+		}
+		else{
+			return $rowcount;
+		}
+	}
 	
 	//function for update of values
 	function updateValue($table_name,$column_name,$column_value,$id)
@@ -300,6 +314,16 @@ class manageusers{
 		else{
 			return $rowcount;
 		}
+	}
+	//insert value of ad owner
+	function insert_adOwner($owner_email,$password)
+	{
+		$query = $this->link->prepare("INSERT INTO `owner_info`(`owner_email`, `password`) VALUES (?,?)");
+		$values = array($owner_email,$password);
+		
+		$query->execute($values);
+		$rowcount = $query->rowCount();
+		return $rowcount;
 	}
 	
 
