@@ -39,7 +39,7 @@
            
             <!--horizontal menu starts here-->
             <div class="hori_nav_modification">
-            	<div id="hori_nav" style="position: absolute;top: 15px;">
+            	<div id="hori_nav">
                 	<?php
 						//get the vertical search from the template folder 
 						include 'v-template/vertical_search.php' 
