@@ -28,14 +28,9 @@
             <!--page_content for text of every page-->
             <div class="page_content">
             	<!--right author nav-->
-            <div id="attract_user">
-            </div>
+            
                  <form id="login_box" style="display:block" action="#">
-                    <div class="login_form_section">
-                        <div id="close" onclick="hidemenu()">X</div>
-                        <div class="clear"></div>        
-                    </div>
-                    
+                   
                     <div class="login_form_section">
                         <div class="login_username"> Username</div>
                         <input type="text" class="login_textbox" name=""/>
@@ -57,7 +52,7 @@
             </div><!--#page_content ends here-->
            
             <!--horizontal menu starts here-->
-            <div id="hori_nav_container">
+            <div class="hori_nav_modification">
             	<div id="hori_nav" style="top:-90px;">
                 	<?php
 						//get the vertical search from the template folder 
@@ -69,7 +64,7 @@
                     ?> 
                 </div>
             </div><!--hori meu ends here-->
-            
+            <div class="clear"></div>
         </div><!--body container ends here-->
     </div><!--body_main_div-->
  

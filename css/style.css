@@ -590,15 +590,17 @@ h1,h2,h3,h4{
 	margin:10px 8px 5px 0px;
 }
 #login_box{
-	background-color: #dbdbdb;
-	border: 3px solid #dbdbdb;
-	height: auto;
-	width: 350px;
-	padding-bottom: 20px;
-	float: left;
+    border: 1px solid #DBDBDB;
+    float: left;
+    height: auto;
+    margin-left: 100px;
+    padding-bottom: 20px;
+    width: 450px;
+	margin-top:50px;
+	box-shadow:2px 2px 14px #6C6C6C;
 }
 .login_form_section{
-	margin:10px auto 0;
+	margin:35px auto 0;
 	width:320px;
 	font-family:Verdana;
 	font-size:15px;
@@ -612,6 +614,7 @@ h1,h2,h3,h4{
 	float:right;
 	width:200px;
 	margin-right:10px;
+	border:1px solid;
 }
 #login_submit{
 	background-color: #E41B1B;
@@ -621,6 +624,7 @@ h1,h2,h3,h4{
     margin-right: 12px;
     padding: 5px;
     width: 80px;
+	font-weight: bold;
 }
 #close{
 	background-color: #E41B1B;

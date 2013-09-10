@@ -63,7 +63,7 @@ function reloadCaptcha()
 /*function showmenubox(){
 	document.getElementById('login_box').style.display = 'block';
 	return false;
-}*/
+}
 function hidemenu(){
 	document.getElementById('login_box').style.display = 'none';
 }
@@ -74,7 +74,7 @@ $(document).ready(function(){
 	$("#login_box").slideToggle("slow");
   });
 });
-	
+*/	
 </script>
 <!--JS code for search of ads-->
 <script src="js/search_function.js" type="text/javascript"></script>
