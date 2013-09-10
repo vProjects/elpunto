@@ -591,14 +591,11 @@ h1,h2,h3,h4{
 }
 #login_box{
 	background-color: #dbdbdb;
-    border: 3px solid #dbdbdb;
-    height: auto;
-    position: absolute;
-    right: 194px;
-    top: 186px;
-    width: 350px;
-    z-index: 1001;
-	padding-bottom:20px;
+	border: 3px solid #dbdbdb;
+	height: auto;
+	width: 350px;
+	padding-bottom: 20px;
+	float: left;
 }
 .login_form_section{
 	margin:10px auto 0;
@@ -643,4 +640,18 @@ h1,h2,h3,h4{
 .category_description{
 	font-family: arial;
     font-size: 12px;
+}
+#login_box_cover{
+	width: 100%;
+	background-color: #000;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+#attract_user{
+	width: 350px;
+	height: 100px;
+	background: #000;
+	float: left;
 }

@@ -26,7 +26,6 @@
          	<div class="clear"></div>
          </div>
       </form>  
-     
     
 <?php 
 	//get horizontal nav bar

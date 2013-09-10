@@ -71,7 +71,7 @@ function hidemenu(){
 
 $(document).ready(function(){
   $("#login").click(function(){
-    $("#login_box").slideToggle("slow");
+	$("#login_box").slideToggle("slow");
   });
 });
 	
