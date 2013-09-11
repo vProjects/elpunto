@@ -99,6 +99,21 @@
 				return $rowcount;
 			}
 		}
+		//get ads according to email(username)
+		function getValue_email($table_name,$value,$row_value,$value_entered)
+		{
+			//$value_entered = htmlentities($value_entered);
+			$query = $this->link->query("SELECT $value from $table_name WHERE $row_value LIKE '".$value_entered."'");
+			$query->execute();
+			$rowcount = $query->rowCount();
+			if($rowcount > 0){
+				$result = $query->fetchAll(PDO::FETCH_ASSOC);
+				return $result;
+			}
+			else{
+				return $rowcount;
+			}
+		}
 		//get submenus according to the position
 		function getSubmenu_ordered($table_name,$value,$order)
 		{
@@ -138,5 +153,22 @@
 			
 			$query->execute($values);
 		}
+		//function for update of values
+		function updateValue_email_owner($table_name,$column_name,$column_value,$email)
+		{
+			$query = $this->link->prepare("UPDATE `$table_name` SET `$column_name` = '$column_value' WHERE `owner_email` = '$email'");
+			$query->execute();
+			$count = $query->rowCount();
+			return $count;
+		}
+		//function for update of values
+		function updateValue_email_company($table_name,$column_name,$column_value,$email)
+		{
+			$query = $this->link->prepare("UPDATE `$table_name` SET `$column_name` = '$column_value' WHERE `company_name` = '$email'");
+			$query->execute();
+			$count = $query->rowCount();
+			return $count;
+		}
+		
 	}
 ?>

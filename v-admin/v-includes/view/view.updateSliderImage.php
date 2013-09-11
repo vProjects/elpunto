@@ -7,7 +7,7 @@
 ?>
 
 <div id="dashboard">
-	<div id="mailbox" style="height:562px">
+	<div id="mailbox" style="height:630px">
     
      <blockquote>
           <p>Update Slider Image of your site</p>
@@ -15,6 +15,20 @@
       </blockquote>
       
       <div class="container_navbar_manage">
+      	<div class="banner_image_container">
+        	<div class="banner_image">
+            	<img src="../images/<?php if($getSliders[0]['slider_status'] == 1){echo $getSliders[0]['slider_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            </div>
+            <div class="banner_image">
+            	<img src="../images/<?php if($getSliders[1]['slider_status'] == 1){echo $getSliders[1]['slider_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            </div>
+            <div class="banner_image">
+            	<img src="../images/<?php if($getSliders[2]['slider_status'] == 1){echo $getSliders[2]['slider_image'];} ?>" alt="Disabled" style="height:100%;width:100%;"/>
+            </div>
+            <div class="banner_image" style="border:none;">
+            	<img src="../images/<?php if($getSliders[3]['slider_status'] == 1){echo $getSliders[3]['slider_image']; }?>" alt="Disabled" style="height:100%;width:100%;"/>
+            </div>
+        </div>
       	<form class="meta_tag" action="v-includes/functions/function.updateSlider.php" method="post" enctype="multipart/form-data">
         	<div class="form_element_v" style="margin:12px 0px;">
             	<label class="label1" style="margin-right:0px;margin-top:5px;">Slider Image 1:</label>

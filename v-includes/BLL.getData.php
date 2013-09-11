@@ -35,6 +35,45 @@
 				echo "No result found";
 			}
 		}
+		//get ads accordnig to username(emails)
+		function getAds_email($email)
+		{
+			$seachValues = $this->manage_content->getValue_email('company_info','*','company_email',$email);
+			if($seachValues != "")
+			{
+				foreach($seachValues as $searchValue)
+				{
+					echo '<!--container for adds to be repeated-->
+						<a href="manage_ads.php?comp_name='.$searchValue['company_name'].'">
+							<div class="a_content">
+								<div class="a_image">
+									<img src="'.$searchValue['company_logo'].'" alt="grafti cartt" />    
+								</div>
+								<div class="a_company_name">'.$searchValue['company_name'].'</div>
+							</div>
+						</a>';
+				}
+			}
+			else
+			{
+				echo "No result found";
+			}
+		}
+		//funtion to get full categories
+		function get_categories()
+		{
+			$categories = $this->manage_content->getValue('vertical_navbar','menu_name');
+			return $categories;
+		}
+		
+		//get company details
+		function getAd_details_owner($company_name)
+		{
+			$adDetails = $this->manage_content->getValue_where('company_info','*','company_name',$company_name);
+			if($adDetails[0]['status'] == 1)
+			return $adDetails;
+			
+		}
 		
 		function getAd_details($company_name)
 		{
@@ -79,7 +118,7 @@
 		function getAuthor_sidebar()
 		{
 			$authors = $this->manage_content->getValue_distinct('article_info','article_author');
-			echo '<div class="auth_info"><h4>TODO</h4><ul>';
+			echo '<div class="auth_info"><a href="article.php"><h4>TODO</h4><a><ul>';
 			foreach($authors as $author)
 			{
 				echo '<li><a href="article_by_auth.php?author='.$author['article_author'].'">'.$author['article_author'].'</a></li>';
@@ -243,6 +282,122 @@
 				{
 					echo '<a href="'.$slider_image["slider_link"].'"><img src="images/'.$slider_image["slider_image"].'" style="width:692px;height:210px;"/></a>';
 				}
+			}
+		}
+		function login_owner($username,$password)
+		{
+			if(isset($password) && $password != "" && isset($username) && $username != "")
+			{
+				$password_db = $this->manage_content->getValue_where('owner_info','password','owner_email',$username);
+				if($password_db != 0)
+				{
+					if($password_db[0]['password'] == $password)
+					{
+						$_SESSION['elpunto'] = $username;
+						echo "<script>window.location = 'user.php';</script>";
+					}
+					else
+					{
+						session_destroy();
+						return "Please check username and password.";
+					}
+				}
+				else
+				{
+					session_destroy();
+					return "Please check username and password.";
+				}
+			}
+			else 
+			{
+				session_destroy();
+				return "Please enter username and password";
+			}
+		}
+		//function for updating password
+		function updatePassword($old_password,$new_password,$new_password_r,$email)
+		{
+			if(isset($new_password) && $new_password != "" && isset($new_password_r) && $new_password_r != "" && isset($old_password) && $old_password != "")
+			{
+				//both the new password matches each other or not
+				if($new_password == $new_password_r)
+				{
+					//get the password using the email(email is username)
+					$password_db = $this->manage_content->getValue_where('owner_info','password','owner_email',$email);
+					//check the password entered matches with the entered password
+					if($password_db[0]['password'] == $old_password )
+					{
+						//update the old password
+						$result = $this->manage_content->updateValue_email_owner('owner_info','password',$new_password,$email);
+						//print successful
+						if($result == 1)
+						{
+							return "Update successful.";
+						}
+					}
+					else 
+					{
+						return "Incorrect password.";
+					}
+				}
+				else
+				{
+					return "New password dont match.";
+				}
+			}
+			else
+			{
+				return "Please fill the form properly.";
+			}
+		}
+		//function update ad details
+		function updateDetails_ads($contact_no,$ad_categories,$comp_name)
+		{
+			if(isset($ad_categories) && !empty($ad_categories))
+			{
+				//set the no. of category using $i
+				$i = 1;
+				//total number of elements in the category array
+				$count_category = count($ad_categories);
+				//define $ad_keyword as null
+				$ad_keyword = "";
+				
+				foreach($ad_categories as $ad_category)
+				{
+					$ad_keyword =$ad_keyword.','.$ad_category;
+					if($i == $count_category)
+					{
+						break;
+					}
+					$i++;
+				}
+				$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "utf-8");
+				$result = $this->manage_content->updateValue_email_company('company_info','company_keywords',$ad_keyword,$comp_name);
+				//print result
+				if($result != 0)
+				return "Update successful.";
+				
+			}
+			if(isset($contact_no) && $contact_no != "")
+			{
+				$result = $this->manage_content->updateValue_email_company('company_info','company_tel',$contact_no,$comp_name);
+				//print result
+				if($result != 0)
+				return "Update successful.";
+			}
+			if($result == 0)
+			{
+				return "Update unsuccessful";
+			}
+			
+		}
+		//function to get the list of the cities avialable
+		function getCity()
+		{
+			$cities = $this->manage_content->getValue_distinct('company_info','company_city');
+			foreach($cities as $city)
+			{
+				echo '<option value="'.$city['company_city'].'">'.$city['company_city'].'</option>';
 			}
 		}
 		

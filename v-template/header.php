@@ -90,13 +90,10 @@ $(document).ready(function(){
             <div id="seacrch_box">Seleccione su ciudad
             	<select onchange="search_ads_city(this.value)">
                 	<option value="">Select One</option>
-                    <option value="Bello">Bello</option>
-                    <option value="boavita">Boavita</option>
-                    <option value="cali">Cali</option>
-                    <option value="envigado">Envigado</option>
-                    <option value="medellín">Medell&iacute;n</option>Nocaima
-                    <option value="nocaima">Nocaima</option>
-                    <option value="santafe">Santaf&eacute; de Bogot&aacute;</option>
+                    <?php
+						//get distinct cities from the database
+						$getData_UI->getCity();
+					?>
                 </select>
             </div>
             <div id="logo_container">

@@ -1,7 +1,15 @@
 <?php
+	session_start();
 	$page_title = "ARTICLE OF INTEREST";
 	$metaName = '';
 	include 'v-template/header.php';
+	
+	if($_SERVER['REQUEST_METHOD'] == 'POST')
+	{
+		$user_email = $_POST['user_email'];
+		$password = $_POST['password'];
+		$login_result = $getData_UI->login_owner($user_email,$password);
+	}
 	
 ?>
 
@@ -29,22 +37,23 @@
             <div class="page_content">
             	<!--right author nav-->
             
-                 <form id="login_box" style="display:block" action="#">
+                 <form id="login_box" style="display:block" action="login.php" method="post">
                    
                     <div class="login_form_section">
-                        <div class="login_username"> Username</div>
-                        <input type="text" class="login_textbox" name=""/>
+                        <div class="login_username"> Email</div>
+                        <input type="text" class="login_textbox" name="user_email"/>
                         <div class="clear"></div>
                     </div>
                     
                     <div class="login_form_section">
                         <div class="login_username"> Password</div>
-                        <input type="text" class="login_textbox" name=""/>
+                        <input type="text" class="login_textbox" name="password"/>
                         <div class="clear"></div>
                     </div>
                     
                      <div class="login_form_section">
                         <input type="submit" id="login_submit" value="SUBMIT" />
+                        <div style="font-size:10px;color:red;"><?php if(isset($login_result)){echo $login_result;} ?></div>
                         <div class="clear"></div>
                      </div>
                   </form>   
