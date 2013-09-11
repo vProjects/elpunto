@@ -53,7 +53,7 @@
                 <label class="label1">Author:</label>
                 	<input type="text" class="input1" name="aerticle_author" placeholder="Enter Article Author" style="width: 447px;">
                 <label class="label1">End Date:</label>
-                	<input type="text" class="input1" name="article_end" placeholder="YYYY-MM-DD" style="width: 447px;">
+                	<input type="text" class="input1" name="article_end" placeholder="YYYY-MM-DD" style="width: 447px;" value="<?php echo $date = date('Y-m-d'); ?>">
                 <label class="label1">Brief:</label> 
                		<textarea id="" name="brief" placeholder="type the brief here" style="width:447px" ></textarea>
                 	<textarea class="ckeditor" id="editor2" name="editor2" ></textarea>

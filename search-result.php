@@ -1,7 +1,8 @@
 <?php
 	$metaName = 'fullarticle';
-	$page_title = "Ads | Elpunto de Venta";
 	$search_keyword = htmlentities($_GET['keyword'],ENT_QUOTES,"utf-8");
+	//automated title from keyword
+	$page_title = $search_keyword." | Elpunto de Venta";
 	include 'v-template/header.php';
 ?>
     

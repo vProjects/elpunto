@@ -326,6 +326,14 @@ class manageusers{
 		$rowcount = $query->rowCount();
 		return $rowcount;
 	}
+	//update using the email
+	function update_byColumn($table_name,$column_name,$column_value,$where_column,$where_value)
+	{
+		$query = $this->link->prepare("UPDATE `$table_name` SET `$column_name` = '$column_value' WHERE `$where_column` = '$where_value'");
+		$query->execute();
+		$count = $query->rowCount();
+		return $count;
+	}
 	
 
 }

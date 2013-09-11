@@ -11,6 +11,8 @@
 	$search_value = htmlentities($_GET['keyword'],ENT_QUOTES,"utf-8");
 	//get value according to the search result
 	$company_details = $manage_UI->getvalue_search('company_info','*','company_name',$search_value);
+	//get the emails for the email field
+	$getEmails = $manage_UI->getValue_sorted('owner_info','*','owner_email');
 ?>
 
 <div id="dashboard">
@@ -44,7 +46,20 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Email</label>
-                      <input type="text" class="form-control" name="company_email" id="exampleInputEmail" placeholder="Email" style="width:500px" value="<?php echo $company_details[0]['company_email']; ?>" readonly="readonly">
+                      <select class="input1" name="company_email" style="margin-right: 88px;width: 514px;">
+                            <option value="">Select One</option>
+                            <?php
+								foreach($getEmails as $email)
+								{
+									echo '<option value="'.$email["owner_email"].'"';
+									if($email["owner_email"] == $company_details[0]['company_email'])
+									{
+										echo 'selected="selected"';
+									}
+									echo '>'.$email["owner_email"].'</option>';
+								}
+							?>
+                      </select>
 
                     </div>
                     <div class="form-group">

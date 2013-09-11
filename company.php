@@ -1,10 +1,12 @@
 <?php
 	include('v-includes/captcha/captchaVerify.php');
+	$company_name = $_GET['comp_name'];
 	$metaName = 'company';
-	$page_title = "El Punto de Venta";
+	//automated title from keyword
+	$page_title = $company_name ." | Elpunto de Venta";
 	include 'v-template/header.php';
 	
-	$company_name = $_GET['comp_name'];
+	
 	$ad_details = $getData_UI->getAd_details($company_name);
 
 	$getData_UI->getUserData($company_name);
@@ -59,7 +61,7 @@
                     <div class="company_logo"><img src="<?php echo $ad_details[0]['company_logo']; ?>" style="width:100%;height:100%;" /></div>
                     <div class="company_info"><?php echo $ad_details[0]['company_address']; ?></div>
                     <div class="company_info"><?php echo $ad_details[0]['company_city']; ?></div>
-                    <div class="company_info"><?php echo $ad_details[0]['company_website']; ?></div>
+                    <div class="company_info"><a href="<?php echo 'http://'.$ad_details[0]['company_website']; ?>"><?php echo $ad_details[0]['company_website']; ?></a></div>
                 </div><!--#left_container ends here-->
                 <!--right_container starts here-->
             	<div class="right_container">

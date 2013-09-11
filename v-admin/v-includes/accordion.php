@@ -18,6 +18,9 @@
                     </div><div class="accordion-inner" onClick="loadFile('view.create_AdOwner.php')">
                       Create Ad Owner
                     </div>
+                    <div class="accordion-inner" onClick="loadFile('view.update_AdOwner.php')">
+                      Update Ad Owner
+                    </div>
                   </div>
                 </div>
                 <div class="accordion-group">
