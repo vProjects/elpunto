@@ -13,7 +13,7 @@
 			 header('Location: ../../admin.php?value=afail');
 		 }
 		 else {
-		 	$manageUsers->insertArticle(htmlentities($GLOBALS['_POST']['article_heading'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['aerticle_author'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['article_end'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['brief'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['editor2'],ENT_QUOTES, "utf-8"),$date);
+		 	$manageUsers->insertArticle(htmlentities($GLOBALS['_POST']['article_heading'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['aerticle_author'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['article_end'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['brief'],ENT_QUOTES, "utf-8"),$GLOBALS['_POST']['editor2'],$date);
 										
 			 header('Location: ../../admin.php?value=apass');
 		 }

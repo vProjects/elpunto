@@ -130,6 +130,32 @@
 	 }
 	 
 	 
+	 	 function showCategoryDec(value){
+		 var xmlhttp;
+			if (window.XMLHttpRequest)
+			  {// code for IE7+, Firefox, Chrome, Opera, Safari
+			  xmlhttp=new XMLHttpRequest();
+			  }
+			else
+			  {// code for IE6, IE5
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+			xmlhttp.onreadystatechange=function()
+			  {
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{	
+					document.getElementById("catdesc").innerHTML=xmlhttp.responseText;
+					
+				}
+			  }
+			xmlhttp.open("GET","v-includes/functions/function.showcategorydesc.php?cat="+value,true);
+			xmlhttp.send();
+		 
+		 
+	 }
+
+	 
+	 
 </script>
 
 <script type="text/javascript">
