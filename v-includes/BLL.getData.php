@@ -201,7 +201,7 @@
 		*/
 		function getMetaTags($pageName){
 			$metaTags = $this->manage_content->getValue_where('meta_tags','*','page',$pageName);
-			echo '<meta name="description" content="'.$metaTags[0]['keyword'].'" />
+			echo '<meta name="keywords" content="'.$metaTags[0]['keyword'].'" />
 <meta name="description" content="'.$metaTags[0]['description'].'" />';
 		}
 		

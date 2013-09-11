@@ -7,10 +7,10 @@
 	$page = $_POST['page'];
 	
 	if(isset($description)){
-		$count  = $manageUsers->saveMetatags('description',$description,$page);
+		echo $count  = $manageUsers->saveMetatags('description',$description,$page);
 	}
 	else if(isset($keywords)){
-		$count = $manageUsers->saveMetatags('keywords',$keywords,$page);
+		echo $count = $manageUsers->saveMetatags('keywords',$keywords,$page);
 	}
 	
 	header('location: ../../admin.php?value=seo');

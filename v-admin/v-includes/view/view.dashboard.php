@@ -10,12 +10,14 @@
         	<label class="label">Enter Keywords:</label><input type="text" class="input" name="keywords" placeholder="Enter Keywords">
             <label class="label">Select the Page</label>
             	<select class="input" name="page">
-                  <option value="index">Home Page</option>
-                  <option value="portfolio">Portfolio</option>
-                  <option value="login">Login</option>
-                  <option value="services">Services</option>
+                  <option value="inicio">Inicio</option>
                   <option value="about">About</option>
+                  <option value="announce">Article List</option>
+                  <option value="fullarticle">Full Article</option>
+                  <option value="terms">Terms</option>
                   <option value="contact">Contact</option>
+                  <option value="company">Company</option>
+                  <option value="articlebyauth">Article By Author</option>
                 </select>
             <button type="submit" class="btn btn-primary" onClick="">submit</button> 
         
