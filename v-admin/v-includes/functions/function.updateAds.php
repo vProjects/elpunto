@@ -28,6 +28,9 @@
 		$sec_image_4 = $_FILES['sec_image_4']['name'];
 		$sec_image_5 = $_FILES['sec_image_5']['name'];
 		$sec_image_6 = $_FILES['sec_image_6']['name'];
+		//get values which has to be updated in owner info table
+		$owner_address_1 = htmlentities($_POST['owner_address_1'],ENT_QUOTES, "utf-8");
+		$owner_address_2 = htmlentities($_POST['owner_address_2'],ENT_QUOTES, "utf-8");
 	}
 	echo $id;
 	//update owner name
@@ -178,6 +181,7 @@
 			echo 'ad_categorys status failed<br/>';
 		}
 	
+	
 	//image upload section
 	//check wheather image are uploaded or not if yes upload the file
 	if(!empty($company_logo))
@@ -234,6 +238,7 @@
 		$result1 = $manageData->updateValue('company_info','sec_image_5',$image_link,$id);
 		echo $result1;
 	}
+	
 	if(!empty($sec_image_6))
 	{
 		$filename = $company_name.'_sec_image_6';
@@ -243,5 +248,20 @@
 		$result1 = $manageData->updateValue('company_info','sec_image_6',$image_link,$id);
 		echo $result1;
 	}
+	}
+	//update value in owner info table
+	//get email according to id for updation
+	$owner_email = $manageData->getValue_where('company_info','company_email','id',$id);
+	//update the add owner address line 1
+	if(isset($owner_address_1) && $owner_address_1 != "")
+	{
+		$result = $manageData->update_byColumn('owner_info','owner_address_1',$owner_address_1,'owner_email',$owner_email[0]['company_email']);
+		echo $result;
+	}
+	//update the add owner address line 2
+	if(isset($owner_address_2) && $owner_address_2 != "")
+	{
+		$result = $manageData->update_byColumn('owner_info','owner_address_2',$owner_address_2,'owner_email',$owner_email[0]['company_email']);
+		echo $result;
 	}
 ?>

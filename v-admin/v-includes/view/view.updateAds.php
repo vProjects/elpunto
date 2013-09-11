@@ -11,8 +11,13 @@
 	$search_value = htmlentities($_GET['keyword'],ENT_QUOTES,"utf-8");
 	//get value according to the search result
 	$company_details = $manage_UI->getvalue_search('company_info','*','company_name',$search_value);
-	//get the emails for the email field
+	//get the emails for the email field from owner_info table
 	$getEmails = $manage_UI->getValue_sorted('owner_info','*','owner_email');
+	if(!empty($company_details[0]['company_email']))
+	{
+		//getDetails according to email from owner info table according to email
+		$getDetails = $manage_UI->getValue_where('owner_info',"*",'owner_email',$company_details[0]['company_email']);
+	}
 ?>
 
 <div id="dashboard">
@@ -62,6 +67,18 @@
                       </select>
 
                     </div>
+                    <!--values fetched from owner info table-->
+                    <div class="form-group">
+                      <label for="exampleInputEmail" class="polllabel" style="font-size:12px;">Owner Address 1</label>
+                      <input type="text" class="form-control" name="owner_address_1" id="exampleInputEmail" placeholder="Owner Address 1" style="width:500px" value="<?php if(isset($getDetails)){echo $getDetails[0]['owner_address_1'];} ?>">
+
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail" class="polllabel" style="font-size:12px;">Owner Address 2</label>
+                      <input type="text" class="form-control" name="owner_address_2" id="exampleInputEmail" placeholder="Owner Address 2" style="width:500px" value="<?php if(isset($getDetails)){echo $getDetails[0]['owner_address_2'];} ?>">
+
+                    </div>
+                    <!--values fetched from owner info table ends here-->
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Phone</label>
                       <input type="text" class="form-control" name="company_phone" id="exampleInputEmail" placeholder="Phone No." style="width:500px" value="<?php echo $company_details[0]['company_tel']; ?>">

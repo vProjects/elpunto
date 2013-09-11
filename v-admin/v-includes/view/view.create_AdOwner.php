@@ -20,6 +20,16 @@
                       <input type="text" class="form-control" name="owner_password_r" id="exampleInputEmail" placeholder="Re Enter Password" style="width:500px">
 
                     </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail" class="polllabel" style="width:140px;">Address 1</label>
+                      <input type="text" class="form-control" name="add_line_1" id="exampleInputEmail" placeholder="Enter Password" style="width:500px">
+
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail" class="polllabel" style="width:140px;">Address 2</label>
+                      <input type="text" class="form-control" name="add_line_2" id="exampleInputEmail" placeholder="Enter Password" style="width:500px">
+
+                    </div>
                     <button type="submit" class="btn btn-primary" style="margin-right:153px;float:right;">Create</button>
                   </fieldset>
                 </form> 
