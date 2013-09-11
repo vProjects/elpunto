@@ -26,7 +26,7 @@
 
 
 <div id="dashboard">
-	<div id="post_article">
+	<div id="post_article" style=" height: 650px;">
     	<blockquote>
           <p>Post An Article Here</p>
         </blockquote>
@@ -52,6 +52,8 @@
                 	<input type="text" class="input1" name="article_heading" placeholder="Enter Article Heading" style="width: 447px;">
                 <label class="label1">Author:</label>
                 	<input type="text" class="input1" name="aerticle_author" placeholder="Enter Article Author" style="width: 447px;">
+                <label class="label1">End Date:</label>
+                	<input type="text" class="input1" name="article_end" placeholder="YYYY-MM-DD" style="width: 447px;">
                 <label class="label1">Brief:</label> 
                		<textarea id="" name="brief" placeholder="type the brief here" style="width:447px" ></textarea>
                 	<textarea class="ckeditor" id="editor2" name="editor2" ></textarea>
@@ -73,7 +75,8 @@
           <tr>  
             <th>Article Heading</th>  
             <th>Author</th>  
-            <th>Brief</th>  
+            <th>Brief</th> 
+            <th>End Date</th> 
             <th>Delete</th>  
           </tr>  
         </thead>  
@@ -83,7 +86,8 @@
           <tr>  
             <td><?php echo $article['article_title'] ?></td>  
             <td><?php echo $article['article_author'] ?></td>  
-            <td><?php echo $article['article_brief'] ?></td>  
+            <td><?php echo $article['article_brief'] ?></td> 
+            <td><?php echo $article['end_date'] ?></td> 
             <td><form method="post" action="v-includes/functions/function.postarticle.php">
             	<input type="hidden" name="id" value="<?php echo $article['id'] ?>" />
             	<input type="submit" value="delete" name="delete" />
