@@ -663,3 +663,13 @@ h1,h2,h3,h4{
     height: 115px;
     width: 393px;
 }
+#forgotPassword{
+	border: 1px solid #DBDBDB;
+	float: left;
+	height: auto;
+	margin-left: 40px;
+	padding-bottom: 20px;
+	width: 600px;
+	margin-top: 50px;
+	box-shadow: 2px 2px 14px #6C6C6C;
+}

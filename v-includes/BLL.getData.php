@@ -401,6 +401,17 @@
 			}
 		}
 		
+		
+		// function to send the users password in case he/she forgets the old one
+		function validateAndSend($user_email){
+			$userPassword = $this->manage_content->getValue_email('owner_info','password','owner_email',$user_email);
+			if(isset($userPassword[0]['password']))
+				return 'Mail sent to the Email specified';
+			else 
+				return 'Email Id does not exist';
+
+		}
+		
 	}
 	
 

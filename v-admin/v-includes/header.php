@@ -1,3 +1,8 @@
+<?php
+	include('class/class.manageusers.php');
+	$manageUsers = new manageusers();
+	$tracking = $manageUsers->stats('7','15','30');
+?>
 <!doctype html>
 <html>
 <head>
@@ -26,11 +31,11 @@
 	  }
       function drawChart(pagename) {
         var data = google.visualization.arrayToDataTable([
-          ['Day', 'visits', 'clicks'],
-          ['Today',  1000,      400],
-          ['date',  1170,      460],
-          ['date',  660,       1120],
-          ['date',  1030,      540]
+          ['Day', 'visits'],
+          ['Today',  <?php echo $tracking['today'] ?>],
+          ['7 days',  <?php echo $tracking['7 day'] ?>],
+          ['15 days',  <?php echo $tracking['15 day'] ?>],
+          ['30 days',  <?php echo $tracking['30 day'] ?>]
         ]);
 
         var options = {
@@ -93,11 +98,10 @@
 						CKEDITOR.replace( 'editor2' );   // this is used to load cke-edtior on any page
 						CKEDITOR.replace( 'editor3' );   // this is used to load cke-edtior on any page
 						CKEDITOR.replace( 'editor4' );   // this is used to load cke-edtior on any page
-						CKEDITOR.replace( 'editor5' );   // this is used to load cke-edtior on any page
 					}
 					if(variable == 'view.postArticle.php' || variable == 'view.postArticle.php?status=fail' 
 					|| variable == 'view.postArticle.php?status=pass' || variable == 'view.postArticle.php?status=adel' )
-						CKEDITOR.replace( 'editor2' );   // this is used to load cke-edtior on any page
+						CKEDITOR.replace( 'editor5' );   // this is used to load cke-edtior on any page
 				}
 			  }
 			xmlhttp.open("GET","v-includes/view/"+variable,true);

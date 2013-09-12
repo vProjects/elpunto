@@ -335,6 +335,40 @@ class manageusers{
 		return $count;
 	}
 	
+	function getTrackingCount($tableName,$today,$timeDifference){
+		$query = $this->link->prepare("SELECT count(*) FROM $tableName 
+										WHERE date BETWEEN '$timeDifference' AND '$today'");
+		$query->execute();
+		return $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+	
+	/* functions to show stats for the click and views takes input as days
+	*  and returns an array
+	*/
+	
+	function stats($sevenDay, $fifDay, $thDay){
+		//calculate the time difference
+		$today = substr(date('Y-m-d H:i:s'),0,10);
+		$sevenDay = date('Y-m-d',strtotime(date("Y-m-d", time()) . " - $sevenDay day"));
+		$fifDay =   date('Y-m-d',strtotime(date("Y-m-d", time()) . " - $fifDay day"));
+		$thDay = date('Y-m-d',strtotime(date("Y-m-d", time()) . " - $thDay day"));
+		
+		//takes the time difference value in variables
+		$todaysTrackingInfo = $this->getTrackingCount('tracking',$today,$today);
+		$sevendaytrackingInfo = $this->getTrackingCount('tracking',$today,$sevenDay);
+		$fifdaytrackingInfo = $this->getTrackingCount('tracking',$today,$fifDay);
+		$thdaytrackingInfo = $this->getTrackingCount('tracking',$today,$thDay);
+		
+		// assigning final values in an array
+		$tracking = array(
+						"today" => $todaysTrackingInfo[0]['count(*)'],
+						"7 day" => $sevendaytrackingInfo[0]['count(*)'],
+						"15 day" => $fifdaytrackingInfo[0]['count(*)'],
+						"30 day" => $thdaytrackingInfo[0]['count(*)']
+						);
+						
+		return $tracking;
+	}
 
 }
 ?>

@@ -56,7 +56,7 @@
                 	<input type="text" class="input1" name="article_end" placeholder="YYYY-MM-DD" style="width: 447px;" value="<?php echo $date = date('Y-m-d'); ?>">
                 <label class="label1">Brief:</label> 
                		<textarea id="" name="brief" placeholder="type the brief here" style="width:447px" ></textarea>
-                	<textarea class="ckeditor" id="editor2" name="editor2" ></textarea>
+                	<textarea class="ckeditor" id="editor5" name="editor5" ></textarea>
                 <input type="submit" value="submit" name="submit" class="btn btn-success btn-large nbutton"/>
             </form>
         <?php

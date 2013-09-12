@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$page_title = "ARTICLE OF INTEREST";
+	$page_title = "LOGIN PAGE";
 	$metaName = '';
 	include 'v-template/header.php';
 	
@@ -52,6 +52,7 @@
                     </div>
                     
                      <div class="login_form_section">
+                     	<a href="forgotpwd.php">Forgot Password?</a>
                         <input type="submit" id="login_submit" value="SUBMIT" />
                         <div style="font-size:10px;color:red;"><?php if(isset($login_result)){echo $login_result;} ?></div>
                         <div class="clear"></div>

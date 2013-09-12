@@ -4,7 +4,7 @@
 	$date = date('Y-m-d');
 	
 	if($GLOBALS['_POST']['submit']){
-		if( $GLOBALS['_POST']['editor2'] == '' || 
+		if( $GLOBALS['_POST']['editor5'] == '' || 
 			$GLOBALS['_POST']['article_heading'] == '' || 
 			$GLOBALS['_POST']['aerticle_author'] == '' || 
 			$GLOBALS['_POST']['article_end'] == '' ||
@@ -13,7 +13,7 @@
 			 header('Location: ../../admin.php?value=afail');
 		 }
 		 else {
-		 	$manageUsers->insertArticle(htmlentities($GLOBALS['_POST']['article_heading'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['aerticle_author'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['article_end'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['brief'],ENT_QUOTES, "utf-8"),$GLOBALS['_POST']['editor2'],$date);
+		 	$manageUsers->insertArticle(htmlentities($GLOBALS['_POST']['article_heading'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['aerticle_author'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['article_end'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['brief'],ENT_QUOTES, "utf-8"),$GLOBALS['_POST']['editor5'],$date);
 										
 			 header('Location: ../../admin.php?value=apass');
 		 }

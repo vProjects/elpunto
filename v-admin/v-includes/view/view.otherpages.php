@@ -60,7 +60,7 @@
               <div class="form-group">
                 <form action="v-includes/functions/function.manageotherpages.php" name="bannertext" method="post">
                 	<input type="hidden" name="contact" value="contact" />
-                    <textarea class="ckeditor" id="editor3" name="editor4"><?php echo $otherpages[3]['content'] ?></textarea>
+                    <textarea class="ckeditor" id="editor4" name="editor4"><?php echo $otherpages[3]['content'] ?></textarea>
                     <input type="submit" value="submit" class="btn btn-success btn-large nbutton"/>
                 </form>
 			 </div>
