@@ -36,3 +36,12 @@ function search_ads_city(search_keyword)
 		window.location = 'index.php?keyword='+search_keyword;
 	}
 }
+//function to give a hint while creating a category link-->only valid for creating the vertical menus
+function categoryLink(id_field,id_field_link){
+	var x = document.getElementById(id_field).value;
+	if( x != "")
+	{
+		var prescribed_link = "search-result.php?keyword="+x;
+		document.getElementById(id_field_link).value = prescribed_link;
+	}
+}

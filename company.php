@@ -62,6 +62,7 @@
                     <div class="company_info"><?php echo $ad_details[0]['company_address']; ?></div>
                     <div class="company_info"><?php echo $ad_details[0]['company_city']; ?></div>
                     <div class="company_info"><a href="<?php echo 'http://'.$ad_details[0]['company_website']; ?>"><?php echo $ad_details[0]['company_website']; ?></a></div>
+                   
                 </div><!--#left_container ends here-->
                 <!--right_container starts here-->
             	<div class="right_container">
