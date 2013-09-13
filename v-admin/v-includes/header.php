@@ -94,14 +94,14 @@
 						CKEDITOR.replace( 'editor1' );   // this is used to load cke-edtior on any page
 					}
 					if(variable == 'view.otherpages.php'){
-						CKEDITOR.replace( 'editor1' );   // this is used to load cke-edtior on any page
-						CKEDITOR.replace( 'editor2' );   // this is used to load cke-edtior on any page
-						CKEDITOR.replace( 'editor3' );   // this is used to load cke-edtior on any page
-						CKEDITOR.replace( 'editor4' );   // this is used to load cke-edtior on any page
+						CKEDITOR.replace('editor1', { filebrowserBrowseUrl: 'ss/index.html'});
+						CKEDITOR.replace('editor2', { filebrowserBrowseUrl: 'ss/index.html'});
+						CKEDITOR.replace('editor3', { filebrowserBrowseUrl: 'ss/index.html'});
+						CKEDITOR.replace('editor4', { filebrowserBrowseUrl: 'ss/index.html'});
 					}
 					if(variable == 'view.postArticle.php' || variable == 'view.postArticle.php?status=fail' 
 					|| variable == 'view.postArticle.php?status=pass' || variable == 'view.postArticle.php?status=adel' )
-						CKEDITOR.replace( 'editor5' );   // this is used to load cke-edtior on any page
+						CKEDITOR.replace('editor4', { filebrowserBrowseUrl: 'ss/index.html'});
 				}
 			  }
 			xmlhttp.open("GET","v-includes/view/"+variable,true);
