@@ -1,6 +1,7 @@
 <?php
 	include 'class.DAL.php';
 	include 'class.utility.php';
+	include 'class.mail.php';
 	
 	class BLL_manageData
 	{
@@ -404,11 +405,16 @@
 		
 		// function to send the users password in case he/she forgets the old one
 		function validateAndSend($user_email){
+			$mail_function = new Mail();
+			$company_email = $this->manage_content->getValue_where('email_info','company_email','id',1);  
+			
 			$userPassword = $this->manage_content->getValue_email('owner_info','password','owner_email',$user_email);
 			if(isset($userPassword[0]['password']))
-				return 'Mail sent to the Email specified';
-			else 
-				return 'Email Id does not exist';
+			{	
+				$message = "Your password for the account is".$userPassword[0]['password'];
+				$mailsent = $mail_function->sendMail($user_email,$message,$company_email[0]['company_email']);
+				return $mailsent;	
+			}
 
 		}
 		
