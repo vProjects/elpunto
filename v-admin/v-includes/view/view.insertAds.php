@@ -21,7 +21,7 @@
                   <fieldset>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Name</label>
-                      <input type="text" class="form-control" name="name" id="exampleInputEmail" placeholder="Owner Name" style="width:500px">
+                      <input type="text" class="form-control" name="name" placeholder="Owner Name" style="width:500px">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Company Name</label>

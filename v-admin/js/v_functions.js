@@ -45,3 +45,26 @@ function categoryLink(id_field,id_field_link){
 		document.getElementById(id_field_link).value = prescribed_link;
 	}
 }
+//form validation codes starts from here
+//global varriable which will contain the validation output
+var validation_result = "" ;
+//function for form validations
+function validateRequiredField(input_value,id_name)
+{
+	var x = document.getElementById(id_name).value;
+	if(input_value == "")
+	{
+		//make the background color red
+		document.getElementById(id_name).style.backgroundColor = '#F6D3D3';
+		//update the validation result
+		validation_result = "invalid";
+		alert(validation_result);
+	}
+	else
+	{
+		//make the background color normal if valid
+		document.getElementById(id_name).style.backgroundColor = '#ffffff';
+		validation_result = "valid";
+		alert(validation_result);
+	}
+}

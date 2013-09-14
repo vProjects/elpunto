@@ -62,7 +62,12 @@
                     <div class="company_info"><?php echo $ad_details[0]['company_address']; ?></div>
                     <div class="company_info"><?php echo $ad_details[0]['company_city']; ?></div>
                     <div class="company_info"><a href="<?php echo 'http://'.$ad_details[0]['company_website']; ?>"><?php echo $ad_details[0]['company_website']; ?></a></div>
-                   
+                    <!--Random ads container-->
+                   	<!--<div class="a_random_container">
+                    	<div class="a_random">
+                        	<img src="images/ban_1.jpg" alt="random_ads"/>
+                        </div>
+                    </div>-->
                 </div><!--#left_container ends here-->
                 <!--right_container starts here-->
             	<div class="right_container">

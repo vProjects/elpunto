@@ -355,10 +355,7 @@ h1,h2,h3,h4{
     margin: 25px auto 30px;
 }
 .company_img_scroller{
-	background-color: #666666;
-    float: left;
-    height: 95px;
-    width: 100%;
+	margin: 0 auto 0 5px;
 }
 .company_logo{
 	float: left;
@@ -672,4 +669,19 @@ h1,h2,h3,h4{
 	width: 600px;
 	margin-top: 50px;
 	box-shadow: 2px 2px 14px #6C6C6C;
+}
+.a_random_container{
+	background-color: #A52A2A;
+    clear: both;
+    margin: 0 auto;
+	max-width:220px;
+}
+.a_random{
+	background-color: #000000;
+    clear: both;
+    margin: 0 auto;
+}
+.a_random img{
+	max-width:220px;
+	max-height:80px;
 }
