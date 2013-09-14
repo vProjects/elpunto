@@ -74,29 +74,30 @@
                 	<div class="company_description"><?php echo $ad_details[0]['company_description']; ?></div>
 				<h3>Contacte al proveedor</h3>
                 <form class="company_contact_form" action="v-includes/captcha/captchaVerify.php" method="post">
+                	<input type="hidden" name="id" value="1" />
                 	<div class="form_element">
                     	<div class="form_text">Nombre / Apellido:</div>
-                    	<input id="" type="text" value="" name="" class="textbx_1">
+                    	<input id="" type="text" value="" name="name" class="textbx_1">
                     </div>
                 	<div class="form_element">
                     	<div class="form_text">Empresa: </div>
-                    	<input id="" type="text" value="" name="" class="textbx_1">
+                    	<input id="" type="text" value="" name="company_name" class="textbx_1">
                     </div>
                     <div class="form_element">
                     	<div class="form_text">Departamento <br />/ Ciudad: </div>
-                    	<input id="" type="text" value="" name="" class="textbx_1">
+                    	<input id="" type="text" value="" name="city" class="textbx_1">
                     </div>
                     <div class="form_element">
                     	<div class="form_text">Email: </div>
-                    	<input id="" type="text" value="" name="" class="textbx_1">
+                    	<input id="" type="text" value="" name="email" class="textbx_1">
                     </div>
                     <div class="form_element">
                     	<div class="form_text">Telefono: </div>
-                    	<input id="" type="text" value="" name="" class="textbx_1">
+                    	<input id="" type="text" value="" name="phone_no" class="textbx_1">
                     </div>
                     <div class="form_element">
                     	<div class="form_text">Comentarios:  </div><br/>
-                    	<textarea class="textarea_1"></textarea>
+                    	<textarea class="textarea_1" name="comments"></textarea>
                     </div>
                     <div class="form_element">
                     	<div class="form_text">Cual es el resultado? </div><br/>

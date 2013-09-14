@@ -31,6 +31,7 @@
             
             <!--contact form starts here-->
             <form class="contact_form" action="v-includes/captcha/captchaVerify.php" method="post">
+            	<input type="hidden" name="id" value="2" />
                 <div class="form_element">
                     <div class="form_text">Nombre / Apellido:</div>
                     <input id="" type="text" value="" name="" class="textbx_1">
