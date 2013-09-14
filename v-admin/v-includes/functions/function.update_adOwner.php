@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include '../class/class.manageusers.php';
 	$manage_data = new manageusers();
 	
@@ -14,8 +15,19 @@
 	{
 		$result = $manage_data->update_byColumn('company_info','company_email',$new_email,'company_email',$email_previous);
 		echo $result;
-		$result = $manage_data->update_byColumn('owner_info','owner_email',$new_email,'owner_email',$email_previous);
-		echo $result;
+		$result1 = $manage_data->update_byColumn('owner_info','owner_email',$new_email,'owner_email',$email_previous);
+		echo $result1;
 		
 	}
+	//codes for update result using session
+	if($result > 0)
+	{
+		$_SESSION['result'] = "Update Successful.";
+	}
+	else
+	{
+		$_SESSION['result'] = "Please fill the form properly and try again.";
+	}
+	//redirection varriable insertAds_owner
+	header('location: ../../admin.php?value=updateAds_owner');
 ?>

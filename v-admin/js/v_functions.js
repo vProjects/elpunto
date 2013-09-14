@@ -68,3 +68,35 @@ function validateRequiredField(input_value,id_name)
 		alert(validation_result);
 	}
 }
+//function for checking valid email
+function validateEmail(id_name,id_button)
+{
+	var textbx = document.getElementById(id_name);
+	var input_value = document.getElementById(id_name).value;
+	var btn = document.getElementById(id_button);
+	//check the field is empty
+	if(input_value == "")
+	{
+		alert("Mandatory Field.");
+		textbx.style.backgroundColor = '#F6D3D3';
+		btn.disabled = 'true';
+	}
+	//If not empty then check for email validation
+	else
+	{
+		var x=input_value;
+		var atpos=x.indexOf("@");
+		var dotpos=x.lastIndexOf(".");
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+		{
+			alert("Invalid Email");
+			textbx.style.backgroundColor = '#F6D3D3';
+			btn.disabled = 'true';
+  		}
+		else
+		{
+			textbx.style.backgroundColor = '#ffffff';
+			btn.disabled = '';
+		}
+	}
+}

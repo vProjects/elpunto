@@ -44,15 +44,21 @@
 		
 		function getValue_where($table_name,$value,$row_value,$value_entered)
 		{
-			$query = $this->link->query("SELECT $value from $table_name where $row_value='$value_entered'");
-			$query->execute();
-			$rowcount = $query->rowCount();
-			if($rowcount > 0){
-				$result = $query->fetchAll(PDO::FETCH_ASSOC);
-				return $result;
+			try{
+				$query = $this->link->query("SELECT $value from $table_name where $row_value='$value_entered'");
+				$query->execute();
+				$rowcount = $query->rowCount();
+				if($rowcount > 0){
+					$result = $query->fetchAll(PDO::FETCH_ASSOC);
+					return $result;
+				}
+				else{
+					return $rowcount;
+				}
 			}
-			else{
-				return $rowcount;
+			catch(Exception $e)
+			{
+				throw "Result Not Found";
 			}
 		}
 		//get all the latest aricles 

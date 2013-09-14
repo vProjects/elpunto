@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include '../class/class.manageusers.php';
 	$manageData = new manageusers();
 	
@@ -16,29 +17,36 @@
 		if($owner_password == $owner_password_r)
 		{
 			$result = $manageData->insert_adOwner($owner_email,$owner_password);
-			echo $result;
+			//update the add owner address line 1
+			if(isset($add_line_1) && $add_line_1 != "")
+			{
+				$result = $manageData->update_byColumn('owner_info','owner_address_1',$add_line_1,'owner_email',$owner_email);
+			}
+			//update the add owner address line 2
+			if(isset($add_line_2) && $add_line_2 != "")
+			{
+				$result = $manageData->update_byColumn('owner_info','owner_address_2',$add_line_2,'owner_email',$owner_email);
+			}
 		}
 		else
 		{
 			$result = "Password Don't match";
-			echo $result;
 		}
 	}
 	else
 	{
 		$result = "Please fill the form properly";
-		echo $result;
 	}
-	//update the add owner address line 1
-	if(isset($add_line_1) && $add_line_1 != "")
+	
+	//codes for update result using session
+	if($result > 0)
 	{
-		$result = $manageData->update_byColumn('owner_info','owner_address_1',$add_line_1,'owner_email',$owner_email);
-		echo $result;
+		$_SESSION['result'] = "Update Successful.";
 	}
-	//update the add owner address line 2
-	if(isset($add_line_2) && $add_line_2 != "")
+	else
 	{
-		$result = $manageData->update_byColumn('owner_info','owner_address_2',$add_line_2,'owner_email',$owner_email);
-		echo $result;
+		$_SESSION['result'] = "Please fill the form properly and try again.";
 	}
+	//redirection varriable insertAds_owner
+	header('location: ../../admin.php?value=insertAds_owner');
 ?>

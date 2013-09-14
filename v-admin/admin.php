@@ -82,6 +82,14 @@
 				echo "<script> loadFile('view.insertAds_img.php?company_name=$company_name') </script>";
 				break;
 			}
+			case 'insertAds_owner':{
+				echo "<script> loadFile('view.create_AdOwner.php') </script>";
+				break;
+			}
+			case 'updateAds_owner':{
+				echo "<script> loadFile('view.update_AdOwner.php') </script>";
+				break;
+			}
 
 		}
 	}

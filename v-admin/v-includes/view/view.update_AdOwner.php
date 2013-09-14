@@ -27,11 +27,11 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" style="width:140px;">New Email</label>
-                      <input type="text" class="form-control" name="new_email" id="exampleInputEmail" placeholder="Enter Password" style="width:500px">
+                      <input type="text" class="form-control" name="new_email" id="new_email" onblur="validateEmail('new_email','btn_submit')" placeholder="Enter Password" style="width:500px">
 
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="margin-right:153px;float:right;">Update</button>
+                    <div class="error_result"><?php if(isset($_SESSION['result'])){echo $_SESSION['result']; unset($_SESSION['result']);}?></div>
+                    <button type="submit" class="btn btn-primary" id="btn_submit" style="margin-right:153px;float:right;">Update</button>
                   </fieldset>
                 </form> 
 

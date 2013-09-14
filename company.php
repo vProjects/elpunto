@@ -1,6 +1,13 @@
 <?php
 	include('v-includes/captcha/captchaVerify.php');
-	$company_name = $_GET['comp_name'];
+	$company_name = $_GET["comp_name"];
+	if (strpos($company_name, "'") != false)
+	{
+		echo '<script>
+				alert("Invalid search");
+				window.location = "index.php";
+			</script>';
+	}
 	$metaName = 'company';
 	//automated title from keyword
 	$page_title = $company_name ." | Elpunto de Venta";
@@ -10,7 +17,7 @@
 	$ad_details = $getData_UI->getAd_details($company_name);
 
 	$getData_UI->getUserData($company_name);
-
+	
 	
 ?>
 
@@ -34,6 +41,12 @@
             <div class="company_content_holder">
             	<!--left_container starts here-->
             	<div class="left_container">
+                	
+				<?php
+					//check if the output is zero or not if zero display null------------->(1)
+					if($ad_details != 'Ad not active' )
+					{
+				?>
                 	<h2><?php echo $ad_details[0]['company_name']; ?></h2>
                     <div class="company_img"><img id="change_image" src="<?php echo $ad_details[0]['company_logo']; ?>" style="width:100%;height:100%;" /></div>
                     <div class="company_img_scroller">
@@ -73,6 +86,7 @@
             	<div class="right_container">
                 	<div class="company_description"><?php echo $ad_details[0]['company_description']; ?></div>
 				<h3>Contacte al proveedor</h3>
+                
                 <form class="company_contact_form" action="v-includes/captcha/captchaVerify.php" method="post">
                 	<input type="hidden" name="id" value="1" />
                 	<div class="form_element">
@@ -108,6 +122,14 @@
                     </div>
                     <input type="submit" value="Enviar" name="Enviar" class="btn_1"/>
                 </form>
+                <?php
+					//for the above condition checkinf------------->(1)
+						}
+						else
+						{
+							echo "No ads for the search.Try again with some other keyword.";
+						}
+				?>
                 </div><!--#right_container ends here-->
             </div><!--#company content holder-->
            
@@ -115,6 +137,7 @@
             <div class="hori_nav_modification">
             	<div id="hori_nav" style="top:-90px;">
                 	<?php
+						
 						//get the vertical search from the template folder 
 						include 'v-template/vertical_search.php' 
 					?>
