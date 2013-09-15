@@ -102,6 +102,9 @@
 					if(variable == 'view.postArticle.php' || variable == 'view.postArticle.php?status=fail' 
 					|| variable == 'view.postArticle.php?status=pass' || variable == 'view.postArticle.php?status=adel' )
 						CKEDITOR.replace('editor4', { filebrowserBrowseUrl: 'ss/index.html'});
+					if(variable == 'view.updateCategoryDescription.php'){
+						CKEDITOR.replace('editor6', { filebrowserBrowseUrl: 'ss/index.html'});
+					}
 				}
 			  }
 			xmlhttp.open("GET","v-includes/view/"+variable,true);

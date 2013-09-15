@@ -4,7 +4,7 @@
 	$date = date('Y-m-d');
 	
 	if($GLOBALS['_POST']['submit']){
-		if( $GLOBALS['_POST']['editor5'] == '' || 
+		if( $GLOBALS['_POST']['editor4'] == '' || 
 			$GLOBALS['_POST']['article_heading'] == '' || 
 			$GLOBALS['_POST']['aerticle_author'] == '' || 
 			$GLOBALS['_POST']['article_end'] == '' ||
