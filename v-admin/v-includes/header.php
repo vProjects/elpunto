@@ -67,6 +67,7 @@
    
 
 	 function loadFile(variable){
+		
 		 
 		 var xmlhttp;
 			if (window.XMLHttpRequest)
@@ -102,7 +103,11 @@
 					if(variable == 'view.postArticle.php' || variable == 'view.postArticle.php?status=fail' 
 					|| variable == 'view.postArticle.php?status=pass' || variable == 'view.postArticle.php?status=adel' )
 						CKEDITOR.replace('editor4', { filebrowserBrowseUrl: 'ss/index.html'});
-					if(variable == 'view.updateCategoryDescription.php'){
+						
+					   // this update Variable is checked to maintain the get request on the
+										
+					var updateCat = variable.substr(0,34);	
+					if(updateCat == 'view.updateCategoryDescription.php'){
 						CKEDITOR.replace('editor6', { filebrowserBrowseUrl: 'ss/index.html'});
 					}
 				}
@@ -160,6 +165,13 @@
 		 
 		 
 	 }
+	 
+	 
+	 
+	 function showCategoryDesc(value){
+		 window.location.assign("admin.php?value=upc&cat="+value);
+		 
+		}
 
 	 
 	 

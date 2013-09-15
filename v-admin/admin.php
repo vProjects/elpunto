@@ -90,6 +90,11 @@
 				echo "<script> loadFile('view.update_AdOwner.php') </script>";
 				break;
 			}
+			case 'upc':{
+				$cat = $_GET['cat'];
+				echo "<script> loadFile('view.updateCategoryDescription.php?cat=$cat') </script>";
+				break;
+			}
 
 		}
 	}
