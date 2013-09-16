@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include '../class/class.upload_file.php';
 	//object or uploading image
 	$uploadImage = new FileUpload();
@@ -30,69 +31,69 @@
 		$filename = 'banner_1';
 		$result = $uploadImage->upload_file($filename,'slider_1','../../../images/');
 		$result1 = $manageData->updateValue('slider_info','slider_image',$result,1);
-		echo $result;
 	}
 	if(!empty($slider_2))
 	{
 		$filename = 'banner_2';
 		$result = $uploadImage->upload_file($filename,'slider_2','../../../images/');
 		$result1 = $manageData->updateValue('slider_info','slider_image',$result,2);
-		echo $result;
 	}
 	if(!empty($slider_3))
 	{
 		$filename = 'banner_3';
 		$result = $uploadImage->upload_file($filename,'slider_3','../../../images/');
 		$result1 = $manageData->updateValue('slider_info','slider_image',$result,3);
-		echo $result;
 	}
 	if(!empty($slider_4))
 	{
 		$filename = 'banner_4';
 		$result = $uploadImage->upload_file($filename,'slider_4','../../../images/');
 		$result1 = $manageData->updateValue('slider_info','slider_image',$result,4);
-		echo $result;
 	}
 	//update the slider the links
 	if(isset($slider_link_1) && $slider_link_1 != "")
 	{
 		$result = $manageData->updateValue('slider_info','slider_link',$slider_link_1,1);
-		echo $result;
 	}
 	if(isset($slider_link_2) && $slider_link_2 != "")
 	{
 		$result = $manageData->updateValue('slider_info','slider_link',$slider_link_2,2);
-		echo $result;
 	}
 	if(isset($slider_link_3) && $slider_link_3 != "")
 	{
 		$result = $manageData->updateValue('slider_info','slider_link',$slider_link_3,3);
-		echo $result;
 	}
 	if(isset($slider_link_4) && $slider_link_4 != "")
 	{
 		$result = $manageData->updateValue('slider_info','slider_link',$slider_link_4,4);
-		echo $result;
 	}
 	//update the slider status
 	if(isset($slider_status_1) && $slider_status_1 != "")
 	{
 		$result = $manageData->updateValue('slider_info','slider_status',$slider_status_1,1);
-		echo $result;
 	}
 	if(isset($slider_status_2) && $slider_status_2 != "")
 	{
 		$result = $manageData->updateValue('slider_info','slider_status',$slider_status_2,2);
-		echo $result;
 	}
 	if(isset($slider_status_3) && $slider_status_3 != "")
 	{
 		$result = $manageData->updateValue('slider_info','slider_status',$slider_status_3,3);
-		echo $result;
 	}
 	if(isset($slider_status_4) && $slider_status_4 != "")
 	{
 		$result = $manageData->updateValue('slider_info','slider_status',$slider_status_4,4);
-		echo $result;
 	}
+	
+	//codes for update result using session
+	if($result > 0)
+	{
+		$_SESSION['result'] = "Update Successful.";
+	}
+	else
+	{
+		$_SESSION['result'] = "Please fill the form properly and try again.";
+	}
+	//redirection varriable insertAds_owner
+	header('location: ../../admin.php?value=updateSlider');
 ?>

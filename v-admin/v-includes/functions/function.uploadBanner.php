@@ -109,42 +109,36 @@
 	if(isset($banner_link_1) && $banner_link_1 != "")
 	{
 		$result = $manageData->updateValue('banner_info','banner_link',$banner_link_1,1);
-		echo $result;
 	}
 	if(isset($banner_link_2) && $banner_link_2 != "")
 	{
 		$result = $manageData->updateValue('banner_info','banner_link',$banner_link_2,2);
-		echo $result;
 	}
 	if(isset($banner_link_3) && $banner_link_3 != "")
 	{
 		$result = $manageData->updateValue('banner_info','banner_link',$banner_link_3,3);
-		echo $result;
 	}
 	if(isset($banner_link_4) && $banner_link_4 != "")
 	{
 		$result = $manageData->updateValue('banner_info','banner_link',$banner_link_4,4);
-		echo $result;
 	}
 	//update banner_status
 	if(isset($banner_status_1) && $banner_status_1 != "")
 	{
 		$result = $manageData->updateValue('banner_info','banner_status',$banner_status_1,1);
-		echo $result;
 	}
 	if(isset($banner_status_2) && $banner_status_2 != "")
 	{
 		$result = $manageData->updateValue('banner_info','banner_status',$banner_status_2,2);
-		echo $result;
 	}
 	if(isset($banner_status_3) && $banner_status_3 != "")
 	{
 		$result = $manageData->updateValue('banner_info','banner_status',$banner_status_3,3);
-		echo $result;
 	}
 	if(isset($banner_status_4) && $banner_status_4 != "")
 	{
 		$result = $manageData->updateValue('banner_info','banner_status',$banner_status_4,4);
-		echo $result;
 	}
+	
+	header('Location:../../admin.php?value=uploadBanner');
 ?>

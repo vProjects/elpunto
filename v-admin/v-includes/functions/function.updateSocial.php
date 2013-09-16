@@ -14,16 +14,15 @@
 	if(isset($fb_link) && $fb_link != "")
 	{
 		$result = $manageData->updateValue('social_links','facebook',$fb_link,1);
-		echo $result;
 	}
 	if(isset($t_link) && $t_link != "")
 	{
 		$result = $manageData->updateValue('social_links','twitter',$t_link,1);
-		echo $result;
 	}
 	if(isset($l_link) && $l_link != "")
 	{
 		$result = $manageData->updateValue('social_links','linkedin',$l_link,1);
-		echo $result;
 	}
+	
+	header('Location:../../admin.php?value=updateSocial');
 ?>

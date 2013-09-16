@@ -95,6 +95,26 @@
 				echo "<script> loadFile('view.updateCategoryDescription.php?cat=$cat') </script>";
 				break;
 			}
+			case 'updateSlider':{
+				echo "<script> loadFile('view.updateSliderImage.php') </script>";
+				break;
+			}
+			case 'updateCategoryDescription':{
+				echo "<script> loadFile('view.updateCategoryDescription.php') </script>";
+				break;
+			}
+			case 'uploadBanner':{
+				echo "<script> loadFile('view.manageBanners.php') </script>";
+				break;
+			}
+			case 'updateSocial':{
+				echo "<script> loadFile('view.updateSocialLink.php') </script>";
+				break;
+			}
+			case 'updateAds':{
+				echo "<script> loadFile('view.updateAds.php') </script>";
+				break;
+			}
 
 		}
 	}

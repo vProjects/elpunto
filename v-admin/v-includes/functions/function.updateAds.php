@@ -191,7 +191,6 @@
 		$image_link = 'images/company_logo/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','company_logo',$image_link,$id);
-		echo $result1;
 	}
 	if(!empty($sec_image_1))
 	{
@@ -200,7 +199,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_1',$image_link,$id);
-		echo $result1;
 	}
 	if(!empty($sec_image_2))
 	{
@@ -209,7 +207,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_2',$image_link,$id);
-		echo $result1;
 	}
 	if(!empty($sec_image_3))
 	{
@@ -218,7 +215,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_3',$image_link,$id);
-		echo $result1;
 	}
 	if(!empty($sec_image_4))
 	{
@@ -227,7 +223,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_4',$image_link,$id);
-		echo $result1;
 	}
 	if(!empty($sec_image_5))
 	{
@@ -236,7 +231,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_5',$image_link,$id);
-		echo $result1;
 	}
 	
 	if(!empty($sec_image_6))
@@ -246,7 +240,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_6',$image_link,$id);
-		echo $result1;
 	}
 	}
 	//update value in owner info table
@@ -256,12 +249,11 @@
 	if(isset($owner_address_1) && $owner_address_1 != "")
 	{
 		$result = $manageData->update_byColumn('owner_info','owner_address_1',$owner_address_1,'owner_email',$owner_email[0]['company_email']);
-		echo $result;
 	}
 	//update the add owner address line 2
 	if(isset($owner_address_2) && $owner_address_2 != "")
 	{
 		$result = $manageData->update_byColumn('owner_info','owner_address_2',$owner_address_2,'owner_email',$owner_email[0]['company_email']);
-		echo $result;
 	}
+	header('Location:../../admin.php?value=updateAds');
 ?>
