@@ -31,19 +31,20 @@
 		//get values which has to be updated in owner info table
 		$owner_address_1 = htmlentities($_POST['owner_address_1'],ENT_QUOTES, "utf-8");
 		$owner_address_2 = htmlentities($_POST['owner_address_2'],ENT_QUOTES, "utf-8");
+		//codes for company specific ads
+		$company_ads = $_POST['company_ads'];
 	}
-	echo $id;
 	//update owner name
 	if(isset($name) && $name != "")
 	{
 		$result = $manageData->updateValue($table_name,'owner_name',$name,$id);
 		if($result == 1)
 		{
-			echo 'name successfully updated<br/>';
+			$result_update = 'name successfully updated<br/>';
 		}
 		else
 		{
-			echo 'update name failed<br/>';
+			$result_update =  'update name failed<br/>';
 		}
 	}
 	//update company name
@@ -52,11 +53,11 @@
 		$result = $manageData->updateValue($table_name,'company_name',$company_name,$id);
 		if($result == 1)
 		{
-			echo 'company company name successfully updated<br/>';
+			$result_update =  'company company name successfully updated<br/>';
 		}
 		else
 		{
-			echo 'company company name failed<br/>';
+			$result_update =  'company company name failed<br/>';
 		}
 	}
 	//update company city
@@ -65,11 +66,11 @@
 		$result = $manageData->updateValue($table_name,'company_city',$company_city,$id);
 		if($result == 1)
 		{
-			echo 'company city successfully updated<br/>';
+			$result_update =  'company city successfully updated<br/>';
 		}
 		else
 		{
-			echo 'company city failed<br/>';
+			$result_update =  'company city failed<br/>';
 		}
 	}
 	//update company email
@@ -78,11 +79,11 @@
 		$result = $manageData->updateValue($table_name,'company_email',$company_email,$id);
 		if($result == 1)
 		{
-			echo 'company email successfully updated<br/>';
+			$result_update =  'company email successfully updated<br/>';
 		}
 		else
 		{
-			echo 'company email failed<br/>';
+			$result_update =  'company email failed<br/>';
 		}
 	}
 	//update company phone
@@ -91,11 +92,11 @@
 		$result = $manageData->updateValue($table_name,'company_tel',$company_phone,$id);
 		if($result == 1)
 		{
-			echo 'company phone successfully updated<br/>';
+			$result_update =  'company phone successfully updated<br/>';
 		}
 		else
 		{
-			echo 'company phone failed<br/>';
+			$result_update =  'company phone failed<br/>';
 		}
 	}
 	//update company website
@@ -104,11 +105,11 @@
 		$result = $manageData->updateValue($table_name,'company_website',$company_website,$id);
 		if($result == 1)
 		{
-			echo 'company website successfully updated<br/>';
+			$result_update =  'company website successfully updated<br/>';
 		}
 		else
 		{
-			echo 'company website failed<br/>';
+			$result_update =  'company website failed<br/>';
 		}
 	}
 	//update company description
@@ -117,11 +118,11 @@
 		$result = $manageData->updateValue($table_name,'company_description',$company_description,$id);
 		if($result == 1)
 		{
-			echo 'company description successfully updated<br/>';
+			$result_update =  'company description successfully updated<br/>';
 		}
 		else
 		{
-			echo 'company description failed<br/>';
+			$result_update =  'company description failed<br/>';
 		}
 	}
 	//update company status
@@ -130,11 +131,11 @@
 		$result = $manageData->updateValue($table_name,'status',$ad_status,$id);
 		if($result == 1)
 		{
-			echo 'company status successfully updated<br/>';
+			$result_update =  'company status successfully updated<br/>';
 		}
 		else
 		{
-			echo 'company status failed<br/>';
+			$result_update =  'company status failed<br/>';
 		}
 	}
 	//update end date
@@ -143,11 +144,11 @@
 		$result = $manageData->updateValue($table_name,'end_date',$end_date,$id);
 		if($result == 1)
 		{
-			echo 'end_date successfully updated<br/>';
+			$result_update =  'end_date successfully updated<br/>';
 		}
 		else
 		{
-			echo 'end_date status failed<br/>';
+			$result_update =  'end_date status failed<br/>';
 		}
 	}
 	//update category which are used as keyword for searching
@@ -174,11 +175,11 @@
 		$result = $manageData->updateValue($table_name,'company_keywords',$ad_keyword,$id);
 		if($result == 1)
 		{
-			echo 'ad_categorys successfully updated<br/>';
+			$result_update =  'ad_categorys successfully updated<br/>';
 		}
 		else
 		{
-			echo 'ad_categorys status failed<br/>';
+			$result_update =  'ad_categorys status failed<br/>';
 		}
 	
 	
@@ -259,6 +260,10 @@
 	if(!isset($company_name) || empty($company_name))
 	{
 		$keyword = 'none';
+	}
+	if(isset($company_ads) && $company_ads != "")
+	{
+		$result = $manageData->updateValue('company_info','company_ads',$company_ads,$id);
 	}
 	header('Location:../../admin.php?value=updateAds&keyword='.$company_name);
 ?>

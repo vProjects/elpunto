@@ -25,6 +25,8 @@
 		$sec_image_4 = $_FILES['sec_image_4']['name'];
 		$sec_image_5 = $_FILES['sec_image_5']['name'];
 		$sec_image_6 = $_FILES['sec_image_6']['name'];
+		//codes for company specific ads
+		$company_ads = $_POST['company_ads'];
 	}
 	
 	if(isset($company_name) && $company_name != "" && isset($company_email) && $company_email != "" && isset($ad_duration) && $ad_duration != "" && isset($ad_status) && $ad_status != "" )
@@ -59,18 +61,15 @@
 		
 		$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "utf-8");
 		//$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "cp1252");
-		echo $ad_keyword;
-		$result = $manageData->insertAds_details($company_name,$company_phone,$company_city,$company_email,$company_website,$name,$company_description,$ad_keyword,$c_start_date,$c_end_date,$ad_status,$ad_duration);
+		$result = $manageData->insertAds_details($company_name,$company_phone,$company_city,$company_email,$company_website,$name,$company_description,$ad_keyword,$c_start_date,$c_end_date,$ad_status,$ad_duration,$company_ads);
 		echo $result;
 	}
 	else
 	{
 		$result = 'Please fill the form properly';
-		echo $result;
 	}
 	//get the id of inserted element
-	$get_id = $manageData->getValue_where('company_info','id','company_name',$company_name);
-	echo $get_id[0]['id'];	
+	$get_id = $manageData->getValue_where('company_info','id','company_name',$company_name);	
 	//image upload section
 	//check wheather image are uploaded or not if yes upload the file
 	if(!empty($company_logo))
@@ -80,7 +79,6 @@
 		$image_link = 'images/company_logo/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','company_logo',$image_link,$get_id[0]['id']);
-		echo $result1;
 	}
 	if(!empty($sec_image_1))
 	{
@@ -89,7 +87,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_1',$image_link,$get_id[0]['id']);
-		echo $result1;
 	}
 	if(!empty($sec_image_2))
 	{
@@ -107,7 +104,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_3',$image_link,$get_id[0]['id']);
-		echo $result1;
 	}
 	if(!empty($sec_image_4))
 	{
@@ -116,7 +112,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_4',$image_link,$get_id[0]['id']);
-		echo $result1;
 	}
 	if(!empty($sec_image_5))
 	{
@@ -125,7 +120,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_5',$image_link,$get_id[0]['id']);
-		echo $result1;
 	}
 	if(!empty($sec_image_6))
 	{
@@ -134,7 +128,6 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_6',$image_link,$get_id[0]['id']);
-		echo $result1;
 	}
 	
 	header('location: ../../admin.php?value=insertAds');

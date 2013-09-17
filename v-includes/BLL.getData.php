@@ -97,7 +97,7 @@
 			$horizontalMenus = $this->manage_content->getMenu_sorted('horizontal_navbar','*','level',"0");
 			echo '<div id="nav_bar">
 					<div class="navbar_horizontal">
-						<ul>';
+						<ul style="width:650px;">';
 			foreach($horizontalMenus as $horizontalMenu)
 			{
 				echo '<li><a href="'.$horizontalMenu['menu_link'].'">'.$horizontalMenu['menu_name'].'</a>';

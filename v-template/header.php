@@ -78,6 +78,7 @@ $(document).ready(function(){
 </script>
 <!--JS code for search of ads-->
 <script src="js/search_function.js" type="text/javascript"></script>
+<script src="js/v_function.js" type="text/javascript"></script>
 </head>
 
 <body>

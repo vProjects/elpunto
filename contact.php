@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$metaName = 'contact';
 	$page_title = "CONTACT US";
 	include 'v-template/header.php';
@@ -28,40 +29,40 @@
             </div><!--#page_content ends here-->
             
             <!--contact form starts here-->
-            <form class="contact_form" action="v-includes/captcha/captchaVerify.php" method="post">
+            <form class="contact_form" action="v-includes/captcha/captchaVerify.php" method="post" id="contact_form">
             	<input type="hidden" name="form_name" value="contact_form" />
                 <div class="form_element">
                     <div class="form_text">Nombre / Apellido:</div>
-                    <input id="" type="text" value="" name="name" class="textbx_1">
+                    <input type="text" value="" name="name" class="textbx_1" id="c_name" onblur="checkEmptyField('c_name')">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Empresa: </div>
-                    <input id="" type="text" value="" name="company_name" class="textbx_1">
+                    <input id="c_company_name" type="text" value="" name="company_name" class="textbx_1" onblur="checkEmptyField('c_company_name')">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Departamento / Ciudad: </div>
-                    <input id="" type="text" value="" name="city" class="textbx_1">
+                    <input id="c_city" type="text" value="" name="city" class="textbx_1" onblur="checkEmptyField('c_city')">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Email: </div>
-                    <input id="" type="text" value="" name="email" class="textbx_1">
+                    <input id="c_email" type="text" value="" name="email" class="textbx_1" onblur="checkEmptyField('c_email')">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Telefono: </div>
-                    <input id="" type="text" value="" name="phone_no" class="textbx_1">
+                    <input id="c_telephone" type="text" value="" name="phone_no" class="textbx_1" onblur="checkEmptyField('c_telephone')">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Comentarios:  </div><br/>
-                    <textarea class="textarea_1" name="comments"></textarea>
+                    <textarea class="textarea_1" name="comments" id="c_comment" onblur="checkEmptyField('c_comment')"></textarea>
                 </div>
                 <div class="form_element">
                     <div class="form_text">Cual es el resultado? </div><br/>
                     <div class="captcha_img">
         <img src="v-includes/captcha/image.php" alt="Click to reload image" title="Click to reload image" id="captcha" onclick="javascript:reloadCaptcha()" />
                     </div><br/>
-                    <input id="" type="text"  name="secure" value="what's the result?" onclick="this.value=''" class="textbx_1">
+                    <input id="c_captcha" onblur="checkEmptyField('c_captcha')" type="text"  name="secure" placeholder="what's the result?" onclick="this.value=''"  class="textbx_1">
                 </div>
-                <input type="submit" value="Enviar" class="btn_1"/>
+                <input type="button" value="Enviar" class="btn_1" id="btn_submit" onclick="validateForm('contact_form')"/>
             </form><!--contact form ends here-->
            
             <!--horizontal menu starts here-->

@@ -80,7 +80,7 @@ h1,h2,h3,h4{
     width: 650px;
 }
 .navbar_horizontal{
-	width:100%;
+	width:650px;
 }
 .navbar_horizontal ul{
 	margin: 0;
@@ -88,7 +88,6 @@ h1,h2,h3,h4{
     position: absolute;
     z-index: 100;
 	border-left:1px solid #dbdbdb;
-	width: 620px;
 }
 .navbar_horizontal ul li{
 	list-style-type:none;

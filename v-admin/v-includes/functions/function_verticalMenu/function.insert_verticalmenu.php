@@ -1,5 +1,5 @@
 <?php
-	include '../../class/class.Manageusers.php';
+	include '../../class/class.manageusers.php';
 	$manageData = new manageusers();
 	//table name for vertical menu
 	$table_name = 'vertical_navbar';

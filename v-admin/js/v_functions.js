@@ -3,9 +3,7 @@
 //Copyright Vyrazu Labs
 function serach_ads_f(search_id)
 {
-	alert('anand');
 	var search_keyword=document.getElementById(search_id).value;
-	alert(search_keyword);
 	if(search_keyword != '')
 	{
 		window.location = 'admin.php?value=updateAds&keyword='+search_keyword;
@@ -64,7 +62,6 @@ function validateRequiredField(input_value,id_name)
 	{
 		//make the background color normal if valid
 		document.getElementById(id_name).style.backgroundColor = '#ffffff';
-		validation_result = "valid";
 		alert(validation_result);
 	}
 }

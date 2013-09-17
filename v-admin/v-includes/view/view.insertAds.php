@@ -122,6 +122,10 @@
                         <label class="label1" style="margin-right:0px;margin-top:5px;">Secondary Image 6:</label>
                         <input type="file" class="browse_style" style="width:477px;" name="sec_image_6"/>
                     </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail" class="polllabel" >Company Ads</label>
+                      <input type="text" class="form-control" name="company_ads" id="exampleInputEmail" placeholder="Put your codes here." style="width:500px">
+                    </div>
                     <button type="submit" class="btn btn-primary" style="margin-left:220px;">Submit</button>
                   </fieldset>
                 </form>  		
