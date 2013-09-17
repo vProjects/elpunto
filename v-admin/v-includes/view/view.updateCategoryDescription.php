@@ -38,8 +38,9 @@
 				?>
             </select>
         	<label class="label1 label2" style="margin-right:0px;">Category Description:</label>
+        	<br /><br /><br /><br /><br /><br /><br />
             <div id="catdesc">
-            <textarea id="editor6" class="ckeditor" style="width:573px; height: 200px;" name="editor6" placeholder="type the brief here"><?php if(isset($categoryDesc)) echo $categoryDesc[0]['description'] ?></textarea>
+            <textarea id="editor6" class="ckeditor" name="editor6" placeholder="type the brief here"><?php if(isset($categoryDesc)) echo $categoryDesc[0]['description'] ?></textarea>
             </div>
             <?php if(isset($result)) echo $result ?>
             <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Update</button> 
