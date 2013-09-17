@@ -544,9 +544,12 @@ h1,h2,h3,h4{
 }
 .company_image{
 	margin: 140px auto 0;
-    max-height: 80px;
-    max-width: 92%;
-    width: 92%;
+    max-height: 90px;
+    max-width: 250px;
+}
+.company_image img{
+	max-height: 90px;
+    max-width: 250px;
 }
 
 /******************************** Edited By dipanjan(login page)************************************/

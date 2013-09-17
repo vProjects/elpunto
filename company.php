@@ -81,7 +81,7 @@
                         	<img src="images/ban_1.jpg" alt="random_ads"/>
                         </div>
                     </div>-->
-                    <div class="company_image"></div>
+                    <div class="company_image"><?php echo $ad_details[0]['company_ads']; ?></div>
                 </div><!--#left_container ends here-->
                 <!--right_container starts here-->
             	<div class="right_container">
