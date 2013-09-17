@@ -1,6 +1,6 @@
 <?php
 	//include class of BLL for data fetching
-	include 'v-includes/BLL.getData.php';
+	if(!class_exists('BLL_manageData'))include 'v-includes/BLL.getData.php';
 	$getData_UI = new BLL_manageData();
 	
 ?>

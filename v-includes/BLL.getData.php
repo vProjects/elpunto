@@ -1,7 +1,7 @@
 <?php
-	include 'class.DAL.php';
-	include 'class.utility.php';
-	include 'class.mail.php';
+	if(!class_exists('ManageContent_DAL'))include 'class.DAL.php';
+	if(!class_exists('utility'))include 'class.utility.php';
+	if(!class_exists('Mail'))include 'class.mail.php';
 	
 	
 	class BLL_manageData
@@ -422,14 +422,30 @@
 		}
 		
 		
-		// function to send the information to the company when he fills the contact form
+		function getCompanyEmail(){
+			$company_email = $this->manage_content->getValue('admin_profile','email_add');
+			return $company_email[0]['email_add'];
+		}
+		//function to send email to the ad owner and admin from company.php
+		function sendInformation($name,$company_name,$city,$email,$phone_no,$comments,$company_email)
+		{
+			//email will be sent to both the ad owners and admin
+			//emaill of admin
+			$email_admin = $this->manage_content->getValue('admin_profile','email_add');
+			//get email from array $email_admin[0]['email_add']
+			$sendMail_admin = $this->mail_function->contactToAdmin($name,$company_name,$city,$email,$phone_no,$comments,$email_admin[0]['email_add']);
+			//send email to ad owner from company.php
+			$sendMail_adOwner = $this->mail_function->contactToAdmin($name,$company_name,$city,$email,$phone_no,$comments,$company_email);
+		}
 		
-		function sendInformation($name,$company_name,$city,$email,$phone_no,$comments){
-			
-			$company_email = $this->manage_content->getValue_where('company_info','company_email','company_name',$company_name);
-			$message = $name."from".$company_name."lives in".$city."want to say".$comments;
-			$mailsent = $this->mail_function->sendMail($company_email[0]['company_email'],$message,$email);
-			$mailsent1 = $this->mail_function->sendMail($email,'your mail sent',$company_email[0]['company_email']);
+		//function to send info to admin from the contact page
+		function sentInfoContactForm($name,$company_name,$city,$email,$phone_no,$comments)
+		{
+			//email will be sent to admin
+			//emaill of admin
+			$email_admin = $this->manage_content->getValue('admin_profile','email_add');
+			//get email from array $email_admin[0]['email_add']
+			$sendMail_admin = $this->mail_function->contactToAdmin($name,$company_name,$city,$email,$phone_no,$comments,$email_admin[0]['email_add']);
 		}
 	}
 	

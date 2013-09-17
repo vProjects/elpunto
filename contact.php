@@ -1,10 +1,8 @@
 <?php
-	include('v-includes/captcha/captchaVerify.php');
 	$metaName = 'contact';
 	$page_title = "CONTACT US";
 	include 'v-template/header.php';
-?>
-    
+?> 
     <!--body main div-->
     <div id="body_main_div">
     	<!--nav_bar_container starts here-->
@@ -31,30 +29,30 @@
             
             <!--contact form starts here-->
             <form class="contact_form" action="v-includes/captcha/captchaVerify.php" method="post">
-            	<input type="hidden" name="id" value="2" />
+            	<input type="hidden" name="form_name" value="contact_form" />
                 <div class="form_element">
                     <div class="form_text">Nombre / Apellido:</div>
-                    <input id="" type="text" value="" name="" class="textbx_1">
+                    <input id="" type="text" value="" name="name" class="textbx_1">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Empresa: </div>
-                    <input id="" type="text" value="" name="" class="textbx_1">
+                    <input id="" type="text" value="" name="company_name" class="textbx_1">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Departamento / Ciudad: </div>
-                    <input id="" type="text" value="" name="" class="textbx_1">
+                    <input id="" type="text" value="" name="city" class="textbx_1">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Email: </div>
-                    <input id="" type="text" value="" name="" class="textbx_1">
+                    <input id="" type="text" value="" name="email" class="textbx_1">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Telefono: </div>
-                    <input id="" type="text" value="" name="" class="textbx_1">
+                    <input id="" type="text" value="" name="phone_no" class="textbx_1">
                 </div>
                 <div class="form_element">
                     <div class="form_text">Comentarios:  </div><br/>
-                    <textarea class="textarea_1"></textarea>
+                    <textarea class="textarea_1" name="comments"></textarea>
                 </div>
                 <div class="form_element">
                     <div class="form_text">Cual es el resultado? </div><br/>

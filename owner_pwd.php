@@ -10,7 +10,6 @@
 		$login_status = 0;
 		header('Location: login.php');
 	}
-	include('v-includes/captcha/captchaVerify.php');
 	$page_title = "USER INFORMATION";
 	$metaName = 'announce';
 	include 'v-template/header.php';

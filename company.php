@@ -1,5 +1,5 @@
 <?php
-	include('v-includes/captcha/captchaVerify.php');
+	session_start();
 	$company_name = $_GET["comp_name"];
 	if (strpos($company_name, "'") != false)
 	{
@@ -88,7 +88,9 @@
 				<h3>Contacte al proveedor</h3>
                 
                 <form class="company_contact_form" action="v-includes/captcha/captchaVerify.php" method="post">
-                	<input type="hidden" name="id" value="1" />
+                	<input type="hidden" name="form_name" value="company_form" />
+                    <input type="hidden" name="main_company" value="<?php echo $ad_details[0]['company_name']; ?>" />
+                	<input type="hidden" name="company_email" value="<?php echo $ad_details[0]['company_email']; ?>" />
                 	<div class="form_element">
                     	<div class="form_text">Nombre / Apellido:</div>
                     	<input id="" type="text" value="" name="name" class="textbx_1">

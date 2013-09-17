@@ -1,6 +1,6 @@
 <?php
 	//include class library of database connecton
-	include 'class.database.php';
+	if(!class_exists('dbConnection')){include 'class.database.php';}
 	class ManageContent_DAL
 	{
 		public $link;
