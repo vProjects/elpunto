@@ -255,5 +255,10 @@
 	{
 		$result = $manageData->update_byColumn('owner_info','owner_address_2',$owner_address_2,'owner_email',$owner_email[0]['company_email']);
 	}
-	header('Location:../../admin.php?value=updateAds');
+	$keyword = ""; 
+	if(!isset($company_name) || empty($company_name))
+	{
+		$keyword = 'none';
+	}
+	header('Location:../../admin.php?value=updateAds&keyword='.$company_name);
 ?>

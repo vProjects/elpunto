@@ -115,6 +115,10 @@
 				echo "<script> loadFile('view.updateAds.php') </script>";
 				break;
 			}
+			case 'updateContact':{
+				echo "<script> loadFile('view.update_contactEmail.php') </script>";
+				break;
+			}
 
 		}
 	}

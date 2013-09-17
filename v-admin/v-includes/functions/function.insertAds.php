@@ -136,6 +136,6 @@
 		$result1 = $manageData->updateValue('company_info','sec_image_6',$image_link,$get_id[0]['id']);
 		echo $result1;
 	}
+	
+	header('location: ../../admin.php?value=insertAds');
 ?>
-
-<a href="../../admin.php?value=insertAds_img&company_name=<?php echo $company_email; ?>">Redirect</a>

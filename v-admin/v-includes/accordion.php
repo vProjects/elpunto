@@ -21,6 +21,9 @@
                     <div class="accordion-inner" onClick="loadFile('view.update_AdOwner.php')">
                       Update Ad Owner
                     </div>
+                    <div class="accordion-inner" onClick="loadFile('view.update_contactEmail.php')">
+                      Update Contact Email
+                    </div>
                   </div>
                 </div>
                 <div class="accordion-group">
