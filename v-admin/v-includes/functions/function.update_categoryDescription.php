@@ -12,12 +12,9 @@
 	//update only menu description
 	if(isset($category_description) && $category_description != "" && isset($menu_id) && $menu_id != "")
 	{
-<<<<<<< HEAD
 		//$result = $manageData->updateValue($table_name,'description',$category_description,$menu_id);
 		//echo $result;
-=======
 		$result = $manageData->updateValue($table_name,'description',$category_description,$menu_id);
->>>>>>> dipanjan
 	}
 	header('location: ../../admin.php?value=updateCategoryDescription');
 ?>
