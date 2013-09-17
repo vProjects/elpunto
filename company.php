@@ -81,6 +81,7 @@
                         	<img src="images/ban_1.jpg" alt="random_ads"/>
                         </div>
                     </div>-->
+                    <div class="company_image"></div>
                 </div><!--#left_container ends here-->
                 <!--right_container starts here-->
             	<div class="right_container">

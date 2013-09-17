@@ -88,6 +88,7 @@ h1,h2,h3,h4{
     position: absolute;
     z-index: 100;
 	border-left:1px solid #dbdbdb;
+	width: 620px;
 }
 .navbar_horizontal ul li{
 	list-style-type:none;
@@ -227,13 +228,13 @@ h1,h2,h3,h4{
 	background-color:#E4E4E4;
 }
 #hori_nav ul ul {
-	display:none;;
+	display:none;
 }
 #hori_nav ul li:hover > ul {
 	display: block;
 	z-index: 100;
 	position: absolute;
-	left: 380px;
+	left: 27%;
 	margin-top: -34px;
 	border: 1px solid #E4E4E4;
 	border-radius: 8px;
@@ -542,6 +543,12 @@ h1,h2,h3,h4{
     font-size: 12px;
     margin-top: 11px;
 }
+.company_image{
+	margin: 140px auto 0;
+    max-height: 80px;
+    max-width: 92%;
+    width: 92%;
+}
 
 /******************************** Edited By dipanjan(login page)************************************/
 .user_page_content{
@@ -684,4 +691,14 @@ h1,h2,h3,h4{
 .a_random img{
 	max-width:220px;
 	max-height:80px;
+}
+
+
+
+
+@media all and (min-width: 200px) and (max-width: 1000px){
+	#hori_nav ul li:hover > ul{
+		position:absolute;
+		left:198px;
+	}
 }
