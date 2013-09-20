@@ -5,9 +5,10 @@
 	$manage_UI = new manageusers();
 	
 	$getEmails = $manage_UI->getValue_sorted('owner_info','*','owner_email');
+	$getCompanyNames = $manage_UI->getValue_where('company_info','company_name','company_email',$GLOBALS['_GET']['email']);
 ?>
 <div id="dashboard">
-	<div id="homepage">
+	<div id="homepage" style="height:400px;">
     	<blockquote>
         	<p>Update an Ad Owner</p>
         </blockquote>
@@ -15,12 +16,14 @@
                   <fieldset>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" style="width:140px;">Email</label>
-                      <select class="input1" name="email_previous" style="margin-right: 88px;width: 514px;">
+                      <select class="input1" name="email_previous" style="margin-right: 88px;width: 514px;" onchange="adOwnerInfo(this.value)">
                             <option value="">Select One</option>
                             <?php
 								foreach($getEmails as $email)
 								{
-									echo '<option value="'.$email["owner_email"].'">'.$email["owner_email"].'</option>';
+									echo '<option value="'.$email["owner_email"].'"';
+									if($email["owner_email"] == $GLOBALS['_GET']['email']){echo 'selected="selected"';}
+									echo '>'.$email["owner_email"].'</option>';
 								}
 							?>
                         </select>
@@ -34,9 +37,23 @@
                     <button type="submit" class="btn btn-primary" id="btn_submit" style="margin-right:153px;float:right;">Update</button>
                   </fieldset>
                 </form> 
-
-
-
+				<div class="adowner_company">
+                	<h3>Company Name</h3>
+					<?php
+						if(!empty($getCompanyNames))
+						{
+							//print the value of company name
+							foreach($getCompanyNames as $getCompanyName)
+							{
+								echo $getCompanyName['company_name'].'<br/>';
+							}
+						}
+						else
+						{
+							echo 'No company found.';
+						}
+					?>
+                </div>
 		</div>
 	</div>
 </div>

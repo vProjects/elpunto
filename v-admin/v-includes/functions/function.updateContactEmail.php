@@ -14,7 +14,6 @@
 	if(isset($new_email) && $new_email != "" )
 	{
 		$result = $manage_data->update_byColumn('admin_profile','email_add',$new_email,'email_add',$present_email);
-		echo $result;
 		
 	}
 	//codes for update result using session

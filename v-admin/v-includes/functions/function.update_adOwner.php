@@ -14,9 +14,7 @@
 	if(isset($email_previous) && $email_previous != "" && isset($new_email) && $new_email != "")
 	{
 		$result = $manage_data->update_byColumn('company_info','company_email',$new_email,'company_email',$email_previous);
-		echo $result;
 		$result1 = $manage_data->update_byColumn('owner_info','owner_email',$new_email,'owner_email',$email_previous);
-		echo $result1;
 		
 	}
 	//codes for update result using session

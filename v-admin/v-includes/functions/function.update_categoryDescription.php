@@ -6,7 +6,7 @@
 	$table_name = 'vertical_navbar';
 	if($_SERVER['REQUEST_METHOD'] == 'GET')
 	{
-		echo $category_description = $_GET['editor6'];
+		$category_description = $_GET['editor6'];
 		$menu_id = $_GET['menu_id'];
 	}
 	//update only menu description
@@ -16,5 +16,5 @@
 		//echo $result;
 		$result = $manageData->updateValue($table_name,'description',$category_description,$menu_id);
 	}
-	header('location: ../../admin.php?value=updateCategoryDescription');
+	header('location: ../../admin.php?value=upc&cat='.$menu_id);
 ?>

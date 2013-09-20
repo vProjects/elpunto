@@ -12,7 +12,6 @@
 	{
 		//get the value of sub menu with parent id = menu id
 		$submenus_parentid = $manageData->getMenu_sorted($table_name,'*','parent_id',$menu_id);
-		print_r($submenus_parentid);
 		//delete menu where id = menu_id
 		$delete_status = $manageData->deleteValue($table_name,'id',$menu_id);
 		//echo $delete_status.'menu<br />';

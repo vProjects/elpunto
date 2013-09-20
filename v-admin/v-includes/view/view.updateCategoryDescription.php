@@ -15,7 +15,7 @@
              
 
 <div id="dashboard">
-	<div id="mailbox" style="height:500px">
+	<div id="mailbox" style="height:575px">
 		<!--create new sub menu form--->
         <blockquote>
           <p>Update Category Description of your site</p>
@@ -28,12 +28,16 @@
                 <?php
 					//get the select element value of menu dynamically
 					foreach($menus as $menu)
-					{if($catagory=='all') echo 'selected=selected';
-						echo '<option value="'.$menu['id'].'")>'.html_entity_decode($menu['menu_name'],ENT_QUOTES, "utf-8").'</option>';
+					{
+						echo '<option value="'.$menu['id'].'"';
+						if($menu['id'] == $catID){echo 'selected="selected"';};
+						echo '>'.html_entity_decode($menu['menu_name'],ENT_QUOTES, "utf-8").'</option>';
 					}
 					foreach($submenus as $submenu)
 					{
-						echo '<option value="'.$submenu['id'].'">'.html_entity_decode($submenu['menu_name'],ENT_QUOTES, "utf-8").'</option>';
+						echo '<option value="'.$submenu['id'].'"';
+						if($submenu['id'] == $catID){echo 'selected="selected"';};
+						echo '>'.html_entity_decode($submenu['menu_name'],ENT_QUOTES, "utf-8").'</option>';
 					}
 				?>
             </select>

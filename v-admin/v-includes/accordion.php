@@ -18,7 +18,7 @@
                     </div><div class="accordion-inner" onClick="loadFile('view.create_AdOwner.php')">
                       Create Ad Owner
                     </div>
-                    <div class="accordion-inner" onClick="loadFile('view.update_AdOwner.php')">
+                    <div class="accordion-inner" onClick="loadFile('view.update_AdOwner.php?email=')">
                       Update Ad Owner
                     </div>
                     <div class="accordion-inner" onClick="loadFile('view.update_contactEmail.php')">
@@ -48,7 +48,7 @@
                     <div class="accordion-inner" onclick="loadFile('view.changeMenu_vertical.php')">
                       Manage Vertical Menu
                     </div>
-                    <div class="accordion-inner" onclick="loadFile('view.updateCategoryDescription.php')">
+                    <div class="accordion-inner" onclick="loadFile('view.updateCategoryDescription.php?cat=')">
                       Manage Category Description
                     </div>
                     <div class="accordion-inner" onclick="loadFile('view.manageBanners.php')">

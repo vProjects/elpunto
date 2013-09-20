@@ -101,8 +101,15 @@
 						CKEDITOR.replace('editor4', { filebrowserBrowseUrl: 'ss/index.html'});
 					}
 					if(variable == 'view.postArticle.php' || variable == 'view.postArticle.php?status=fail' 
-					|| variable == 'view.postArticle.php?status=pass' || variable == 'view.postArticle.php?status=adel' )
+					|| variable == 'view.postArticle.php?status=pass' || variable == 'view.postArticle.php?status=adel')
 						CKEDITOR.replace('editor4', { filebrowserBrowseUrl: 'ss/index.html'});
+						
+						
+						
+					// this updateArticle Variable is checked to maintain the get request for the updateArticle page	
+					updateArticle = variable.substr(0,22);	
+					if(updateArticle == 'view.updateArticle.php' )
+						CKEDITOR.replace('editor7', { filebrowserBrowseUrl: 'ss/index.html'});
 						
 					   // this update Variable is checked to maintain the get request on the
 										
@@ -172,6 +179,12 @@
 		 window.location.assign("admin.php?value=upc&cat="+value);
 		 
 		}
+		
+	//reloads the page and populates the add owner page
+	function adOwnerInfo(owner_email)
+	{
+		window.location = 'admin.php?value=updateAds_owner&email='+owner_email;
+	}
 
 	 
 	 

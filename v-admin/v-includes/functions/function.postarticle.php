@@ -13,9 +13,10 @@
 			 header('Location: ../../admin.php?value=afail');
 		 }
 		 else {
-		 	$manageUsers->insertArticle(htmlentities($GLOBALS['_POST']['article_heading'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['aerticle_author'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['article_end'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['brief'],ENT_QUOTES, "utf-8"),$GLOBALS['_POST']['editor4'],$date);
+			 $end_date = $GLOBALS['_POST']['article_end'];
+		 	$manageUsers->insertArticle(htmlentities($GLOBALS['_POST']['article_heading'],ENT_QUOTES, "utf-8"),htmlentities($GLOBALS['_POST']['aerticle_author'],ENT_QUOTES, "utf-8"),$end_date,htmlentities($GLOBALS['_POST']['brief'],ENT_QUOTES, "utf-8"),$GLOBALS['_POST']['editor4'],$date);
 										
-			 header('Location: ../../admin.php?value=apass');
+			header('Location: ../../admin.php?value=apass');
 		 }
 	}
 	if($GLOBALS['_POST']['delete']){

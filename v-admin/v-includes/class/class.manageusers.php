@@ -120,7 +120,6 @@ class manageusers{
 	* @returns whether updated or not
 	*/
 	function insertArticle($aHeading, $aAuthor,$aEndDate, $aBrief, $aDesc,$date){
-		
 		$query = $this->link->prepare("INSERT INTO `article_info`(`article_title`, `article_author`, `end_date`, `article_brief`, `article_description` , `article_date`) VALUES (?,?,?,?,?,?)");
 		$values = array($aHeading,$aAuthor,$aEndDate,$aBrief,$aDesc,$date);
 		$query->execute($values);

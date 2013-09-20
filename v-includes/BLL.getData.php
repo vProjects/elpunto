@@ -135,13 +135,17 @@
 			$articles = $this->manage_content->getValue_latest('article_info','*');
 			foreach($articles as $article)
 			{
-				echo '<!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">'.$article['article_title'].'</div>
-                    <div class="article_auth">Por:'.$article['article_author'].'</div>
-                    <div class="article_brief">'.$article['article_brief'].'</div>
-                    <div class="article_more"><a href="article_full.php?article_no='.$article['id'].'">Leer mas »</a></div>
-                </div><!--#article container ends here-->';
+				//check the expiry date of the article
+				if($article['end_date'] >= date('Y-m-d'))
+				{
+					echo '<!--article_container starts here-->
+					<div class="article_container">
+						<div class="article_header">'.$article['article_title'].'</div>
+						<div class="article_auth">Por:'.$article['article_author'].'</div>
+						<div class="article_brief">'.$article['article_brief'].'</div>
+						<div class="article_more"><a href="article_full.php?article_no='.$article['id'].'">Leer mas »</a></div>
+					</div><!--#article container ends here-->';
+				}
 			}
 		}
 		
@@ -150,13 +154,17 @@
 			$articles = $this->manage_content->getValue_latest_where('article_info','*','article_author',$author);
 			foreach($articles as $article)
 			{
-				echo '<!--article_container starts here-->
-            	<div class="article_container">
-                	<div class="article_header">'.$article['article_title'].'</div>
-                    <div class="article_auth">Por:'.$article['article_author'].'</div>
-                    <div class="article_brief">'.$article['article_brief'].'</div>
-                    <div class="article_more"><a href="article_full.php?article_no='.$article['id'].'">Leer mas »</a></div>
-                </div><!--#article container ends here-->';
+				//check the expiry date of the article
+				if($article['end_date'] >= date('Y-m-d'))
+				{
+					echo '<!--article_container starts here-->
+					<div class="article_container">
+						<div class="article_header">'.$article['article_title'].'</div>
+						<div class="article_auth">Por:'.$article['article_author'].'</div>
+						<div class="article_brief">'.$article['article_brief'].'</div>
+						<div class="article_more"><a href="article_full.php?article_no='.$article['id'].'">Leer mas »</a></div>
+					</div><!--#article container ends here-->';
+				}
 			}
 		}
 		
@@ -408,15 +416,16 @@
 		
 		// function to send the users password in case he/she forgets the old one
 		function validateAndSend($user_email){
-			
-			$company_email = $this->manage_content->getValue_where('email_info','company_email','id',1);  
-			
 			$userPassword = $this->manage_content->getValue_email('owner_info','password','owner_email',$user_email);
 			if(isset($userPassword[0]['password']))
 			{	
 				$message = "Your password for the account is".$userPassword[0]['password'];
-				$mailsent = $this->mail_function->sendMail($user_email,$message,$company_email[0]['company_email']);
+				$mailsent = $this->mail_function->sendMail($user_email,$message,$user_email);
 				return $mailsent;	
+			}
+			else
+			{
+				return "Invalid user.";
 			}
 
 		}

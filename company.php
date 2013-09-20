@@ -74,7 +74,7 @@
                     <div class="company_logo"><img src="<?php echo $ad_details[0]['company_logo']; ?>" style="width:100%;height:100%;" /></div>
                     <div class="company_info"><?php echo $ad_details[0]['company_address']; ?></div>
                     <div class="company_info"><?php echo $ad_details[0]['company_city']; ?></div>
-                    <div class="company_info"><a href="<?php echo 'http://'.$ad_details[0]['company_website']; ?>"><?php echo $ad_details[0]['company_website']; ?></a></div>
+                    <div class="company_info"><a href="<?php echo 'http://'.$ad_details[0]['company_website']; ?>" target="_blank"><?php echo $ad_details[0]['company_website']; ?></a></div>
                     <!--Random ads container-->
                    	<!--<div class="a_random_container">
                     	<div class="a_random">

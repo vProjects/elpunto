@@ -84,7 +84,7 @@
         <?php
 			foreach($articleList as $article ){ ?> 
           <tr>  
-            <td><?php echo $article['article_title'] ?></td>  
+            <td onclick="loadFile('view.updateArticle.php?article_id=<?php echo $article['id']; ?>')" style="cursor:pointer;"><?php echo $article['article_title'] ?></td>  
             <td><?php echo $article['article_author'] ?></td>  
             <td><?php echo $article['article_brief'] ?></td> 
             <td><?php echo $article['end_date'] ?></td> 

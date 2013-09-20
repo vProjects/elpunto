@@ -87,7 +87,8 @@
 				break;
 			}
 			case 'updateAds_owner':{
-				echo "<script> loadFile('view.update_AdOwner.php') </script>";
+				$email = $GLOBALS['_GET']['email'];
+				echo "<script> loadFile('view.update_AdOwner.php?email=$email') </script>";
 				break;
 			}
 			case 'upc':{
@@ -117,6 +118,11 @@
 			}
 			case 'updateContact':{
 				echo "<script> loadFile('view.update_contactEmail.php') </script>";
+				break;
+			}
+			case 'aupdate':{
+				$article_id = $_GET['article_id'];
+				echo "<script> loadFile('view.updateArticle.php?article_id=$article_id') </script>";
 				break;
 			}
 
