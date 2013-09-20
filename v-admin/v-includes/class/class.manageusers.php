@@ -136,6 +136,39 @@ class manageusers{
 			$query->execute();
 			return $searchResult = $query->fetchALL(PDO::FETCH_ASSOC);
 	}
+	
+	/*
+	 * Function use to check whether ad_owner exist or not
+	 */
+	 function checkMail($owner_email){
+	 	$query = $this->link->prepare("SELECT `password` FROM `owner_info` WHERE `owner_email` = '$owner_email'");
+		$query->execute();
+		$pwd = $query->fetchALL(PDO::FETCH_ASSOC);
+		if(count($pwd)>0){
+				return 'Email Exist';
+			}
+			else{
+				return '';
+			}
+		
+	 }
+	 
+	 
+	 function getvalue_search_sorted($table_name,$value,$row_value,$value_entered,$order_by)
+	{
+		$query = $this->link->query("SELECT $value from $table_name WHERE ( $row_value LIKE '%".$value_entered."%') OR (`owner_name` LIKE '%".$value_entered."%') AND `status` = '1' ORDER BY $order_by ASC");
+		$query->execute();
+		$rowcount = $query->rowCount();
+		if($rowcount > 0){
+			$result = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $result;
+		}
+		else{
+			return $rowcount;
+		}
+	}
+	 
+	 
 		
 /* ------------------------------------ CODES ADDED BY VASU NAMAN ENDS HERE---------------------------------------------------------- */		
 /*-----Author Anand-----*/
@@ -216,7 +249,7 @@ class manageusers{
 	}
 	//function get value 
 	function getValue($table_name)
-	{
+	{	
 		$query = $this->link->query("SELECT * from $table_name");
 		$query->execute();
 		$rowcount = $query->rowCount();

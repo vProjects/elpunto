@@ -15,9 +15,7 @@ function serach_ads_f(search_id)
 }
 function serach_ads_a(search_id)
 {
-	alert('anand');
 	var search_keyword=document.getElementById(search_id).value;
-	alert(search_keyword);
 	if(search_keyword != '')
 	{
 		window.location = 'admin.php?value=allads&keyword='+search_keyword;
@@ -94,6 +92,7 @@ function validateEmail(id_name,id_button)
 		{
 			textbx.style.backgroundColor = '#ffffff';
 			btn.disabled = '';
+			
 		}
 	}
 }

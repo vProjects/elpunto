@@ -32,7 +32,7 @@
 		$owner_address_1 = htmlentities($_POST['owner_address_1'],ENT_QUOTES, "utf-8");
 		$owner_address_2 = htmlentities($_POST['owner_address_2'],ENT_QUOTES, "utf-8");
 		//codes for company specific ads
-		$company_ads = $_POST['company_ads'];
+		$company_ads = mysql_real_escape_string($_POST['company_ads']);
 	}
 	//update owner name
 	if(isset($name) && $name != "")

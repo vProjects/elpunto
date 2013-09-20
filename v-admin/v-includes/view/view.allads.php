@@ -7,12 +7,13 @@
 	$search_value = htmlentities($_GET['keyword'],ENT_QUOTES,"utf-8");
 	if($search_value == 'all')
 	{
-		$company_infos = $manage_UI->getValue('company_info');
+		$company_infos = $manage_UI->getValue_sorted('company_info','*','company_name');
+	
 	}
 	else
 	{
 		//get value according to the search result
-		$company_infos = $manage_UI->getvalue_search('company_info','*','company_name',$search_value);
+		$company_infos = $manage_UI->getvalue_search_sorted('company_info','*','company_name',$search_value,'company_name');
 	}
 ?>
 
