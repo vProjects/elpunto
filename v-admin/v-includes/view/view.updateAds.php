@@ -13,6 +13,7 @@
 	$company_details = $manage_UI->getvalue_search('company_info','*','company_name',$search_value);
 	//get the emails for the email field from owner_info table
 	$getEmails = $manage_UI->getValue_sorted('owner_info','*','owner_email');
+	//$getOwnerName = $manage_UI->getValue_where('owner_info','owner_name','owner_email',$GLOBALS['_GET']['email']);
 	if(!empty($company_details[0]['company_email']))
 	{
 		//getDetails according to email from owner info table according to email
@@ -38,7 +39,7 @@
                   <fieldset>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Name</label>
-                      <input type="text" class="form-control" name="name" id="exampleInputEmail" placeholder="Owner Name" value="<?php echo $company_details[0]['owner_name']; ?>" style="width:500px">
+                      <input type="text" class="form-control" name="name" id="exampleInputEmail" placeholder="Owner Name" value="<?php echo $company_details[0]['owner_name']; ?>" style="width:500px" readonly="readonly">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Company Name</label>

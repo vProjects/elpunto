@@ -45,10 +45,6 @@ class FileUpload{
 			$this->error = 'You cannot upload to the specified directory please CHMOD it to 777';
 	  		//die('');
 		}
-			
-		else if(file_exists($this->upload_path.$location.$filename)){
-			$this->error = 'this cover pic exists please upload a new cover pic';
-		}
 		else{
 			$uploaded  = move_uploaded_file($_FILES[$input_name]['tmp_name'],$this->upload_path.$filename_desired.$ext);
 			$this->error ='success';

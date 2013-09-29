@@ -19,10 +19,10 @@
 		<div id="managePageContent">
         		<form class="polls" action="v-includes/functions/function.insertAds.php" method="post" enctype="multipart/form-data">
                   <fieldset>
-                    <div class="form-group">
+                    <!--<div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Name</label>
                       <input type="text" class="form-control" name="name" placeholder="Owner Name" style="width:500px">
-                    </div>
+                    </div>-->
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Company Name</label>
                       <input type="text" class="form-control" name="company_name" id="exampleInputEmail" placeholder="Company Name" style="width:500px">

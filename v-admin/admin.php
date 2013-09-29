@@ -125,6 +125,10 @@
 				echo "<script> loadFile('view.updateArticle.php?article_id=$article_id') </script>";
 				break;
 			}
+			case 'manageCity':{
+				echo "<script> loadFile('view.manageCity.php') </script>";
+				break;
+			}
 
 		}
 	}

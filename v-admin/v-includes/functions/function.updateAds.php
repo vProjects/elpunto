@@ -6,7 +6,7 @@
 	//object or uploading image
 	$uploadImage = new FileUpload();
 	$table_name = 'company_info';
-		
+	//print_r($GLOBALS['_POST']['ad_category']);	
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		$name = htmlentities($_POST['name'],ENT_QUOTES, "utf-8");
@@ -19,7 +19,7 @@
 		$end_date = $_POST['end_date'];
 		$id = $_POST['id'];
 		$ad_status = htmlentities($_POST['ad_status'],ENT_QUOTES, "utf-8");
-		$ad_categorys = $_POST['ad_category'];
+		//$ad_categorys = $_POST['ad_category'];
 		//varriables for getting images
 		$company_logo = $_FILES['company_logo']['name'];
 		$sec_image_1 = $_FILES['sec_image_1']['name'];
@@ -152,16 +152,16 @@
 		}
 	}
 	//update category which are used as keyword for searching
-	if(isset($ad_categorys) && $ad_categorys != "")
+	if(isset($GLOBALS['_POST']['ad_category']) && !empty($GLOBALS['_POST']['ad_category']))
 	{
 		//set the no. of category using $i
 		$i = 1;
 		//total number of elements in the category array
-		$count_category = count($ad_categorys);
+		$count_category = count($GLOBALS['_POST']['ad_category']);
 		//define $ad_keyword as null
 		$ad_keyword = "";
 		
-		foreach($ad_categorys as $ad_category)
+		foreach($GLOBALS['_POST']['ad_category'] as $ad_category)
 		{
 			$ad_keyword =$ad_keyword.','.$ad_category;
 			if($i == $count_category)
@@ -181,8 +181,7 @@
 		{
 			$result_update =  'ad_categorys status failed<br/>';
 		}
-	
-	
+	}
 	//image upload section
 	//check wheather image are uploaded or not if yes upload the file
 	if(!empty($company_logo))
@@ -242,7 +241,7 @@
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_6',$image_link,$id);
 	}
-	}
+	
 	//update value in owner info table
 	//get email according to id for updation
 	$owner_email = $manageData->getValue_where('company_info','company_email','id',$id);

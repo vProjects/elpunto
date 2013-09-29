@@ -9,7 +9,8 @@
 		$owner_password = $_POST['owner_password'];
 		$owner_password_r = $_POST['owner_password_r'];
 		$add_line_1 = $_POST['add_line_1'];
-		$add_line_2 = $_POST['add_line_2'];		
+		$add_line_2 = $_POST['add_line_2'];
+		$ad_owner_name = $_POST['ad_owner_name'];		
 	}
 	
 	if(isset($owner_email) && $owner_email != "" && isset($owner_password) && $owner_password != "" && isset($owner_password_r) && $owner_password_r != "" )
@@ -33,6 +34,11 @@
 							if(isset($add_line_2) && $add_line_2 != "")
 							{
 								$result = $manageData->update_byColumn('owner_info','owner_address_2',$add_line_2,'owner_email',$owner_email);
+							}
+							//update the add ad_owner_name
+							if(isset($ad_owner_name) && $ad_owner_name != "")
+							{
+								$result = $manageData->update_byColumn('owner_info','owner_name',$ad_owner_name,'owner_email',$owner_email);
 							}
 						}
 						else

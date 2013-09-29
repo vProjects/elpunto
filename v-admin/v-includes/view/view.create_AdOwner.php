@@ -24,13 +24,17 @@
 
                     </div>
                     <div class="form-group">
+                      <label for="exampleInputEmail" class="polllabel" style="width:140px;">Ad Owner Name</label>
+                      <input type="text" class="form-control" name="ad_owner_name" id="exampleInputEmail" placeholder="" style="width:500px">
+                    </div>
+                    <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" style="width:140px;">Address 1</label>
-                      <input type="text" class="form-control" name="add_line_1" id="exampleInputEmail" placeholder="Enter Password" style="width:500px">
+                      <input type="text" class="form-control" name="add_line_1" id="exampleInputEmail" placeholder="" style="width:500px">
 
                     </div>
                     <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" style="width:140px;">Address 2</label>
-                      <input type="text" class="form-control" name="add_line_2" id="exampleInputEmail" placeholder="Enter Password" style="width:500px">
+                      <input type="text" class="form-control" name="add_line_2" id="exampleInputEmail" placeholder="" style="width:500px">
 
                     </div>
                     <div class="error_result"><?php if(isset($_SESSION['result'])){echo $_SESSION['result']; unset($_SESSION['result']);}?></div>

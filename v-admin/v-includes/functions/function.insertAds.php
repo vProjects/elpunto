@@ -7,7 +7,7 @@
 		
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
-		$name = htmlentities($_POST['name'],ENT_QUOTES, "utf-8");
+		//$name = htmlentities($_POST['name'],ENT_QUOTES, "utf-8");
 		$company_name = htmlentities($_POST['company_name'],ENT_QUOTES, "utf-8");
 		$company_city = htmlentities($_POST['company_city'],ENT_QUOTES, "utf-8");
 		$company_email = htmlentities($_POST['company_email'],ENT_QUOTES, "utf-8");
@@ -58,7 +58,10 @@
 			}
 			$i++;
 		}
-		
+		//get the owner name from owner name table
+		$owner_name = $manageData->getValue_where('owner_info','owner_name','owner_email',$company_email);
+		//store owner name into $name to insert in the database
+		$name = $owner_name[0]['owner_name'];
 		$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "utf-8");
 		//$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "cp1252");
 		$result = $manageData->insertAds_details($company_name,$company_phone,$company_city,$company_email,$company_website,$name,$company_description,$ad_keyword,$c_start_date,$c_end_date,$ad_status,$ad_duration,$company_ads);

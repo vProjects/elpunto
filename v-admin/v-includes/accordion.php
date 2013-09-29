@@ -24,6 +24,9 @@
                     <div class="accordion-inner" onClick="loadFile('view.update_contactEmail.php')">
                       Update Contact Email
                     </div>
+                    <div class="accordion-inner" onClick="loadFile('view.manageCity.php')">
+                      Manage City
+                    </div>
                   </div>
                 </div>
                 <div class="accordion-group">

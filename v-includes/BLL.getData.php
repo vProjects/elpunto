@@ -431,10 +431,10 @@
 		//function to get the list of the cities avialable
 		function getCity()
 		{
-			$cities = $this->manage_content->getValue_distinct('company_info','company_city');
+			$cities = $this->manage_content->getValue('city','city_name');
 			foreach($cities as $city)
 			{
-				echo '<option value="'.$city['company_city'].'">'.$city['company_city'].'</option>';
+				echo '<option value="'.$city['city_name'].'">'.$city['city_name'].'</option>';
 			}
 		}
 		

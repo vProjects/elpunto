@@ -358,6 +358,16 @@ class manageusers{
 		$rowcount = $query->rowCount();
 		return $rowcount;
 	}
+	//insert value of city
+	function insert_city($city_name)
+	{
+		$query = $this->link->prepare("INSERT INTO `city`(`city_name`) VALUES (?)");
+		$values = array($city_name);
+		
+		$query->execute($values);
+		$rowcount = $query->rowCount();
+		return $rowcount;
+	}
 	//update using the email
 	function update_byColumn($table_name,$column_name,$column_value,$where_column,$where_value)
 	{
