@@ -9,10 +9,10 @@
              
 
 <div id="dashboard">
-	<div id="mailbox" style="height:661px">
+	<div id="mailbox" style="height:763px">
 		<!--create new sub menu form--->
         <blockquote>
-          <p>Update Category Description of your site</p>
+          <p>Update Banners of your site</p>
           <small>It will help <cite title="Source Title">you in category changes</cite></small>
         </blockquote>
 		<div class="container_navbar_manage">
@@ -99,9 +99,13 @@
                     <option value="0" <?php if($image_links[3]['banner_status'] == '0'){echo 'selected="selected"';} ?>>In-active</option>
                 </select>
             </div>
-            <div class="form_element_v">
-                <input type="text" class="form-control textbx_css" style="width:277px;" name="banner_link_4">
-            	<label class="label1" style="margin-right:0px;float:right;margin-top:5px;">Banner4 Link:</label>
+            <div class="form_element_v" style="height: 80px;">
+            	<label class="label1" style="margin-right:0px;margin-top:5px;">Dynamic Banner 1:</label>
+                <textarea class="form-control textbx_css" name="dynamic_banner_1" style="width: 548px;margin: 10px 1px 6px;" placeholder="Type NULL to disable this ads"></textarea>
+            </div>
+            <div class="form_element_v" style="height: 80px;">
+            	<label class="label1" style="margin-right:0px;margin-top:5px;">Dynamic Banner 2:</label>
+                <textarea class="form-control textbx_css" name="dynamic_banner_2" style="width: 548px;margin: 10px 1px 6px;" placeholder="Type NULL to disable this ads"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 45px;margin-top: 10px;">Update</button> 
         </form>

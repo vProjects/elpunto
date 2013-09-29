@@ -13,7 +13,7 @@
 	if(isset($submenu_name) && isset($submenu_link) && $submenu_name != "" && $submenu_link != "")
 	{
 		$position = $manageData->getMenu_sorted_DESC($table_name,'*','parent_id',$menu_id);
-		print_r($position[0]['position']+1);
+		//print_r($position[0]['position']+1);
 		if($position != 0 || $position != "")
 		{
 			$result = $manageData->insertValue_menu($table_name,$submenu_name,$submenu_link,$menu_id,$position[0]['position']+1,'1');

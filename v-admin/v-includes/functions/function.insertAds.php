@@ -62,7 +62,7 @@
 		$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "utf-8");
 		//$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "cp1252");
 		$result = $manageData->insertAds_details($company_name,$company_phone,$company_city,$company_email,$company_website,$name,$company_description,$ad_keyword,$c_start_date,$c_end_date,$ad_status,$ad_duration,$company_ads);
-		echo $result;
+		//echo $result;
 	}
 	else
 	{
@@ -95,7 +95,7 @@
 		$image_link = 'images/company_secondary_image/'.$result;
 		
 		$result1 = $manageData->updateValue('company_info','sec_image_2',$image_link,$get_id[0]['id']);
-		echo $result1;
+		//echo $result1;
 	}
 	if(!empty($sec_image_3))
 	{

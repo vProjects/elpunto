@@ -68,7 +68,7 @@
 		}
 		if($menu_position == $menu_position_present[0]['position'])
 		{
-			echo 'please enter a valid position';
+			//echo 'please enter a valid position';
 		}
 	}
 	

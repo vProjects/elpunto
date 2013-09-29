@@ -36,6 +36,8 @@
             <!--Add_container-->
             <div id="a_container">  
             	<?php
+					//get dynamic banners
+					$getData_UI->getDynamicAds();
 					//get banner images
 					$getData_UI->getbanners();
 				?>

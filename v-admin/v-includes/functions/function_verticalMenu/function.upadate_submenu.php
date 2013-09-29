@@ -73,7 +73,7 @@
 		
 		if($submenu_position == $submenu_position_present[0]['position'])
 		{
-			echo 'please enter a valid position';
+			//echo 'please enter a valid position';
 		}
 	}
 	

@@ -104,15 +104,15 @@ $(document).ready(function(){
                   	<div class="follow_us">Follow us:</div>
                     <!--Facebook Icon-->
                     <div class="social_icon">
-                    	<a href="<?php $getData_UI->getSocial_links('facebook'); ?>" target="_blank"><img src="images/facebook.png" alt="facebook" style="width:100%;height:100%;"/></a>
+                    	<a href="<?php $getData_UI->getSocial_links('facebook'); ?>" target="_blank" rel="nofollow"><img src="images/facebook.png" alt="facebook" style="width:100%;height:100%;"/></a>
                     </div>
                     <!--Twitter Icon-->
                     <div class="social_icon">
-                    	<a href="<?php $getData_UI->getSocial_links('twitter'); ?>" target="_blank"><img src="images/twitter.png" alt="twitter" style="width:100%;height:100%;"/></a>
+                    	<a href="<?php $getData_UI->getSocial_links('twitter'); ?>" target="_blank" rel="nofollow"><img src="images/twitter.png" alt="twitter" style="width:100%;height:100%;"/></a>
                     </div>
                     <!--Linkdin Icon-->
                     <div class="social_icon">
-                    	<a href="<?php $getData_UI->getSocial_links('linkedin'); ?>" target="_blank"><img src="images/linkedin.png" alt="linkedin" style="width:100%;height:100%;"/></a>
+                    	<a href="<?php $getData_UI->getSocial_links('linkedin'); ?>" target="_blank" rel="nofollow"><img src="images/linkedin.png" alt="linkedin" style="width:100%;height:100%;"/></a>
                     </div>
                   </div>
         </div><!--#header_main ends-->

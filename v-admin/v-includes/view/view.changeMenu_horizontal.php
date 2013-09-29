@@ -17,8 +17,8 @@
         </blockquote>
 		<div class="container_navbar_manage">
         <form class="meta_tag" action="v-includes/functions/function_horizontalMenu/function.insert_horizontalmenu.php" method="get">
-        	<label class="label1" style="margin-right:0px;">Menu Name:</label><input type="text" class="input1" name="menu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;">
-            <label class="label1" style="margin-right:0px;">Menu Link:</label><input type="text" class="input1" name="menu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;">
+        	<label class="label1" style="margin-right:0px;">Menu Name:</label><input type="text" class="input1" name="menu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;" id="h_menu_name" onblur="categoryLink('h_menu_name','h_menu_link')">
+            <label class="label1" style="margin-right:0px;">Menu Link:</label><input type="text" class="input1" name="menu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;" id="h_menu_link">
             <?php if(isset($result)) echo $result ?>
             <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Create</button> 
         </form>
@@ -69,8 +69,8 @@
 					}
 				?>
             </select>
-        	<label class="label1" style="margin-right:0px;">Sub Menu Name:</label><input type="text" class="input1" name="submenu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;">
-            <label class="label1" style="margin-right:0px;">Sub Menu Link:</label><input type="text" class="input1" name="submenu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;">
+        	<label class="label1" style="margin-right:0px;">Sub Menu Name:</label><input type="text" class="input1" name="submenu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;" id="h_submenu_name" onblur="categoryLink('h_submenu_name','h_submenu_link')">
+            <label class="label1" style="margin-right:0px;">Sub Menu Link:</label><input type="text" class="input1" name="submenu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;" id="h_submenu_link">
             <?php if(isset($result)) echo $result ?>
             <button type="submit" class="btn btn-primary" onClick="" style="float:right;margin-right: 42px;">Create</button> 
         </form>

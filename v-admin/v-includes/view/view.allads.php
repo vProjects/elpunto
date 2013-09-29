@@ -49,7 +49,7 @@
 									foreach($company_infos as $company_info)
 									{
 										echo '<tr>
-												<td onclick="loadFile(\'view.updateAds.php?keyword='.$company_info['company_name'].'\')">'.$company_info['company_name'].'</td>
+												<td onclick="loadFile(\'view.updateAds.php?keyword='.$company_info['company_name'].'\')">'.'<img src="../'.$company_info['company_logo'].'" style="height:80px;width:80px;"/>'.$company_info['company_name'].'</td>
 												<td>'.$company_info['ad_duration'].'</td>
 												<td>'.$company_info['start_date'].'</td>
 												<td>'.$company_info['end_date'].'</td>

@@ -277,6 +277,31 @@
 			}
 			echo '</div>';
 		}
+		//get dynamic ad for homepage
+		function getDynamicAds()
+		{
+			$dynamicBanner_1 = $this->manage_content->getValue_where('banner_info','banner_image','id',5);
+			$dynamicBanner_2 = $this->manage_content->getValue_where('banner_info','banner_image','id',6);
+			//print_r($dynamicBanner[0]['banner_image']);
+			//get dynamic banner 1
+			if($dynamicBanner_1[0]['banner_image'] == 'NULL')
+			{
+				echo '';
+			}
+			else
+			{
+				echo '<div class="dynamic_banner">'.$dynamicBanner_1[0]['banner_image'].'</div>';
+			}
+			//get the dynamic banner 2
+			if($dynamicBanner_2[0]['banner_image'] == 'NULL')
+			{
+				echo '';
+			}
+			else
+			{
+				echo '<div class="dynamic_banner">'.$dynamicBanner_2[0]['banner_image'].'</div>';
+			}
+		}
 		//get social links
 		function getSocial_links($social_name)
 		{
