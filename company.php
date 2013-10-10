@@ -85,7 +85,7 @@
                 </div><!--#left_container ends here-->
                 <!--right_container starts here-->
             	<div class="right_container">
-                	<div class="company_description"><?php echo $ad_details[0]['company_description']; ?></div>
+                	<div class="company_description"><?php echo nl2br($ad_details[0]['company_description']); ?></div>
 				<h3>Contacte al proveedor</h3>
                 
                 <form class="company_contact_form" action="v-includes/captcha/captchaVerify.php" method="post" id="contact_form">

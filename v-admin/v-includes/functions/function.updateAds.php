@@ -33,6 +33,8 @@
 		$owner_address_2 = htmlentities($_POST['owner_address_2'],ENT_QUOTES, "utf-8");
 		//codes for company specific ads
 		$company_ads = mysql_escape_string($_POST['company_ads']);
+		
+		$company_address = htmlentities($_POST['company_address'],ENT_QUOTES, "utf-8");
 	}
 	//update owner name
 	if(isset($name) && $name != "")
@@ -151,6 +153,21 @@
 			$result_update =  'end_date status failed<br/>';
 		}
 	}
+	
+	//update company address
+	if(isset($company_address) && $company_address != "")
+	{
+		$result = $manageData->updateValue($table_name,'company_address',$company_address,$id);
+		if($result == 1)
+		{
+			$result_update =  'company status successfully updated<br/>';
+		}
+		else
+		{
+			$result_update =  'company status failed<br/>';
+		}
+	}
+	
 	//update category which are used as keyword for searching
 	if(isset($GLOBALS['_POST']['ad_category']) && !empty($GLOBALS['_POST']['ad_category']))
 	{
@@ -186,60 +203,61 @@
 	//check wheather image are uploaded or not if yes upload the file
 	if(!empty($company_logo))
 	{
-		$filename = $company_name.'_logo';
+		$filename = html_entity_decode($company_name.'_logo',ENT_QUOTES, "utf-8");
 		$result = $uploadImage->upload_file($filename,'company_logo','../../../images/company_logo/');
 		$image_link = 'images/company_logo/'.$result;
 		
-		$result1 = $manageData->updateValue('company_info','company_logo',$image_link,$id);
+		$result1 = $manageData->updateValue('company_info','company_logo',mysql_escape_string($image_link),$id);
+		
 	}
 	if(!empty($sec_image_1))
 	{
-		$filename = $company_name.'_sec_image_1';
+		$filename = html_entity_decode($company_name.'_sec_image_1',ENT_QUOTES, "utf-8");
 		$result = $uploadImage->upload_file($filename,'sec_image_1','../../../images/company_secondary_image/');
 		$image_link = 'images/company_secondary_image/'.$result;
 		
-		$result1 = $manageData->updateValue('company_info','sec_image_1',$image_link,$id);
+		$result1 = $manageData->updateValue('company_info','sec_image_1',mysql_escape_string($image_link),$id);
 	}
 	if(!empty($sec_image_2))
 	{
-		$filename = $company_name.'_sec_image_2';
+		$filename = html_entity_decode($company_name.'_sec_image_2',ENT_QUOTES, "utf-8");
 		$result = $uploadImage->upload_file($filename,'sec_image_2','../../../images/company_secondary_image/');
 		$image_link = 'images/company_secondary_image/'.$result;
 		
-		$result1 = $manageData->updateValue('company_info','sec_image_2',$image_link,$id);
+		$result1 = $manageData->updateValue('company_info','sec_image_2',mysql_escape_string($image_link),$id);
 	}
 	if(!empty($sec_image_3))
 	{
-		$filename = $company_name.'_sec_image_3';
+		$filename = html_entity_decode($company_name.'_sec_image_3',ENT_QUOTES, "utf-8");
 		$result = $uploadImage->upload_file($filename,'sec_image_3','../../../images/company_secondary_image/');
 		$image_link = 'images/company_secondary_image/'.$result;
 		
-		$result1 = $manageData->updateValue('company_info','sec_image_3',$image_link,$id);
+		$result1 = $manageData->updateValue('company_info','sec_image_3',mysql_escape_string($image_link),$id);
 	}
 	if(!empty($sec_image_4))
 	{
-		$filename = $company_name.'_sec_image_4';
+		$filename = html_entity_decode($company_name.'_sec_image_4',ENT_QUOTES, "utf-8");
 		$result = $uploadImage->upload_file($filename,'sec_image_4','../../../images/company_secondary_image/');
 		$image_link = 'images/company_secondary_image/'.$result;
 		
-		$result1 = $manageData->updateValue('company_info','sec_image_4',$image_link,$id);
+		$result1 = $manageData->updateValue('company_info','sec_image_4',mysql_escape_string($image_link),$id);
 	}
 	if(!empty($sec_image_5))
 	{
-		$filename = $company_name.'_sec_image_5';
+		$filename = html_entity_decode($company_name.'_sec_image_5',ENT_QUOTES, "utf-8");
 		$result = $uploadImage->upload_file($filename,'sec_image_5','../../../images/company_secondary_image/');
 		$image_link = 'images/company_secondary_image/'.$result;
 		
-		$result1 = $manageData->updateValue('company_info','sec_image_5',$image_link,$id);
+		$result1 = $manageData->updateValue('company_info','sec_image_5',mysql_escape_string($image_link),$id);
 	}
 	
 	if(!empty($sec_image_6))
 	{
-		$filename = $company_name.'_sec_image_6';
+		$filename = html_entity_decode($company_name.'_sec_image_6',ENT_QUOTES, "utf-8");
 		$result = $uploadImage->upload_file($filename,'sec_image_6','../../../images/company_secondary_image/');
 		$image_link = 'images/company_secondary_image/'.$result;
 		
-		$result1 = $manageData->updateValue('company_info','sec_image_6',$image_link,$id);
+		$result1 = $manageData->updateValue('company_info','sec_image_6',mysql_escape_string($image_link),$id);
 	}
 	
 	//update value in owner info table

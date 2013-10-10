@@ -8,6 +8,7 @@
 ?>
     
     <!--body main div-->
+
     <div id="body_main_div">
     	<!--nav_bar_container starts here-->
         <div id="nav_bar_container">

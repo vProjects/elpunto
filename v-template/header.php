@@ -110,10 +110,14 @@ $(document).ready(function(){
                     <div class="social_icon">
                     	<a href="<?php $getData_UI->getSocial_links('twitter'); ?>" target="_blank" rel="nofollow"><img src="images/twitter.png" alt="twitter" style="width:100%;height:100%;"/></a>
                     </div>
+                    <!--google+ Icon-->
+                    <div class="social_icon">
+                    	<a href="<?php $getData_UI->getSocial_links('google'); ?>" target="_blank" rel="publisher"><img src="images/googleplus.png" alt="linkedin" style="width:100%;height:100%;"/></a>
+                    </div>  
                     <!--Linkdin Icon-->
                     <div class="social_icon">
                     	<a href="<?php $getData_UI->getSocial_links('linkedin'); ?>" target="_blank" rel="nofollow"><img src="images/linkedin.png" alt="linkedin" style="width:100%;height:100%;"/></a>
-                    </div>
+                    </div>                  
                   </div>
         </div><!--#header_main ends-->
     </div><!--#header_container ends-->

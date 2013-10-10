@@ -40,6 +40,7 @@
                             <th>Start Date</th>
                             <th>End Date Date</th>
                             <th>Status</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                         <tbody>
@@ -62,7 +63,16 @@
 										{
 											echo 'In-active';
 										}
-										echo '</td></tr>';
+										echo '</td>';
+										
+										echo '<td>
+												<form action="v-includes/functions/function.deleteAds.php" method="post">
+													<input type="hidden" name="id_company" value="';
+										echo $company_info['id'];
+										echo '"/>
+													<input type="submit" value="DELETE" class="btn btn-danger" />
+												</form>
+											</td></tr>';
 									}
 								}
 								else

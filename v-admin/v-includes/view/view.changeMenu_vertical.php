@@ -41,8 +41,8 @@
 					}
 				?>
             </select>
-        	<label class="label1" style="margin-right:0px;">Menu Name:</label><input type="text" class="input1" name="menu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;">
-            <label class="label1" style="margin-right:0px;">Menu Link:</label><input type="text" class="input1" name="menu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;">
+        	<label class="label1" style="margin-right:0px;">Menu Name:</label><input type="text" class="input1" name="menu_name" placeholder="Enter Menu Name" style="width: 200px; margin-right:30px;" id="up_menu_name" onblur="categoryLink('up_menu_name','up_menu_link')">
+            <label class="label1" style="margin-right:0px;">Menu Link:</label><input type="text" class="input1" name="menu_link" placeholder="Enter Menu Link" style="width: 200px; margin-right:30px;" id="up_menu_link">
             <label class="label1" style="margin-right:0px;">Menu Position:</label><input type="text" class="input1" name="menu_position" placeholder="Enter Menu Position" style="width: 200px; margin-right:30px;">
             
             <?php if(isset($result)) echo $result ?>

@@ -27,7 +27,7 @@
 						<a href="company.php?comp_name='.$searchValue['company_name'].'">
 							<div class="a_content">
 								<div class="a_image">
-									<img src="'.$searchValue['company_logo'].'" alt="grafti cartt" />    
+									<img src="'.$searchValue['company_logo'].'" />    
 								</div>
 								<div class="a_company_name">'.$searchValue['company_name'].'</div>
 							</div>
@@ -36,7 +36,7 @@
 			}
 			else
 			{
-				echo "No result found";
+				echo "No se encontraron resultados para la busqueda realizada";
 			}
 		}
 		//get ads accordnig to username(emails)
@@ -60,7 +60,7 @@
 			}
 			else
 			{
-				echo "No result found";
+				echo "No se encontraron resultados para la busqueda realizada";
 			}
 		}
 		//funtion to get full categories

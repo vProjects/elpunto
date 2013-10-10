@@ -9,6 +9,7 @@
 		$fb_link = $_POST['fb_link'];
 		$t_link = $_POST['t_link'];
 		$l_link = $_POST['l_link'];
+		$google = $_POST['google'];
 	}
 	
 	if(isset($fb_link) && $fb_link != "")
@@ -22,6 +23,10 @@
 	if(isset($l_link) && $l_link != "")
 	{
 		$result = $manageData->updateValue('social_links','linkedin',$l_link,1);
+	}
+	if(isset($google) && $google != "")
+	{
+		$result = $manageData->updateValue('social_links','google',$google,1);
 	}
 	
 	header('Location:../../admin.php?value=updateSocial');
