@@ -441,6 +441,7 @@ h1,h2,h3,h4{
     margin-top: 20px;
     text-align: justify;
     width: 706px;
+	min-height: 100px;
 }
 .page_content_14{
 	float: right;
