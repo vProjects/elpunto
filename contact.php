@@ -28,6 +28,20 @@
 				<?php $getData_UI->getPageContent('contact') ?>
             </div><!--#page_content ends here-->
             
+             <!--horizontal menu starts here-->
+            <div class="hori_nav_modification">
+            	<div id="hori_nav" style="top:-90px;">
+                	<?php
+						//get the vertical search from the template folder 
+						include 'v-template/vertical_search.php' 
+					?>
+                    <?php
+                        //get the vertical navbar 
+                        $getData_UI->get_navbar_vertical(); 
+                    ?> 
+                </div>
+            </div><!--hori meu ends here-->
+            
             <!--contact form starts here-->
             <form class="contact_form" action="v-includes/captcha/captchaVerify.php" method="post" id="contact_form">
             	<input type="hidden" name="form_name" value="contact_form" />
@@ -65,19 +79,7 @@
                 <input type="button" value="Enviar" class="btn_1" id="btn_submit" onclick="validateForm('contact_form')"/>
             </form><!--contact form ends here-->
            
-            <!--horizontal menu starts here-->
-            <div class="hori_nav_modification">
-            	<div id="hori_nav" style="top:-90px;">
-                	<?php
-						//get the vertical search from the template folder 
-						include 'v-template/vertical_search.php' 
-					?>
-                    <?php
-                        //get the vertical navbar 
-                        $getData_UI->get_navbar_vertical(); 
-                    ?> 
-                </div>
-            </div><!--hori meu ends here-->
+           
             <div class="clear"></div>
         </div><!--body container ends here-->
     </div><!--body_main_div-->

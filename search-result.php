@@ -29,14 +29,6 @@
 					$getData_UI->getCategory_details($search_keyword);					
 				?>
             </div><!--#page_content ends here-->
-            <!--Add_container-->
-            <div id="a_container">                
-                <?php 
-					//get adds according to the keywords
-					$getData_UI->getSearch($search_keyword); 
-				?>   
-            </div><!--#add_container ends here-->
-            
            
             <!--horizontal menu starts here-->
             <div class="hori_nav_modification">
@@ -51,6 +43,17 @@
                     ?> 
                 </div>
             </div><!--hori meu ends here-->
+           
+            <!--Add_container-->
+            <div id="a_container">                
+                <?php 
+					//get adds according to the keywords
+					$getData_UI->getSearch($search_keyword); 
+				?>   
+            </div><!--#add_container ends here-->
+            
+           
+           
             <div class="clear"></div>
         </div><!--body container ends here-->
     </div><!--body_main_div-->
