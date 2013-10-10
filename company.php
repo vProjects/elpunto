@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$company_name = $_GET["comp_name"];
+	$company_name = htmlentities($_GET["comp_name"],ENT_QUOTES,"utf-8");
 	if (strpos($company_name, "'") != false)
 	{
 		echo '<script>
