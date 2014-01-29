@@ -327,9 +327,9 @@ class manageusers{
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
 	//insert the ads
-	function insertAds_details($c_name,$c_phone,$c_city,$c_email,$c_website,$c_owner,$c_desciption,$c_keywords,$c_start,$c_end,$c_status,$c_duration,$company_ads){
-		$query = $this->link->prepare("INSERT INTO `company_info`( `company_name`, `company_tel`, `company_city`,  `company_email`,`company_website`, `owner_name`,`company_description`, `company_keywords`, `start_date`, `end_date`, `status`, `ad_duration`, `company_ads`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
-		$values = array($c_name,$c_phone,$c_city,$c_email,$c_website,$c_owner,$c_desciption,$c_keywords,$c_start,$c_end,$c_status,$c_duration,$company_ads);
+	function insertAds_details($c_name,$c_address,$c_phone,$c_city,$c_email,$c_website,$c_owner,$c_desciption,$c_keywords,$c_start,$c_end,$c_status,$c_duration,$company_ads){
+		$query = $this->link->prepare("INSERT INTO `company_info`( `company_name`, `company_address`, `company_tel`, `company_city`,  `company_email`,`company_website`, `owner_name`,`company_description`, `company_keywords`, `start_date`, `end_date`, `status`, `ad_duration`, `company_ads`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		$values = array($c_name,$c_address,$c_phone,$c_city,$c_email,$c_website,$c_owner,$c_desciption,$c_keywords,$c_start,$c_end,$c_status,$c_duration,$company_ads);
 		
 		$query->execute($values);
 	}

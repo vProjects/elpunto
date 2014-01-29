@@ -45,6 +45,11 @@
                         </select>
                     </div>
                     <div class="form-group">
+                      <label for="exampleInputEmail" class="polllabel" style="font-size:12px;">Company Add</label>
+                      <input type="text" class="form-control" name="company_address" placeholder="Comapny Address" style="width:500px">
+
+                    </div>
+                    <div class="form-group">
                       <label for="exampleInputEmail" class="polllabel" >Phone</label>
                       <input type="text" class="form-control" name="company_phone" id="exampleInputEmail" placeholder="Phone No." style="width:500px">
 

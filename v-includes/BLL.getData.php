@@ -36,7 +36,10 @@
 			}
 			else
 			{
-				echo "No se encontraron resultados para la busqueda realizada";
+				if( $keyword != 'Home' )
+				{
+					echo "No se encontraron resultados para la busqueda realizada";
+				}
 			}
 		}
 		//get ads accordnig to username(emails)

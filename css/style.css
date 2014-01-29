@@ -239,7 +239,7 @@ h1,h2,h3,h4{
 	box-shadow: 1px 2px 10px grey;
 	padding-bottom: 5px;
 	background-color: #ffffff;
-	margin-left: 166px;
+	margin-left: 158px;
 }
 #hori_nav ul li:hover > ul li{
 	float:none;
@@ -289,10 +289,9 @@ h1,h2,h3,h4{
 	background-image:url(../images/a_bg.png);
 }
 .a_image{
-    float: left;
-    height: 54px;
-    margin: 15px 29px;
-    width: 113px;
+    height: 73px;
+    margin: 8px auto;
+    width: 135px;
 }
 .a_image img{
 	width:100%;

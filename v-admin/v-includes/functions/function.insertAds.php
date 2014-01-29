@@ -27,6 +27,8 @@
 		$sec_image_6 = $_FILES['sec_image_6']['name'];
 		//codes for company specific ads
 		$company_ads = $_POST['company_ads'];
+		
+		$company_address = htmlentities($_POST['company_address'],ENT_QUOTES, "utf-8");
 	}
 	
 	if(isset($company_name) && $company_name != "" && isset($company_email) && $company_email != "" && isset($ad_duration) && $ad_duration != "" && isset($ad_status) && $ad_status != "" )
@@ -64,7 +66,7 @@
 		$name = $owner_name[0]['owner_name'];
 		$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "utf-8");
 		//$ad_keyword = htmlentities($ad_keyword, ENT_QUOTES, "cp1252");
-		$result = $manageData->insertAds_details($company_name,$company_phone,$company_city,$company_email,$company_website,$name,$company_description,$ad_keyword,$c_start_date,$c_end_date,$ad_status,$ad_duration,$company_ads);
+		$result = $manageData->insertAds_details($company_name,$company_address,$company_phone,$company_city,$company_email,$company_website,$name,$company_description,$ad_keyword,$c_start_date,$c_end_date,$ad_status,$ad_duration,$company_ads);
 		//echo $result;
 	}
 	else
